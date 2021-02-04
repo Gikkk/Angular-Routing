@@ -1,1 +1,35 @@
-<p>contact works!</p>
+<form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Your Name</label>
+    <input id="name" formControlName="name" type="text">
+    <span
+    *ngIf="!signUpForm.get('name').valid && signUpForm.get('name').touched"
+    >The Name field is empty or not valid!</span>
+  </div>
+
+  <div>
+    <label for="email">Your Email</label>
+    <input id="email" formControlName="email" type="text">
+    <span
+    *ngIf="!signUpForm.get('email').valid && signUpForm.get('email').touched"
+    >The Email field is empty or not valid!</span>
+  </div>
+
+  <div>
+    <label for="subject">Subject</label>
+    <input id="subject" formControlName="subject" type="text">
+    <span
+    *ngIf="!signUpForm.get('subject').valid && signUpForm.get('subject').touched"
+    >The Subject field is empty or not valid!</span>
+  </div>
+
+  <div>
+    <label for="message">Your Message</label>
+    <textarea id="message" formControlName="message"></textarea>
+    <span
+    *ngIf="!signUpForm.get('message').valid && signUpForm.get('message').touched"
+    >The Message field is empty or not valid!</span>
+  </div>
+
+  <button type="submit" [disabled]="!signUpForm.valid">Submit</button>
+</form>
