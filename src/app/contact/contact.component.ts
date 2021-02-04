@@ -26,5 +26,7 @@ export class ContactComponent implements OnInit {
     this.signUpForm.reset();
   }
 
+  lat = 13;
+  lng = 80;
 
 }

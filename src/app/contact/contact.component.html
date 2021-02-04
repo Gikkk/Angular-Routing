@@ -1,4 +1,4 @@
-<form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+<!-- <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
   <div>
     <label for="name">Your Name</label>
     <input id="name" formControlName="name" type="text">
@@ -32,4 +32,7 @@
   </div>
 
   <button type="submit" [disabled]="!signUpForm.valid">Submit</button>
-</form>
+</form> -->
+<agm-map [latitude]="lat" [longitude]="lng">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
