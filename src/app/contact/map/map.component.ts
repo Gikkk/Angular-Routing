@@ -33,7 +33,7 @@ export class MapComponent implements OnInit {
 
     this.Telavi.setStyle(new Style({
       image: new Icon(({
-        color: '#129965',
+        color: '#129899',
         crossOrigin: 'anonymous',
         src: "assets/location.png",
       }))

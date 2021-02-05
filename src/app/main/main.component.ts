@@ -11,16 +11,20 @@ export class MainComponent implements OnInit {
 
   myStyle: object = {};
   myParams: object = {};
-  width: number = 100;
-  height: number = 100;
+  windowHeight: number;
+
+  onResize(event){
+    this.windowHeight = event.target.innerHeight;
+  }
 
   ngOnInit() {
+
+    this.windowHeight = window.innerHeight;
+
     this.myStyle = {
-        'position': 'fixed',
-        'width': '100%',
-        'height': '50%',
+        'height': `${this.windowHeight}px`,
         'background': 'black',
-        'z-index': -1,
+        'z-index': 1,
         'top': 0,
         'left': 0,
         'right': 0,
