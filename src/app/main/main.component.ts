@@ -13,22 +13,17 @@ export class MainComponent implements OnInit {
   myParams: object = {};
   windowHeight: number;
 
-  onResize(event){
-    this.windowHeight = event.target.innerHeight;
-  }
-
-  ngOnInit() {
-
+  onResize(){
     this.windowHeight = window.innerHeight;
 
     this.myStyle = {
-        'height': `${this.windowHeight}px`,
-        'background': 'black',
-        'z-index': 1,
-        'top': 0,
-        'left': 0,
-        'right': 0,
-        'bottom': 0,
+      'height': `${this.windowHeight}px`,
+      'background': 'black',
+      'z-index': 1,
+      'top': 0,
+      'left': 0,
+      'right': 0,
+      'bottom': 0,
     };
 
     this.myParams = {
@@ -136,6 +131,10 @@ export class MainComponent implements OnInit {
       },
       "retina_detect": true
     }
+  }
+
+  ngOnInit() {
+    this.onResize();
   }
 
 }
