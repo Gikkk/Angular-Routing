@@ -22,7 +22,7 @@ export class MapComponent implements OnInit {
   Telavi;
   map: Map;
   vectorSource: VectorSource;
-  vectorLayer: any;
+  vectorLayer: VectorLayer;
 
   constructor() { }
 

@@ -1,3 +1,7 @@
+.test{
+  background: black
+}
+
 .carousel {
   @extend %flex-centring;
   flex-direction: column;
@@ -31,7 +35,7 @@
       animation: carousel 10s infinite cubic-bezier(0.77, 0, 0.175, 1) forwards;
 
       .carousel__content--rotateable.step-animation {
-        animation: carousel 14s infinite steps(1) forwards;
+        animation: carousel 20s infinite steps(1) forwards;
       }
     }
 
@@ -47,33 +51,39 @@
         padding: 0.2rem;
         background: white;
         border-radius: 1rem;
-        width: 128px;
-        height: 128px;
+        width: 95px;
+        height: 95px;
       }
 
       &:nth-child(1) {
         transform: rotateY(0) translateZ(35vw);
       }
       &:nth-child(2) {
-        transform: rotateY(60deg) translateZ(35vw);
+        transform: rotateY(45deg) translateZ(35vw);
       }
       &:nth-child(3) {
-        transform: rotateY(120deg) translateZ(35vw);
+        transform: rotateY(90deg) translateZ(35vw);
       }
       &:nth-child(4) {
-        transform: rotateY(180deg) translateZ(35vw);
+        transform: rotateY(135deg) translateZ(35vw);
       }
       &:nth-child(5) {
-        transform: rotateY(240deg) translateZ(35vw);
+        transform: rotateY(180deg) translateZ(35vw);
       }
       &:nth-child(6) {
-        transform: rotateY(300deg) translateZ(35vw);
+        transform: rotateY(225deg) translateZ(35vw);
+      }
+      &:nth-child(7) {
+        transform: rotateY(270deg) translateZ(35vw);
+      }
+      &:nth-child(8) {
+        transform: rotateY(315deg) translateZ(35vw);
       }
 
       @media(min-width: 640px){
         .carousel__img{
-          width: 200px;
-          height: 200px;
+          width: 190px;
+          height: 190px;
         }
       }
 
@@ -90,30 +100,37 @@
 // Carousel animation
 @keyframes carousel {
   0%,
-  14.3% {
+  11.1% {
     transform: translateZ(-35vw) rotateY(0);
   }
-  29.3% {
-    transform: translateZ(-35vw) rotateY(-60deg);
+  22.2% {
+    transform: translateZ(-35vw) rotateY(-45deg);
   }
 
-  44.3% {
-    transform: translateZ(-35vw) rotateY(-120deg);
+  33.3% {
+    transform: translateZ(-35vw) rotateY(-90deg);
   }
 
-  59.3% {
+  44.4% {
+    transform: translateZ(-35vw) rotateY(-135deg);
+  }
+
+  55.5% {
     transform: translateZ(-35vw) rotateY(-180deg);
   }
 
-  74.3% {
-    transform: translateZ(-35vw) rotateY(-240deg);
+  66.5% {
+    transform: translateZ(-35vw) rotateY(-225deg);
   }
 
-  87.3% {
-    transform: translateZ(-35vw) rotateY(-300deg);
+  77.7% {
+    transform: translateZ(-35vw) rotateY(-270deg);
   }
 
-  100% {
+  88.8% {
+    transform: translateZ(-35vw) rotateY(-315deg);
+  }
+  99.9% {
     transform: translateZ(-35vw) rotateY(-360deg);
   }
 }
