@@ -24,7 +24,6 @@ export class ParticlesComponent implements OnInit {
 
 
     this.myStyle = {
-      'position': 'relative',
       'height': `${this.windowHeight}px`,
       'background': 'black',
       'z-index': 1,
