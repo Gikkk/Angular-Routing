@@ -97,6 +97,21 @@
   }
 }
 
+// particles section
+.particles{
+  position: relative;
+}
+
+.particles__svg{
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  fill: white;
+  height: 40px;
+  background: black;
+  bottom: -1px;
+}
+
 // Carousel animation
 @keyframes carousel {
   0%,
@@ -130,7 +145,7 @@
   88.8% {
     transform: translateZ(-35vw) rotateY(-315deg);
   }
-  99.9% {
+  100% {
     transform: translateZ(-35vw) rotateY(-360deg);
   }
 }

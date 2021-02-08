@@ -39,13 +39,13 @@ export class ParticlesComponent implements OnInit {
           "value": 70,
         },
         "color": {
-          "value": "#6495ED"
+          "value": "#73258C"
         },
         "shape": {
           "type": "circle",
           "stroke": {
             "width": 2,
-            "color": "#A9A9A9"
+            "color": "#73258C"
           },
         },
         "opacity": {
@@ -71,7 +71,7 @@ export class ParticlesComponent implements OnInit {
         "line_linked": {
           "enable": true,
           "distance": 120,
-          "color": "#5FC79B",
+          "color": "#255D8C",
           "opacity": 0.8,
           "width": 1.5
         },
