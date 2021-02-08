@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-main',
@@ -8,6 +8,18 @@ import { Component, OnInit } from '@angular/core';
 export class MainComponent implements OnInit {
 
   constructor() { }
+
+  status: boolean = true;
+  buttonText = 'Stop Animation';
+
+  toggleAnimation(){
+    this.status = !this.status;
+    if(this.status === true){
+      this.buttonText = 'Start Animation'
+    }else{
+      this.buttonText = "Stop Animation";
+    }
+  }
 
   ngOnInit(){
 

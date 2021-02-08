@@ -23,75 +23,75 @@
     margin: 0;
     perspective: 1000px;
     transform-origin: center;
+  }
 
-    // This is the element that rotates with the animation
-    .carousel__content--rotateable{
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      transform-origin: center;
-      transform-style: preserve-3d;
-      transform: translateZ(-30vw) rotateY(0);
-      animation: carousel 10s infinite cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  // This is the element that rotates with the animation
+  .carousel__content--rotateable{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    animation: carousel 15s infinite cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  }
 
-      .carousel__content--rotateable.step-animation {
-        animation: carousel 20s infinite steps(1) forwards;
+  // pause animation
+  .paused{
+    animation-play-state: paused !important;
+  }
+
+  // Individual item
+  .carousel__item{
+    @extend %position-absolute;
+    max-width: 380px;
+    max-height: 250px;
+    transform-origin: center;
+    text-align: center;
+
+    .carousel__img{
+      padding: 0.2rem;
+      background: white;
+      border-radius: 1rem;
+      width: 95px;
+      height: 95px;
+    }
+
+    &:nth-child(1) {
+      transform: rotateY(0) translateZ(35vw);
+    }
+    &:nth-child(2) {
+      transform: rotateY(45deg) translateZ(35vw);
+    }
+    &:nth-child(3) {
+      transform: rotateY(90deg) translateZ(35vw);
+    }
+    &:nth-child(4) {
+      transform: rotateY(135deg) translateZ(35vw);
+    }
+    &:nth-child(5) {
+      transform: rotateY(180deg) translateZ(35vw);
+    }
+    &:nth-child(6) {
+      transform: rotateY(225deg) translateZ(35vw);
+    }
+    &:nth-child(7) {
+      transform: rotateY(270deg) translateZ(35vw);
+    }
+    &:nth-child(8) {
+      transform: rotateY(315deg) translateZ(35vw);
+    }
+
+    @media(min-width: 640px){
+      .carousel__img{
+        width: 190px;
+        height: 190px;
       }
     }
 
-    // Individual item
-    .carousel__item{
-      @extend %position-absolute;
-      max-width: 380px;
-      max-height: 250px;
-      transform-origin: center;
-      text-align: center;
-
+    @media(min-width: 1600px){
       .carousel__img{
-        padding: 0.2rem;
-        background: white;
-        border-radius: 1rem;
-        width: 95px;
-        height: 95px;
-      }
-
-      &:nth-child(1) {
-        transform: rotateY(0) translateZ(35vw);
-      }
-      &:nth-child(2) {
-        transform: rotateY(45deg) translateZ(35vw);
-      }
-      &:nth-child(3) {
-        transform: rotateY(90deg) translateZ(35vw);
-      }
-      &:nth-child(4) {
-        transform: rotateY(135deg) translateZ(35vw);
-      }
-      &:nth-child(5) {
-        transform: rotateY(180deg) translateZ(35vw);
-      }
-      &:nth-child(6) {
-        transform: rotateY(225deg) translateZ(35vw);
-      }
-      &:nth-child(7) {
-        transform: rotateY(270deg) translateZ(35vw);
-      }
-      &:nth-child(8) {
-        transform: rotateY(315deg) translateZ(35vw);
-      }
-
-      @media(min-width: 640px){
-        .carousel__img{
-          width: 190px;
-          height: 190px;
-        }
-      }
-
-      @media(min-width: 1600px){
-        .carousel__img{
-          width: auto;
-          height: auto;
-        }
+        width: auto;
+        height: auto;
       }
     }
   }
