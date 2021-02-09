@@ -15,9 +15,9 @@ export class MainComponent implements OnInit {
   toggleAnimation(){
     this.status = !this.status;
     if(this.status === true){
-      this.buttonText = 'Start Animation'
+      this.buttonText = 'Stop Animation'
     }else{
-      this.buttonText = "Stop Animation";
+      this.buttonText = "Start Animation";
     }
   }
 

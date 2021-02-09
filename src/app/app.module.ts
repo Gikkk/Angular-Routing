@@ -12,6 +12,8 @@ import { AboutComponent } from './about/about.component';
 import { SliderComponent } from './about/slider/slider.component';
 import { ProjectComponent } from './project/project.component';
 import { SharedComponent } from './shared/shared.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { SharedComponent } from './shared/shared.component';
     AboutComponent,
     SliderComponent,
     ProjectComponent,
-    SharedComponent
+    SharedComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
