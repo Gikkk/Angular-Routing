@@ -11,6 +11,10 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
+  isOpened(){
+    this.status = !this.status
+  }
+
   ngOnInit(): void {
   }
 

@@ -11,21 +11,10 @@
       <li>Skills</li>
       <li>Focus</li>
     </ul>
-    <div (click)="status=!status" [ngClass]="status ? 'active' : ''">
-      <a class="button">
-        <span class="menu">
-          <b>menu</b>
-        </span>
-        <ul class="sub-menu">
-          <li>Who</li>
-          <li>What</li>
-          <li>Where</li>
-          <div></div>
-          <li>Home</li>
-          <li>Skills</li>
-          <li>Focus</li>
-        </ul>
-      </a>
-    </div>
+    <section class="menu" [ngClass]="status ? 'open' : ''" (click)="isOpened()">
+      <div class="menu__line half start"></div>
+      <div class="menu__line"></div>
+      <div class="menu__line half end"></div>
+    </section>
   </nav>
 </header>
