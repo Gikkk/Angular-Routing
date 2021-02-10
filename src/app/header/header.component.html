@@ -1,22 +1,25 @@
 <header>
-  <nav class="navbar">
+  <nav class="navbar" id="navbar">
+
     <ul class="navbar__list">
-      <li><a href="">Who</a></li>
-      <li><a href="">What</a></li>
-      <li><a href="">Where</a></li>
+      <li><a href="" class="navbar__item">Who</a></li>
+      <li><a href="" class="navbar__item">What</a></li>
+      <li><a href="" class="navbar__item">Where</a></li>
     </ul>
-    <img src="../../assets/logo.png" alt="logo" class="header__logo">
+    <a href=""><img src="../../assets/logo.png" alt="logo" class="header__logo"></a>
     <ul class="navbar__list">
-      <li><a href="">Home</a></li>
-      <li><a href="">Skills</a></li>
-      <li><a href="">Focus</a></li>
+      <li><a href="" class="navbar__item">Home</a></li>
+      <li><a href="" class="navbar__item">Skills</a></li>
+      <li><a href="" class="navbar__item">Focus</a></li>
     </ul>
+
     <section class="menu" (click)="activeClass()" [ngClass]="{'open' : active}">
       <div class="menu__line menu__line--half menu__line--start"></div>
       <div class="menu__line"></div>
       <div class="menu__line menu__line--half menu__line--end"></div>
     </section>
-    <nav class="mobnav" [ngClass]="{'visible' : active}">
+
+    <section class="mobnav" [ngClass]="{'visible' : active}">
       <ul class="mobnav__list">
         <li><a class="mobnav__item" href="" >Who</a></li>
         <li><a class="mobnav__item" href="" >What</a></li>
@@ -27,6 +30,7 @@
         <li><a class="mobnav__item" href="" >Focus</a></li>
       </ul>
       <div class="copyright">Copyright &#169; 2020 all rights reserved</div>
-    </nav>
+    </section>
+
   </nav>
 </header>
