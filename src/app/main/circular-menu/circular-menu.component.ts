@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  selector: 'app-circular-menu',
+  templateUrl: './circular-menu.component.html',
+  styleUrls: ['./circular-menu.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class CircularMenuComponent implements OnInit {
 
   constructor() { }
 
@@ -14,7 +14,6 @@ export class HeaderComponent implements OnInit {
   activeClass(){
     this.active = !this.active;
   }
-
 
   ngOnInit(): void {
   }

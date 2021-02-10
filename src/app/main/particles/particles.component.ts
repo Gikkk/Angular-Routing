@@ -44,7 +44,7 @@ export class ParticlesComponent implements OnInit {
         "shape": {
           "type": "circle",
           "stroke": {
-            "width": 2,
+            "width": 3,
             "color": "#73258C"
           },
         },

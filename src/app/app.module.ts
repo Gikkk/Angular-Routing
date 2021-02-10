@@ -11,9 +11,9 @@ import { ParticlesComponent } from './main/particles/particles.component';
 import { AboutComponent } from './about/about.component';
 import { SliderComponent } from './about/slider/slider.component';
 import { ProjectComponent } from './project/project.component';
-import { SharedComponent } from './shared/shared.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { CircularMenuComponent } from './main/circular-menu/circular-menu.component';
 
 @NgModule({
   declarations: [
@@ -25,9 +25,9 @@ import { FooterComponent } from './footer/footer.component';
     AboutComponent,
     SliderComponent,
     ProjectComponent,
-    SharedComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CircularMenuComponent
   ],
   imports: [
     BrowserModule,

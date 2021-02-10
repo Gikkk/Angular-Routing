@@ -1,20 +1,32 @@
 <header>
-  <nav class="desktop">
-    <ul class="nav__list">
-      <li>Who</li>
-      <li>What</li>
-      <li>Where</li>
+  <nav class="navbar">
+    <ul class="navbar__list">
+      <li><a href="">Who</a></li>
+      <li><a href="">What</a></li>
+      <li><a href="">Where</a></li>
     </ul>
     <img src="../../assets/logo.png" alt="logo" class="header__logo">
-    <ul class="nav__list">
-      <li>Home</li>
-      <li>Skills</li>
-      <li>Focus</li>
+    <ul class="navbar__list">
+      <li><a href="">Home</a></li>
+      <li><a href="">Skills</a></li>
+      <li><a href="">Focus</a></li>
     </ul>
-    <section class="menu" [ngClass]="status ? 'open' : ''" (click)="isOpened()">
-      <div class="menu__line half start"></div>
+    <section class="menu" (click)="activeClass()" [ngClass]="{'open' : active}">
+      <div class="menu__line menu__line--half menu__line--start"></div>
       <div class="menu__line"></div>
-      <div class="menu__line half end"></div>
+      <div class="menu__line menu__line--half menu__line--end"></div>
     </section>
+    <nav class="mobnav" [ngClass]="{'visible' : active}">
+      <ul class="mobnav__list">
+        <li><a class="mobnav__item" href="" >Who</a></li>
+        <li><a class="mobnav__item" href="" >What</a></li>
+        <li><a class="mobnav__item" href="" >Where</a></li>
+        <hr>
+        <li><a class="mobnav__item" href="" >Home</a></li>
+        <li><a class="mobnav__item" href="" >Skills</a></li>
+        <li><a class="mobnav__item" href="" >Focus</a></li>
+      </ul>
+      <div class="copyright">Copyright &#169; 2020 all rights reserved</div>
+    </nav>
   </nav>
 </header>
