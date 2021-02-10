@@ -1,15 +1,31 @@
-<header class="header">
-  <nav>
-    <ul class="header__">
+<header>
+  <nav class="desktop">
+    <ul class="nav__list">
       <li>Who</li>
       <li>What</li>
       <li>Where</li>
     </ul>
     <img src="../../assets/logo.png" alt="logo" class="header__logo">
-    <ul>
+    <ul class="nav__list">
       <li>Home</li>
       <li>Skills</li>
       <li>Focus</li>
     </ul>
+    <div (click)="status=!status" [ngClass]="status ? 'active' : ''">
+      <a class="button">
+        <span class="menu">
+          <b>menu</b>
+        </span>
+        <ul class="sub-menu">
+          <li>Who</li>
+          <li>What</li>
+          <li>Where</li>
+          <div></div>
+          <li>Home</li>
+          <li>Skills</li>
+          <li>Focus</li>
+        </ul>
+      </a>
+    </div>
   </nav>
 </header>
