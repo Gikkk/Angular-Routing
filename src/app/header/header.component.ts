@@ -1,32 +1,36 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ElementRef, Renderer2, HostListener } from '@angular/core';
+import { debounce } from '../debounce.decorator';
+
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements AfterViewInit {
 
-  constructor() { }
+  @ViewChild("navbar") navbar: ElementRef;
+  constructor( private renderer: Renderer2) {}
+
+  prevScrollPos = window.pageYOffset;
+  @HostListener("window:scroll", [])
+  @debounce()
+  onWindowScroll() {
+    let currentScrollPos = window.pageYOffset;
+    if (this.prevScrollPos >= currentScrollPos) {
+      this.renderer.setStyle(this.navbar.nativeElement, 'top', '0px');
+    } else {
+      this.renderer.setStyle(this.navbar.nativeElement, 'top', '-68px');
+    }
+    this.prevScrollPos = currentScrollPos;
+  }
 
   active = false;
-
   activeClass(){
     this.active = !this.active;
   }
 
-
-  ngOnInit(): void {
-    let prevScrollpos = window.pageYOffset;
-    window.onscroll = function() {
-    let currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos) {
-        document.getElementById("navbar").style.top = "0";
-      } else {
-        document.getElementById("navbar").style.top = "-68px";
-      }
-      prevScrollpos = currentScrollPos;
-    }
+  ngAfterViewInit(): void {
   }
 
 }
