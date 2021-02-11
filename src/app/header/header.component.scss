@@ -1,7 +1,6 @@
 .header__logo{
   width: 60px;
   height: 60px;
-  margin: 0 2rem;
 }
 
 .navbar{
@@ -23,10 +22,11 @@
 .mobnav{
   visibility: hidden;
   position: fixed;
-  top: 1px;
+  top: 0;
   left: 0;
   height: 100%;
-  padding: 1rem;
+  width: 80%;
+  padding: 0.5rem 1rem;
   background: white;
 
   .mobnav__list{
@@ -40,6 +40,12 @@
     text-decoration: none;
     color: black;
   }
+
+  .mobnav__line{
+    width: 80%;
+    height: 3px;
+    background: black;
+  }
 }
 
 .visible{
@@ -47,6 +53,10 @@
 }
 
 @media (min-width: 640px){
+  .header__logo{
+    margin: 0 2rem;
+  }
+
   .navbar{
     justify-content: center;
   }
