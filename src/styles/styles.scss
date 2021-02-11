@@ -1,14 +1,19 @@
-@import "../../node_modules/ol/ol.css";
-
 @import "./abstracts/variables";
 @import "./abstracts/placeholder";
 
 @import "./base/general";
+@import "./base/normalize";
 
-@import "./layout/main";
-@import "./layout/contact";
+@import "./pages/main";
+@import "./pages/about";
+@import "./pages/projects";
+@import "./pages/contact";
 
 @import "./components/carousel";
 @import "./components/circular-menu";
 @import "./components/particles";
 @import "./components/hamburger";
+
+@import "./layout/header";
+@import "./layout/footer";
+@import "./layout/forms";
