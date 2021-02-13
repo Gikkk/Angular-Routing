@@ -1,4 +1,4 @@
-.menu {
+.hamburger {
 	width: 30px;
 	height: 30px;
 	display: flex;
@@ -7,38 +7,38 @@
 	cursor: pointer;
 	transition: transform 330ms ease-out;
 }
-.menu.open {
+.hamburger.open {
 	transform: rotate(-45deg);
 }
-.menu__line {
+.hamburger__line {
 	background-color: #fff;
 	border-radius: 3px;
 	width: 100%;
 	height: 4px;
 }
-.menu__line.menu__line--half {
+.hamburger__line.hamburger__line--half {
 	width: 50%;
 }
-.menu__line.menu__line--start{
+.hamburger__line.hamburger__line--start{
 	transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
 	transform-origin: right;
 }
 .open {
-	.menu__line.menu__line--start{
+	.hamburger__line.hamburger__line--start{
 		transform: rotate(-90deg) translateX(2px);
 	}
-	.menu__line.menu__line--end{
+	.hamburger__line.hamburger__line--end{
 		transform: rotate(-90deg) translateX(-2px);
 	}
 }
-.menu__line.menu__line--end{
+.hamburger__line.hamburger__line--end{
 	align-self: flex-end;
 	transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
 	transform-origin: left;
 }
 
 @media (min-width: 640px){
-  .menu{
+  .hamburger{
     display: none;
   }
 }

@@ -13,10 +13,10 @@
       <li><a href="" class="navbar__item">Focus</a></li>
     </ul>
 
-    <section class="menu" (click)="activeClass()" [ngClass]="{'open' : active}">
-      <div class="menu__line menu__line--half menu__line--start"></div>
-      <div class="menu__line"></div>
-      <div class="menu__line menu__line--half menu__line--end"></div>
+    <section class="hamburger" (click)="activeClass()" [ngClass]="{'open' : active}">
+      <div class="hamburger__line hamburger__line--half hamburger__line--start"></div>
+      <div class="hamburger__line"></div>
+      <div class="hamburger__line hamburger__line--half hamburger__line--end"></div>
     </section>
 
     <section class="mobnav" [ngClass]="{'visible' : active}">
@@ -30,7 +30,6 @@
         <li><a class="mobnav__item" href="" >Skills</a></li>
         <li><a class="mobnav__item" href="" >Focus</a></li>
       </ul>
-      <div class="copyright">Copyright &#169; 2020 all rights reserved</div>
     </section>
 
   </nav>

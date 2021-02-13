@@ -9,25 +9,32 @@ import { debounce } from '../debounce.decorator';
 })
 export class HeaderComponent implements AfterViewInit {
 
+  active = false;
+  cancelScroll = false;
+
   @ViewChild("navbar") navbar: ElementRef;
   constructor( private renderer: Renderer2) {}
 
-  prevScrollPos = window.pageYOffset;
   @HostListener("window:scroll", [])
   @debounce()
   onWindowScroll() {
+
     let currentScrollPos = window.pageYOffset;
-    if (this.prevScrollPos >= currentScrollPos) {
-      this.renderer.setStyle(this.navbar.nativeElement, 'top', '0px');
-    } else {
-      this.renderer.setStyle(this.navbar.nativeElement, 'top', '-68px');
+
+    if (this.cancelScroll) {
+      return;
     }
-    this.prevScrollPos = currentScrollPos;
+
+    if(currentScrollPos > 0){
+      this.renderer.addClass(this.navbar.nativeElement, "navbar__sticky");
+    }else{
+      this.renderer.removeClass(this.navbar.nativeElement, "navbar__sticky");
+    }
   }
 
-  active = false;
   activeClass(){
     this.active = !this.active;
+    this.cancelScroll = !this.cancelScroll
   }
 
   ngAfterViewInit(): void {
