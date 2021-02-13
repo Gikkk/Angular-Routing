@@ -1,0 +1,79 @@
+.footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .footer__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__img{
+    height: 50px;
+    width: 50px;
+  }
+
+  .footer__valid{
+    display: flex;
+    align-items: center;
+  }
+  .footer__facebook{
+    width: 35px;
+    height: 35px;
+    padding: 1px;
+
+    &:hover{
+      fill: white;
+      background: #4267B2;
+    }
+  }
+
+  .footer__instagram{
+    padding: 5px;
+
+    &:hover{
+      fill: white;
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+    }
+  }
+
+  .footer__github{
+    padding: 5px;
+
+    &:hover{
+      fill: white;
+      background: rgb(64, 120, 192);
+    }
+  }
+
+  .footer__google{
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+
+    &:hover{
+      fill: white;
+      background: linear-gradient( 45deg, #EB4335, #FBBC05, #34A853, #4285F4);
+    }
+  }
+}
+
+.back__btn{
+  transform: rotate(180deg);
+  vertical-align: middle;
+
+  &:hover{
+    .back__arrow{
+      fill: rgb(139, 98, 98);
+      transform: translateY(5%);
+      transition: all 0.3s ease;
+    }
+
+    .back__svg--shape{
+      fill: rgb(147, 116, 180);
+      transition: fill 0.3s ease;
+    }
+  }
+}
+
