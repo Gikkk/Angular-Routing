@@ -1,12 +1,21 @@
 .footer{
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  justify-items: center;
   align-items: center;
+  row-gap: 1rem;
+  padding: 1rem;
 
   .footer__content{
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .footer__header{
+    letter-spacing: 2px;
+    color: rgb(84, 52, 114);
+    font-weight: 700;
+    margin: 0.5rem 0;
   }
 
   .footer__img{
@@ -17,6 +26,9 @@
   .footer__valid{
     display: flex;
     align-items: center;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: rgb(84, 52, 114);
   }
   .footer__facebook{
     width: 35px;
@@ -61,7 +73,6 @@
 
 .back__btn{
   transform: rotate(180deg);
-  vertical-align: middle;
 
   &:hover{
     .back__arrow{
