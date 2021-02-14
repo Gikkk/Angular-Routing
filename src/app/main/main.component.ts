@@ -9,18 +9,6 @@ export class MainComponent implements OnInit {
 
   constructor() { }
 
-  status: boolean = true;
-  buttonText = 'Stop Animation';
-
-  toggleAnimation(){
-    this.status = !this.status;
-    if(this.status === true){
-      this.buttonText = 'Stop Animation'
-    }else{
-      this.buttonText = "Start Animation";
-    }
-  }
-
   ngOnInit(){
 
   }
