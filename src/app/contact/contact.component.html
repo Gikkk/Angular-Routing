@@ -1,36 +1,69 @@
-<form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
-  <div>
-    <label for="name">Your Name</label>
-    <input id="name" formControlName="name" type="text">
-    <span
-    *ngIf="!signUpForm.get('name').valid && signUpForm.get('name').touched"
-    >The Name field is empty or not valid!</span>
-  </div>
+<div class="contact">
+  <h3 class="contact__title">Contact Me</h3>
+  <h2 class="contact__text">Write me about anything or just say hello</h2>
+  <div class="contact__box">
+    <div class="box">
+      <h3 class="box__title">SEND ME A MESSAGE</h3>
+      <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+        <div>
+          <label for="name">Your Name</label>
+          <input id="name" formControlName="name" type="text" class="box__input">
+          <span
+          *ngIf="!signUpForm.get('name').valid && signUpForm.get('name').touched"
+          >The Name field is empty or not valid!</span>
+        </div>
 
-  <div>
-    <label for="email">Your Email</label>
-    <input id="email" formControlName="email" type="text">
-    <span
-    *ngIf="!signUpForm.get('email').valid && signUpForm.get('email').touched"
-    >The Email field is empty or not valid!</span>
-  </div>
+        <div>
+          <label for="email">Your Email</label>
+          <input id="email" formControlName="email" type="text" class="box__input">
+          <span
+          *ngIf="!signUpForm.get('email').valid && signUpForm.get('email').touched"
+          >The Email field is empty or not valid!</span>
+        </div>
 
-  <div>
-    <label for="subject">Subject</label>
-    <input id="subject" formControlName="subject" type="text">
-    <span
-    *ngIf="!signUpForm.get('subject').valid && signUpForm.get('subject').touched"
-    >The Subject field is empty or not valid!</span>
-  </div>
+        <div>
+          <label for="subject">Subject</label>
+          <input id="subject" formControlName="subject" type="text" class="box__input">
+          <span
+          *ngIf="!signUpForm.get('subject').valid && signUpForm.get('subject').touched"
+          >The Subject field is empty or not valid!</span>
+        </div>
 
-  <div>
-    <label for="message">Your Message</label>
-    <textarea id="message" formControlName="message"></textarea>
-    <span
-    *ngIf="!signUpForm.get('message').valid && signUpForm.get('message').touched"
-    >The Message field is empty or not valid!</span>
-  </div>
+        <div>
+          <label for="message">Your Message</label>
+          <textarea id="message" formControlName="message" class="box__input"></textarea>
+          <span
+          *ngIf="!signUpForm.get('message').valid && signUpForm.get('message').touched"
+          >The Message field is empty or not valid!</span>
+        </div>
 
-  <button type="submit" [disabled]="!signUpForm.valid">Submit</button>
-</form>
-<app-map></app-map>
+        <button type="submit" [disabled]="!signUpForm.valid" class="submit__btn">Submit</button>
+      </form>
+    </div>
+    <div class="box__details">
+      <h3 class="box__title">CONTACT INFO</h3>
+      <h4 class="box__subtitle">Where to Find Me</h4>
+      <div class="box__item">
+        <img src="/assets/contact/home.svg" alt="home" class="box__img">
+        <p class="box__text">Telavi, Kakheti, Georgia</p>
+      </div>
+      <h4 class="box__subtitle">Email Me At</h4>
+      <div class="box__item">
+        <img src="assets/contact/email.svg" alt="email" class="box__img">
+        <p class="box__text">giorgizhonzholadze1996@gmail.com</p>
+      </div>
+      <h4 class="box__subtitle">Call Me At</h4>
+      <div class="box__item">
+        <img src="assets/contact/smartphone.svg" alt="phone" class="box__img">
+        <p class="box__text">595 33 34 39</p>
+      </div>
+      <div>
+        <h4 class="box__subtitle">Stay Connected</h4>
+        <a href="https://www.facebook.com/zhonzholadze/" target="_blank"><img src="assets/social-icons/iconmonstr-facebook-3.svg" alt="facebook" class="contact__icon"></a>
+        <a href="https://github.com/Gikkk" target="_blank"><img src="assets/social-icons/iconmonstr-github-3.svg" alt="GitHub" class="contact__icon"></a>
+        <a href="https://www.instagram.com/giorgizhonzholadze/" target="_blank"><img src="assets/social-icons/iconmonstr-instagram-11.svg" alt="Instagram" class="contact__icon"></a>
+      </div>
+    </div>
+  </div>
+  <app-map></app-map>
+</div>

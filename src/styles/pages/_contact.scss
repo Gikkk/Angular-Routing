@@ -1,10 +1,123 @@
-form{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.contact{
+  display: grid;
+  text-align: center;
+  padding: 5rem 2rem 1rem 2rem;
+
+  .contact__title{
+    margin: 0;
+    color: $font-color;
+  }
+
+  .contact__text{
+    color:$font-border;
+  }
+
+  .box{
+    background: rgba(0, 0, 0, 0.719);
+    padding: 1.5rem 1rem
+  }
+
+  .box__details{
+    background:  rgba(0, 0, 0, 0.719);
+    padding: 1.5rem 1rem
+  }
+
+  .box__title{
+    color: $font-border;
+  }
+
+  .box__subtitle{
+    color: $secondary-background;
+    margin: 0;
+  }
+
+  .box__item{
+    @extend %flex-centring;
+    margin: 0.6rem 0 2.8rem 0;
+  }
+
+  .box__img{
+    width: 16px;
+    height: 16px;
+    background: $font-border;
+    border-radius: 0.3rem;
+  }
+
+  .box__text{
+    color: $font-border;
+    margin: 0 0 0 0.5rem
+  }
+
+  .contact__icon{
+    background:$font-border;
+    border-radius: 0.5rem;
+    padding: 0.2rem;
+    margin: 1rem 0.2rem;
+
+    &:hover{
+      background: $secondary-background;
+      box-shadow: 0 2px 2px 2px $font-border;
+    }
+  }
 }
 
-input.ng-invalid.ng-touched,
-textarea.ng-invalid.ng-touched{
-  border: 1px solid red;
+@media (max-width: 410px){
+  .box__text{
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 355px){
+  .box__text{
+    font-size: 0.6rem;
+  }
+}
+
+@media (min-width: 640px){
+  .contact{
+    padding: 5rem 3.5rem;
+    text-align: left;
+
+    .contact__title{
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    .contact__text{
+      text-align: center;
+      font-size: 2.5rem;
+    }
+
+    .box{
+      padding: 1.5rem 4rem;
+    }
+
+    .box__details{
+      padding: 1.5rem 4rem;
+    }
+
+    .box__item{
+      justify-content: left;
+    }
+  }
+}
+
+
+@media (min-width: 1024px){
+  .contact__box{
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+
+    .box__details{
+      background: rgba(0, 0, 0, 0.815);
+    }
+  }
+
+  .box{
+    padding: 2rem 5rem;
+  }
+
+  .box__details{
+    padding: 2rem 5rem;
+  }
 }
