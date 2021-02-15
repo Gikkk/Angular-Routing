@@ -15,6 +15,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CircularMenuComponent } from './main/circular-menu/circular-menu.component';
 import { TechStackComponent } from './tech-stack/tech-stack.component';
+import { FocusComponent } from './focus/focus.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { TechStackComponent } from './tech-stack/tech-stack.component';
     HeaderComponent,
     FooterComponent,
     CircularMenuComponent,
-    TechStackComponent
+    TechStackComponent,
+    FocusComponent
   ],
   imports: [
     BrowserModule,
