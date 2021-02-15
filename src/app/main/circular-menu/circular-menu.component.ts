@@ -15,25 +15,6 @@ export class CircularMenuComponent implements OnInit {
     this.active = !this.active;
   }
 
-  // myElement = document.getElementById('my-element');
-  // bounding = this.myElement.getBoundingClientRect();
-  // myElementHeight = this.myElement.offsetHeight;
-  // myElementWidth = this.myElement.offsetWidth;
-
-  // elementInViewport() {
-  //   const bounding = this.myElement.getBoundingClientRect();
-  //   if (bounding.top >= -this.myElementHeight
-  //       && bounding.left >= -this.myElementWidth
-  //       && bounding.right <= (window.innerWidth || document.documentElement.clientWidth) + this.myElementWidth
-  //       && bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) + this.myElementHeight) {
-
-  //       console.log('Element is in the viewport!');
-  //   } else {
-
-  //       console.log('Element is NOT in the viewport!');
-  //   }
-  // }
-
   ngOnInit(): void {
   }
 

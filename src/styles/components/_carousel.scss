@@ -4,6 +4,24 @@
   margin: 3rem 0 0 0;
   text-decoration: underline;
 
+  // pause animation
+  .paused{
+    animation-play-state: paused !important;
+  }
+
+  .carousel__btn{
+    background: $secondary-background;
+    color: $font-border;
+    text-decoration: none;
+    outline: none;
+    font-weight: 700;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    box-shadow: inset 0 0 10px $font-border;
+    letter-spacing: 1px;
+  }
+
+
   .carousel__title{
     font-size: 1.5rem;
     color: black;
@@ -72,11 +90,6 @@
       transform: rotateY(315deg) translateZ(35vw);
     }
 
-    // pause animation
-    .paused{
-      animation-play-state: paused !important;
-    }
-
     @media(min-width: 640px){
       .carousel__img{
         width: 190px;
@@ -91,18 +104,6 @@
       }
     }
   }
-}
-
-.carousel__btn{
-  background: $secondary-background;
-  color: $font-border;
-  text-decoration: none;
-  outline: none;
-  font-weight: 700;
-  padding: 0.5rem;
-  border-radius: 0.2rem;
-  box-shadow: inset 0 0 10px $font-border;
-  letter-spacing: 1px;
 }
 
 // Carousel animation
