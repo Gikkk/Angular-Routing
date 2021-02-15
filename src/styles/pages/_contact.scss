@@ -13,12 +13,12 @@
   }
 
   .box{
-    background: rgba(0, 0, 0, 0.719);
+    background: #252934;
     padding: 1.5rem 1rem
   }
 
   .box__details{
-    background:  rgba(0, 0, 0, 0.719);
+    background:  #1b242f;
     padding: 1.5rem 1rem
   }
 
@@ -107,10 +107,6 @@
   .contact__box{
     display: grid;
     grid-template-columns: 1fr 0.5fr;
-
-    .box__details{
-      background: rgba(0, 0, 0, 0.815);
-    }
   }
 
   .box{

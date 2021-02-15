@@ -3,7 +3,7 @@
   justify-items: center;
   align-items: center;
   row-gap: 1rem;
-  padding: 1rem;
+  background: #252934;
 
   .footer__content{
     display: flex;
@@ -85,11 +85,5 @@
       fill: rgb(147, 116, 180);
       transition: fill 0.3s ease;
     }
-  }
-}
-
-@media (min-width: 640px){
-  .footer{
-    grid-template-columns: 1fr 1fr;
   }
 }

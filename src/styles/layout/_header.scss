@@ -5,6 +5,7 @@
 }
 
 .navbar{
+  font-family: 'Russo One', sans-serif;
   position: fixed;
   top: 0;
   left: 0;
@@ -26,9 +27,14 @@
   .navbar__item{
     margin: 0 1rem;
     text-decoration: none;
-    color: white;
+    color: #ababab;
     letter-spacing: 2px;
-    transition: 0.5s;
+    transition: all ease .3s;
+
+    &:hover{
+      color: #fff;
+
+    }
   }
 }
 
