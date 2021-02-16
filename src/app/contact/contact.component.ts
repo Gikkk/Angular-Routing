@@ -1,5 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { EmailValidator, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -10,7 +11,7 @@ export class ContactComponent implements OnInit {
 
   signUpForm: FormGroup;
 
-  constructor() { }
+  constructor( private http: HttpClient) { }
 
   ngOnInit(): void {
     this.signUpForm = new FormGroup({
@@ -23,7 +24,11 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log(this.signUpForm);
-    this.signUpForm.reset();
+    this.http.post<{name: string, email: EmailValidator, subject: string, message: string}>('https://giorgi-zho-default-rtdb.europe-west1.firebasedatabase.app/messages.json',
+     this.signUpForm.value
+     ).subscribe(data=>{
+      console.log(data);
+      this.signUpForm.reset();
+    });
   }
 }
