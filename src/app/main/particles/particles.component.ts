@@ -19,7 +19,7 @@ export class ParticlesComponent implements OnInit {
     this.windowWidth = window.innerWidth;
 
     if(this.windowWidth < 640){
-      this.windowHeight = this.windowHeight/2;
+      this.windowHeight = this.windowHeight/1.75;
     }
 
 
