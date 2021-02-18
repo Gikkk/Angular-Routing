@@ -18,9 +18,7 @@ export class HeaderComponent implements AfterViewInit {
   @HostListener("window:scroll", [])
   @debounce()
   onWindowScroll() {
-
     let currentScrollPos = window.pageYOffset;
-
     if (this.cancelScroll) {
       return;
     }
@@ -30,6 +28,7 @@ export class HeaderComponent implements AfterViewInit {
     }else{
       this.renderer.removeClass(this.navbar.nativeElement, "navbar__sticky");
     }
+    console.log('event started');
   }
 
   activeClass(){

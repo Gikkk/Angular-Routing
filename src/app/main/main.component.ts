@@ -44,7 +44,7 @@ export class MainComponent implements OnInit {
         "shape": {
           "type": "circle",
           "stroke": {
-            "width": 3,
+            "width": 2.5,
             "color": "#73258C"
           },
         },
@@ -71,9 +71,9 @@ export class MainComponent implements OnInit {
         "line_linked": {
           "enable": true,
           "distance": 120,
-          "color": "#255D8C",
+          "color": "#155D8C",
           "opacity": 0.8,
-          "width": 1.5
+          "width": 1
         },
         "move": {
           "enable": true,

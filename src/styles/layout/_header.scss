@@ -20,7 +20,7 @@
   justify-content: space-between;
   align-items: center;
   transition: 0.5s;
-  padding: 1rem;
+  padding: 1rem 1rem 0 1rem;
   z-index: 100;
   text-transform: uppercase;
 
@@ -93,7 +93,7 @@
 
 // support
 .navbar__sticky{
-  padding: 0 1rem;
+  padding: 0.2rem 1rem;
   background-color: black;
 }
 
@@ -113,7 +113,7 @@
   }
 
   .navbar__sticky{
-    padding: 0;
+    padding: 0.2rem 0;
     background-color: white;
 
     .navbar__item{
