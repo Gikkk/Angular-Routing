@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
 import { MainComponent } from './main/main.component';
 import { MapComponent } from './contact/map/map.component';
-import { ParticlesComponent } from './main/particles/particles.component';
 import { AboutComponent } from './about/about.component';
 import { SliderComponent } from './about/slider/slider.component';
 import { ProjectComponent } from './project/project.component';
@@ -25,7 +24,6 @@ import { LanguageComponent } from './about/language/language.component';
     ContactComponent,
     MainComponent,
     MapComponent,
-    ParticlesComponent,
     AboutComponent,
     SliderComponent,
     ProjectComponent,
