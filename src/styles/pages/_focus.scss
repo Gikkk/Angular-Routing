@@ -2,13 +2,10 @@
   text-align: center;
   justify-content: center;
   background: #252934;
-  margin: 1rem;
-  padding: 1rem;
   border-radius: 0.5rem;
 
   .focus__title{
     color: white;
-    margin: 1rem 0 2rem 0;
   }
 
   .focus__item{
@@ -19,7 +16,6 @@
 
 @media (min-width: 640px){
   .focus{
-    margin: 0 3rem;
 
     .focus__item{
       flex-direction: row;

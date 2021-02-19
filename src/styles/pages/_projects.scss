@@ -1,18 +1,9 @@
 .projects{
   @extend %grid-centring;
-  padding: 2rem 1rem;
   row-gap: 2rem;
-  margin-top: 4rem;
 
   .projects__title{
     color: $font-color;
-    margin: 0;
-  }
-
-  .projects__subtitle{
-    color: white;
-    margin: 0;
-    text-align: center;
   }
 
   .projects__list{

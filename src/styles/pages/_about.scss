@@ -3,8 +3,6 @@
     background: #252934;
     color: white;
     border-radius: 0.5rem;
-    margin: 3rem 1rem;
-    padding: 1rem;
 
     .details__title{
       font-size: 1.5rem;
@@ -27,19 +25,6 @@
 
 @media (min-width: 640px){
 
-  .info{
-    .slider{
-      margin: 5rem 3rem 0 3rem;
-    }
-
-    .details{
-      margin: 5rem 3rem 0 3rem;
-    }
-
-    .details__text{
-      margin: 0;
-    }
-  }
 }
 
 @media (min-width: 850px){
@@ -47,8 +32,6 @@
     display: flex;
 
     .slider{
-      margin-right: 1rem;
-
       .slider__wrapper{
         height: 505px;
         width: 40vw;
@@ -56,7 +39,6 @@
     }
     .details{
       height: 505px;
-      margin-left: 1rem;
     }
   }
 }
@@ -114,8 +96,6 @@
   background: #252934;
   color: white;
   border-radius: 0.5rem;
-  margin: 3rem 1rem;
-  padding: 1rem;
 
   .language__info{
     display: grid;
@@ -129,10 +109,6 @@
 
 .cont{
   text-align: center;
-
-  .cont__title{
-    margin: 1rem 0 2rem 0;
-  }
 
   .intro__btn--highlighted{
     display: inline-block;
@@ -161,10 +137,8 @@
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-content: center;
-    margin: 0 3rem;
 
     .language{
-      margin: 3rem 0;
       display: grid;
       justify-items: center;
     }
