@@ -19,8 +19,8 @@
   }
 
   .footer__img{
-    height: 50px;
-    width: 50px;
+    height: 25px;
+    width: 25px;
   }
 
   .footer__valid{
@@ -34,6 +34,7 @@
     width: 35px;
     height: 35px;
     padding: 1px;
+    border-radius: 5px;
 
     &:hover{
       fill: white;
@@ -43,6 +44,7 @@
 
   .footer__instagram{
     padding: 5px;
+    border-radius: 5px;
 
     &:hover{
       fill: white;
@@ -52,6 +54,7 @@
 
   .footer__github{
     padding: 5px;
+    border-radius: 5px;
 
     &:hover{
       fill: white;
@@ -63,6 +66,7 @@
     width: 35px;
     height: 35px;
     padding: 5px;
+    border-radius: 5px;
 
     &:hover{
       fill: white;
@@ -72,18 +76,26 @@
 }
 
 .back__btn{
-  transform: rotate(180deg);
+  border: none;
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+  padding: 5px;
+  font-weight: 700;
+  outline: none;
 
   &:hover{
-    .back__arrow{
-      fill: rgb(139, 98, 98);
-      transform: translateY(5%);
-      transition: all 0.3s ease;
+    .back__svg{
+      transform: translateY(-5%);
+      transition: all 0.5s ease;
     }
 
-    .back__svg--shape{
-      fill: rgb(147, 116, 180);
-      transition: fill 0.3s ease;
+    .test{
+      fill: rgb(84, 52, 114);
     }
   }
 }
+
+

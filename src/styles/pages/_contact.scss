@@ -1,25 +1,11 @@
 .contact{
-  display: grid;
   text-align: center;
-  // padding: 5rem 2rem 1rem 2rem;
-
-  .contact__title{
-    margin: 0;
-    color: $font-color;
-  }
-
-  .contact__text{
-    color:$font-border;
-  }
-
   .box{
     background: #252934;
-    padding: 1.5rem 1rem
   }
 
   .box__details{
     background:  #1b242f;
-    padding: 1.5rem 1rem
   }
 
   .box__title{
@@ -28,12 +14,10 @@
 
   .box__subtitle{
     color: $secondary-background;
-    margin: 0;
   }
 
   .box__item{
     @extend %flex-centring;
-    margin: 0.6rem 0 2.8rem 0;
   }
 
   .box__img{
@@ -46,30 +30,6 @@
   .box__text{
     color: $font-border;
     margin: 0 0 0 0.5rem
-  }
-
-  .contact__icon{
-    background:$font-border;
-    border-radius: 0.5rem;
-    padding: 0.2rem;
-    margin: 1rem 0.2rem;
-
-    &:hover{
-      background: $secondary-background;
-      box-shadow: 0 2px 2px 2px $font-border;
-    }
-  }
-}
-
-@media (max-width: 410px){
-  .box__text{
-    font-size: 0.75rem;
-  }
-}
-
-@media (max-width: 355px){
-  .box__text{
-    font-size: 0.6rem;
   }
 }
 
@@ -87,14 +47,6 @@
       font-size: 2.5rem;
     }
 
-    .box{
-      padding: 1.5rem 4rem;
-    }
-
-    .box__details{
-      padding: 1.5rem 4rem;
-    }
-
     .box__item{
       justify-content: left;
     }
@@ -106,13 +58,5 @@
   .contact__box{
     display: grid;
     grid-template-columns: 1fr 0.5fr;
-  }
-
-  .box{
-    padding: 2rem 5rem;
-  }
-
-  .box__details{
-    padding: 2rem 5rem;
   }
 }
