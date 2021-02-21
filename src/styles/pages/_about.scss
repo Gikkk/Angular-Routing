@@ -1,5 +1,8 @@
 .info{
+
   .details{
+    // opacity: 0;
+    // transition: opacity 0.25s ease-in;
     background: #252934;
     color: white;
     border-radius: 0.5rem;
@@ -22,6 +25,7 @@
     }
   }
 }
+
 
 @media (min-width: 640px){
 

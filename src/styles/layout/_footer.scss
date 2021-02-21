@@ -85,15 +85,17 @@
   padding: 5px;
   font-weight: 700;
   outline: none;
+  background: rgb(73, 92, 72);
+  color: white;
+
+  .back__svg{
+    transform: rotate(180deg);
+  }
 
   &:hover{
-    .back__svg{
-      transform: translateY(-5%);
-      transition: all 0.5s ease;
-    }
-
-    .test{
-      fill: rgb(84, 52, 114);
+    .back__svg--arrow{
+      transform: translateY(7%);
+      transition: transform 0.5s ease;
     }
   }
 }
