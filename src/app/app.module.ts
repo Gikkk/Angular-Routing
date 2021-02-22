@@ -17,7 +17,6 @@ import { CircularMenuComponent } from './main/circular-menu/circular-menu.compon
 import { TechStackComponent } from './tech-stack/tech-stack.component';
 import { FocusComponent } from './focus/focus.component';
 import { LanguageComponent } from './about/language/language.component';
-import { ObserveVisibilityDirective } from './project/observe-visibility.directive';
 
 @NgModule({
   declarations: [
@@ -34,7 +33,6 @@ import { ObserveVisibilityDirective } from './project/observe-visibility.directi
     TechStackComponent,
     FocusComponent,
     LanguageComponent,
-    ObserveVisibilityDirective,
   ],
   imports: [
     BrowserModule,

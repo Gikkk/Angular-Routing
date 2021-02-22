@@ -101,6 +101,8 @@
   }
 }
 
+
+
 // support
 .navbar__sticky{
   padding: 0.2rem 1rem;
@@ -108,8 +110,23 @@
 }
 
 .visible{
-  width: 75%;
+  width: 70%;
   padding: 2rem;
+}
+
+.space{
+  right: -30%;
+}
+
+.space__fade{
+  z-index: 100;
+  background: black;
+  opacity: 0.5;
+  width: 30%;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  transition: 0.5s;
 }
 
 @media (min-width: 640px){
