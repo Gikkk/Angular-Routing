@@ -38,19 +38,20 @@
 }
 
   .project__btn{
+    @extend %btn;
     margin-right: 1rem;
   }
 
   .project__btn--highlighted{
-
+    @extend %btn--highlighted
   }
 
   .intro__btn{
+    outline: none;
     padding: 16px 24px;
     background-image: linear-gradient(to right, #8490ff 0%, #62bdfc 48%, #8490ff 100%);
     background-size: 200% auto;
     color: #fff;
-    display: inline-block;
     border-radius: 5px;
     font-size: 13px;
     font-weight: 700;
