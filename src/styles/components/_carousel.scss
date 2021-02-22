@@ -2,6 +2,7 @@
   @extend %flex-centring;
   flex-direction: column;
   text-decoration: underline;
+  margin: 5rem 0;
 
   // pause animation
   .paused{
@@ -9,7 +10,8 @@
   }
 
   .carousel__title{
-    font-size: 1.5rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
     color: black;
   }
 
