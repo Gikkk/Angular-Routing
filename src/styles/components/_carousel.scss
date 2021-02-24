@@ -2,16 +2,10 @@
   @extend %flex-centring;
   flex-direction: column;
   text-decoration: underline;
-  margin: 5rem 0;
-
-  // pause animation
-  .paused{
-    animation-play-state: paused !important;
-  }
 
   .carousel__title{
     font-size: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 0;
     color: $secondary-color;
   }
 
@@ -89,6 +83,16 @@
         height: auto;
       }
     }
+  }
+
+  .tech__btn{
+    @extend %btn--colorful;
+    padding: 8px;
+  }
+
+  // pause animation
+  .paused{
+    animation-play-state: paused;
   }
 }
 

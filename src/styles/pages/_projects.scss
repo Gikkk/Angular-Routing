@@ -4,9 +4,10 @@
   row-gap: 1.5rem;
 
   .projects__title{
-    color: $font-color;
-    margin: 3rem 0 1rem 0;
-    font-size: 2rem;
+    color: $secondary-color;
+    margin: 3rem 0 2rem 0;
+    font-size: 2.5rem;
+    font-style: italic;
   }
 
   .projects__list{
@@ -38,29 +39,46 @@
 }
 
   .project__btn{
-    @extend %btn;
+    background: linear-gradient(to right, $secondary-background 50%, $hover-background 50%);
+    color: $secondary-color;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    box-shadow: inset 0 0 10px $font-border;
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 0.5s ease-out;
+    letter-spacing: 2px;
     margin-right: 1rem;
+
+    &:hover{
+      background-position: left bottom;
+      color: $primary-color;
+    }
   }
 
   .project__btn--highlighted{
-    @extend %btn--highlighted
+    background: linear-gradient(to right, $hover-background 50%, $secondary-background 50%);
+    color: $primary-color;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    box-shadow: inset 0 0 10px $font-border;
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 0.5s ease-out;
+    letter-spacing: 2px;
+
+
+    &:hover{
+      color: $secondary-color;
+      background-position: left bottom;
+    }
   }
 
   .intro__btn{
-    outline: none;
-    padding: 16px 24px;
-    background-image: linear-gradient(to right, #8490ff 0%, #62bdfc 48%, #8490ff 100%);
-    background-size: 200% auto;
-    color: #fff;
-    border-radius: 5px;
-    font-size: 13px;
-    font-weight: 700;
-    transition: all 300ms linear 0s;
-    text-decoration: none;
-
-    &:hover{
-      background-position: right center;
-    }
+    @extend %btn--colorful;
+    padding: 16px 32px;
   }
 
   @media (min-width: 640px){

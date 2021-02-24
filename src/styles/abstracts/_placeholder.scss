@@ -19,46 +19,7 @@
   bottom: 0;
 }
 
-// btn
-%btn{
-  background: linear-gradient(to right, $secondary-background 50%, $hover-background 50%);
-  color: $font-border;
-  text-decoration: none;
-  padding: 0.5rem;
-  border-radius: 0.2rem;
-  box-shadow: inset 0 0 10px $font-border;
-  background-size: 200% 100%;
-  background-position: right bottom;
-  transition: all 0.5s ease-out;
-  letter-spacing: 2px;
-
-  &:hover{
-    background-position: left bottom;
-    color: $font-color;
-  }
-}
-
-// btn highlighted
-%btn--highlighted{
-  background: linear-gradient(to right, $hover-background 50%, $secondary-background 50%);
-  color: $font-color;
-  text-decoration: none;
-  padding: 0.5rem;
-  border-radius: 0.2rem;
-  box-shadow: inset 0 0 10px $font-border;
-  background-size: 200% 100%;
-  background-position: right bottom;
-  transition: all 0.5s ease-out;
-  letter-spacing: 2px;
-
-
-  &:hover{
-    color: $font-border;
-    background-position: left bottom;
-  }
-}
-
-%btn--scalable{
+%btn--colorful{
   outline: none;
   background-image: linear-gradient(to right, #8490ff 0%, #62bdfc 48%, #8490ff 100%);
   background-size: 200% auto;
@@ -71,5 +32,24 @@
 
   &:hover{
     background-position: right center;
+  }
+}
+
+%btn--scalable{
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 1000px;
+  background: #4b6cc1;
+  font-weight: 400;
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: all ease .3s;
+
+  &:hover{
+    transform: scale(1.075);
+    box-shadow: inset 0 0 0 2px #4b6cc1;
+    background: none;
+    color: #4b6cc1;
   }
 }
