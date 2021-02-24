@@ -4,14 +4,6 @@
   align-items: center;
 }
 
-%position-absolute{
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
 // display grid - centring
 %grid-centring{
   display: grid;
@@ -63,5 +55,21 @@
   &:hover{
     color: $font-border;
     background-position: left bottom;
+  }
+}
+
+%btn--scalable{
+  outline: none;
+  background-image: linear-gradient(to right, #8490ff 0%, #62bdfc 48%, #8490ff 100%);
+  background-size: 200% auto;
+  color: $primary-color;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 700;
+  transition: all 300ms linear 0s;
+  text-decoration: none;
+
+  &:hover{
+    background-position: right center;
   }
 }
