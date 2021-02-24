@@ -1,11 +1,10 @@
 #map{
-  height: 300px;
-  border: 2px solid rgba(212, 198, 198, 0.719);
-  margin-top: 1rem;
+  height: 400px;
+  padding: 4rem 0 1rem 0;
 }
 
 @media (min-width: 640px){
   #map{
-    height: 550px;
+    height: 650px;
   }
 }
