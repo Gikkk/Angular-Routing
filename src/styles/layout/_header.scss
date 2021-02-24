@@ -1,17 +1,5 @@
-.header__logo{
-  width: 50px;
-  height: 50px;
-
-  &:hover{
-    path{
-      fill: hsl(258, 46%, 49%);
-      background: brown;
-    }
-  }
-}
-
 .navbar{
-  font-family: 'Russo One', sans-serif;
+  font-family: 'Akaya Telivigala', cursive;
   position: fixed;
   top: 0;
   left: 0;
@@ -24,6 +12,13 @@
   z-index: 100;
   text-transform: uppercase;
 
+  .header__logo{
+    width: 50px;
+    height: 50px;
+    margin: 0 2vw;
+  }
+
+
   .navbar__list{
     display: none;
     list-style: none;
@@ -31,15 +26,15 @@
   }
 
   .navbar__item{
-    margin: 0 1rem;
+    margin: 0 2vw;
     text-decoration: none;
-    color: #ababab;
-    letter-spacing: 2px;
+    color: $primary-color;
+    letter-spacing: 5px;
     transition: all ease .3s;
 
     &:hover{
-      color: #fff;
-
+      opacity: 0.8;
+      text-shadow: 0px -2px 0px rgba(0,0,0,1), 0 0 5px rgba(255,255,255,1),0 -4px 5px rgba(255,255,255,1);
     }
   }
 }
@@ -51,7 +46,7 @@
   top: 0;
   left: 0;
   padding: 2rem 0;
-  background: white;
+  background: $primary-color;
   overflow-x: hidden;
   transition: 0.5s;
 
@@ -65,7 +60,7 @@
 
   .mobnav__item{
     text-decoration: none;
-    color: black;
+    color: $secondary-color;
     letter-spacing: 4px;
     font-weight: 700;
     transition: 0.3s;
@@ -78,7 +73,7 @@
   .mobnav__line{
     width: 4.5rem;
     height: 3px;
-    background: black;
+    background: $secondary-color;
   }
 
   .mobnav__btn{
@@ -87,7 +82,7 @@
     border-radius: 1000px;
     background: #4b6cc1;
     font-weight: 400;
-    color: #fff;
+    color: $primary-color;
     padding: 1rem;
     text-decoration: none;
     transition: all ease .3s;
@@ -101,12 +96,10 @@
   }
 }
 
-
-
 // support
 .navbar__sticky{
   padding: 0.2rem 1rem;
-  background-color: black;
+  background-color: $secondary-color;
 }
 
 .visible{
@@ -120,7 +113,7 @@
 
 .space__fade{
   z-index: 100;
-  background: black;
+  background: $secondary-color;
   opacity: 0.5;
   width: 30%;
   height: 100%;
@@ -141,10 +134,10 @@
 
   .navbar__sticky{
     padding: 0.2rem 0;
-    background-color: white;
+    background-color: $primary-color;
 
     .navbar__item{
-      color: black;
+      color: $secondary-color;
     }
   }
 }
