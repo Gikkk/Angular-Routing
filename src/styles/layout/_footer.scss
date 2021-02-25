@@ -1,4 +1,5 @@
 .footer{
+  font-family: 'RocknRoll One', sans-serif;
   display: grid;
   justify-items: center;
   align-items: center;
@@ -112,6 +113,21 @@
     &:hover{
       fill: white;
       background: linear-gradient( 45deg, #EB4335, #FBBC05, #34A853, #4285F4);
+    }
+  }
+}
+
+@media(min-width: 640px){
+  .footer{
+    grid-template-columns: 1fr 1fr;
+
+    .footer__content{
+      margin: 0;
+      flex-direction: row;
+    }
+
+    .footer__header{
+      margin: 0 1rem 0 0;
     }
   }
 }
