@@ -3,38 +3,73 @@
   justify-items: center;
   align-items: center;
   row-gap: 1rem;
-  background: #252934;
+  padding: 1rem;
+  margin-top: 5rem;
+  background: $background;
+  position: relative;
+
+  .footer__btn{
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -40px;
+    right: 0;
+    z-index: 3;
+    transition: 0.6s ease-out;
+
+    &:hover{
+      background: $background;
+
+      path{
+        fill: $primary-color;
+      }
+
+      .svg__hoverable{
+        transform: translateY(35%);
+        transition: 0.6s ease-out;
+      }
+    }
+  }
 
   .footer__content{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 2rem;
   }
 
   .footer__header{
     letter-spacing: 2px;
-    color: rgb(84, 52, 114);
-    font-weight: 700;
+    color: $primary-color;
     margin: 0.5rem 0;
   }
 
   .footer__img{
-    height: 25px;
-    width: 25px;
+    height: 30px;
+    width: 30px;
+    margin-right: 0.5rem;
   }
 
   .footer__valid{
     display: flex;
     align-items: center;
     letter-spacing: 2px;
-    font-weight: 700;
-    color: rgb(84, 52, 114);
+    color: $primary-color;
   }
+
+  .footer__icons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 0.5rem;
+  }
+
   .footer__facebook{
     width: 35px;
     height: 35px;
     padding: 1px;
     border-radius: 5px;
+    fill: white;
+    background: $background-hover;
 
     &:hover{
       fill: white;
@@ -45,6 +80,8 @@
   .footer__instagram{
     padding: 5px;
     border-radius: 5px;
+    fill: white;
+    background: $background-hover;
 
     &:hover{
       fill: white;
@@ -55,6 +92,8 @@
   .footer__github{
     padding: 5px;
     border-radius: 5px;
+    fill: white;
+    background: $background-hover;
 
     &:hover{
       fill: white;
@@ -67,6 +106,8 @@
     height: 35px;
     padding: 5px;
     border-radius: 5px;
+    fill: white;
+    background: $background-hover;
 
     &:hover{
       fill: white;
@@ -74,30 +115,3 @@
     }
   }
 }
-
-.back__btn{
-  border: none;
-  border-radius: 5px 5px 0 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  letter-spacing: 2px;
-  padding: 5px;
-  font-weight: 700;
-  outline: none;
-  background: rgb(73, 92, 72);
-  color: white;
-
-  .back__svg{
-    transform: rotate(180deg);
-  }
-
-  &:hover{
-    .back__svg--arrow{
-      transform: translateY(7%);
-      transition: transform 0.5s ease;
-    }
-  }
-}
-
-
