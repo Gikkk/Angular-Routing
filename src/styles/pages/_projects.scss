@@ -15,11 +15,52 @@
     row-gap: 3rem;
   }
 
+  .projects__item{
+    position: relative;
+
+    &:before {
+      transition: all .5s ease;
+      content: "";
+      border-radius: 0.5rem;
+      @extend %position-absolute;
+      background: #333;
+      transform: scale(0);
+    }
+
+    &:hover:before {
+      height: 250px;
+      opacity: .5;
+      transform: scale(1);
+    }
+
+    &:after {
+      transition: all .6s ease .2s;
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      right: 8px;
+      bottom: 8px;
+      border: 1px solid #aaa;
+      background: #000;
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    &:hover:after {
+      height: 232px;
+      opacity: .35;
+      transform: scale(1);
+    }
+  }
+
   .projects__img{
     height: 300px;
     width: 100%;
     object-fit: cover;
     object-position: 50% 0;
+    width: 290px;
+    height: 250px;
     border-radius: 0.5rem;
   }
 
