@@ -16,7 +16,6 @@ import { FooterComponent } from './footer/footer.component';
 import { CircularMenuComponent } from './main/circular-menu/circular-menu.component';
 import { TechStackComponent } from './tech-stack/tech-stack.component';
 import { FocusComponent } from './focus/focus.component';
-import { LanguageComponent } from './about/language/language.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +31,6 @@ import { LanguageComponent } from './about/language/language.component';
     CircularMenuComponent,
     TechStackComponent,
     FocusComponent,
-    LanguageComponent,
   ],
   imports: [
     BrowserModule,
