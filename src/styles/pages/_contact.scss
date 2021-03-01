@@ -50,6 +50,12 @@
   .contact{
     text-align: left;
 
+    .contact__box{
+      display: grid;
+      grid-template-columns: 1fr 0.5fr;
+      padding: 0 2rem;
+    }
+
     .contact__title{
       text-align: center;
       // font-size: 2rem;
