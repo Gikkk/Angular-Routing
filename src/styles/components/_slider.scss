@@ -1,6 +1,6 @@
 .slider {
   @extend %flex-centring;
-  margin: 5rem 0 1rem 0;
+  padding-bottom: 1rem;
 
   .slider__wrapper {
     position: relative;
