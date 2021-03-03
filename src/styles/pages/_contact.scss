@@ -14,11 +14,13 @@
   .box{
     background: $background;
     padding: 1rem;
+    border-radius: 0.5rem 0.5rem 0 0;
   }
 
   .box__details{
     background:  #1b242f;
     padding: 1rem;
+    border-radius: 0 0 0.5rem 0.5rem;
   }
 
   .box__title{
@@ -54,6 +56,14 @@
       display: grid;
       grid-template-columns: 1fr 0.5fr;
       padding: 0 2rem;
+    }
+
+    .box{
+      border-radius: 0.5rem 0 0 0.5rem;
+    }
+
+    .box__details{
+      border-radius: 0 0.5rem 0.5rem 0;
     }
 
     .contact__title{
