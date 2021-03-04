@@ -15,15 +15,24 @@
     row-gap: 3rem;
   }
 
+  .projects__img{
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 20%;
+    border-radius: 0.5rem;
+    transform: scale(1.1);
+    transition: all 0.4s ease-in-out;
+  }
 
   .projects__item{
-    .hovereffect {
+    .projects__hovereffect {
       overflow: hidden;
       position: relative;
       border-radius: 0.5rem;
     }
 
-    .hovereffect .overlay {
+    .projects__overlay{
       width: 100%;
       height: 100%;
       position: absolute;
@@ -33,12 +42,7 @@
       transition: all 0.4s ease-in-out;
     }
 
-    .hovereffect img {
-      transform: scale(1.1);
-      transition: all 0.4s ease-in-out;
-    }
-
-    .hovereffect div.inf {
+    .projects__box{
       display: inline-block;
       border: 1px solid #fff;
       opacity: 0;
@@ -51,7 +55,7 @@
       left: 7.5%;
     }
 
-    .icon{
+    .projects__icon{
       width: 50px;
       height: 50px;
       position: absolute;
@@ -61,27 +65,19 @@
   }
 
   .projects__item:hover{
-    .hovereffect .overlay {
+    .projects__overlay {
       background-color: rgba(170,170,170,0.4);
     }
 
-    .hovereffect img {
+    .projects__img{
       transform: scale(1);
     }
 
-    .hovereffect div.inf {
+    .projects__box{
       opacity: 1;
       transform: scale(1);
       background-color: rgba(0,0,0,0.4);
     }
-  }
-
-  .projects__img{
-    height: 300px;
-    width: 100%;
-    object-fit: cover;
-    object-position: 50% 20%;
-    border-radius: 0.5rem;
   }
 
   .projects__container{
@@ -193,7 +189,7 @@
       height: 400px;
     }
 
-    .hovereffect{
+    .projects__hovereffect{
       grid-area: image;
     }
 
