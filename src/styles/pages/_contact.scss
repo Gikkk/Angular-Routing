@@ -83,9 +83,10 @@
 }
 
 
-@media (min-width: 1024px){
-  .contact__box{
-    display: grid;
-    grid-template-columns: 1fr 0.5fr;
+@media (min-width: 1040px){
+  .contact{
+    .contact__box{
+      padding: 0 4rem;
+    }
   }
 }

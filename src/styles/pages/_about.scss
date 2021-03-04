@@ -30,7 +30,7 @@
     }
 
     .details__info--highlighted{
-      color: rgb(100, 100, 60);
+      color: $secondary-color;
     }
   }
 }
@@ -84,6 +84,7 @@
 
 @media (min-width: 1040px){
   .info{
+    padding: 1rem 6rem 1rem 5rem;
 
     .slider{
       .slider__wrapper{
