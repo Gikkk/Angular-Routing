@@ -8,10 +8,6 @@
 	transition: transform 330ms ease-out;
 }
 
-.hamburger.open {
-	transform: rotate(-45deg);
-}
-
 .hamburger__line {
 	background-color: #fff;
 	border-radius: 3px;
@@ -19,27 +15,30 @@
 	height: 4px;
 }
 
-.hamburger__line.hamburger__line--half {
+.hamburger__line--half {
 	width: 50%;
 }
 
-.hamburger__line.hamburger__line--start{
+.hamburger__line--start{
 	transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
 	transform-origin: right;
 }
-.open {
-	.hamburger__line.hamburger__line--start{
-		transform: rotate(-90deg) translateX(2px);
-	}
-	.hamburger__line.hamburger__line--end{
-		transform: rotate(-90deg) translateX(-2px);
-	}
-}
 
-.hamburger__line.hamburger__line--end{
+.hamburger__line--end{
 	align-self: flex-end;
 	transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
 	transform-origin: left;
+}
+
+.open {
+  transform: rotate(-45deg);
+
+	.hamburger__line--start{
+		transform: rotate(-90deg) translateX(2px);
+	}
+	.hamburger__line--end{
+		transform: rotate(-90deg) translateX(-2px);
+	}
 }
 
 @media (min-width: 640px){
