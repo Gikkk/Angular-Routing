@@ -12,9 +12,10 @@
   .details{
     padding: 1rem;
     background: $background;
-    color: white;
+    color: $primary-color;
     border-radius: 0.5rem;
     margin-top: 1rem;
+    box-shadow: inset 0 0 10px white;
 
     .details__title{
       font-size: 1.5rem;
@@ -47,6 +48,7 @@
   .CV__btn{
     @extend %btn--scalable;
     padding: 16px;
+    box-shadow: inset 0 0 10px white;
   }
 }
 

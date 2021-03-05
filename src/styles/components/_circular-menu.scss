@@ -51,7 +51,7 @@
     transition: transform .3s ease, background .2s ease;
 
     svg{
-      fill: white;
+      fill: $primary-color;
     }
 
     &:hover {
