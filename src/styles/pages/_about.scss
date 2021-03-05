@@ -11,7 +11,7 @@
 
   .details{
     padding: 1rem;
-    background: #252934;
+    background: $background;
     color: white;
     border-radius: 0.5rem;
     margin-top: 1rem;
@@ -31,6 +31,7 @@
 
     .details__info--highlighted{
       color: $secondary-color;
+      font-weight: 600;
     }
   }
 }

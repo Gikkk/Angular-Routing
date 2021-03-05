@@ -13,6 +13,7 @@ export class MainComponent implements OnInit {
   myParams: object = {};
   windowHeight: number;
   windowWidth: number;
+  background = 'black';
 
   onResize(){
     this.windowHeight = window.innerHeight;
@@ -25,7 +26,7 @@ export class MainComponent implements OnInit {
 
     this.myStyle = {
       'height': `${this.windowHeight}px`,
-      'background': 'black',
+      'background': `${this.background}`,
       'z-index': 1,
       'top': 0,
       'left': 0,
