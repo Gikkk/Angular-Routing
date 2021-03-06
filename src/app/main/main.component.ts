@@ -25,7 +25,7 @@ export class MainComponent implements OnInit {
 
     this.myStyle = {
       'height': `${this.windowHeight}px`,
-      'background': "black",
+      'background': "transperent",
       'z-index': 1,
       'top': 0,
       'left': 0,
