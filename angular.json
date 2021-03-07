@@ -82,10 +82,10 @@
             "browserTarget": "My-Portfolio-New:build"
           }
         },
-        "test": {
+        "projects__tag": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
+            "main": "src/projects__tag.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
