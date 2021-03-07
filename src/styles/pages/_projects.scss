@@ -106,14 +106,14 @@
 
   .projects__tag{
     color: #0062FF;
-    font-family: 'Akaya Telivigala', cursive;
+    font-family: $secondary-font;
     margin-right: 0.375rem;
     font-size: 0.875rem;
   }
 }
 
   .project__btn{
-    background: linear-gradient(to right, $background 50%, $background-hover 50%);
+    background: linear-gradient(to right, $background 50%, $secondary-background 50%);
     color: $secondary-color;
     text-decoration: none;
     padding: 0.5rem;
@@ -132,7 +132,7 @@
   }
 
   .project__btn--highlighted{
-    background: linear-gradient(to right, $background-hover 50%, $background 50%);
+    background: linear-gradient(to right, $secondary-background 50%, $background 50%);
     color: $primary-color;
     text-decoration: none;
     padding: 0.5rem;

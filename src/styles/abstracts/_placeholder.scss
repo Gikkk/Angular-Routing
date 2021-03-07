@@ -1,3 +1,4 @@
+// display flex-centring
 %flex-centring{
   display: flex;
   justify-content: center;
@@ -19,6 +20,7 @@
   bottom: 0;
 }
 
+// buttons
 %btn--colorful{
   outline: none;
   background-image: linear-gradient(to right, #8490ff 0%, #62bdfc 48%, #8490ff 100%);
