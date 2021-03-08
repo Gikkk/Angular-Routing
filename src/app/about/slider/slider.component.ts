@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { OwlOptions } from 'ngx-owl-carousel-o';
-import LinearRing from 'ol/geom/LinearRing';
 
 @Component({
   selector: 'app-slider',
@@ -14,8 +12,8 @@ export class SliderComponent implements OnInit {
   Imagedata = ["assets/slider/myPic.jpg", "assets/slider/random.jpg", "assets/slider/practice.jpg"];
   startIndex = 1;
 
-functionSlide() {
-    const slides = Array.from(document.getElementsByClassName('mall-show-slide'));
+  functionSlide() {
+    const slides = Array.from(document.getElementsByClassName('slider__fade'));
     if (slides === []) {
       this.Repeat();
     }

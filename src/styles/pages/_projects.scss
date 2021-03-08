@@ -15,7 +15,7 @@
   }
 
   .projects__img{
-    height: 300px;
+    height: 280px;
     width: 100%;
     object-fit: cover;
     object-position: 50% 20%;
@@ -172,7 +172,7 @@
 
   .projects__item{
     display: grid;
-    height: 350px;
+    height: 380px;
     grid-template-columns: 1fr 1fr;
     column-gap: 1.5rem;
     align-items: center;
@@ -188,7 +188,7 @@
   }
 
   .projects__img{
-    height: 400px;
+    height: 380px !important;
   }
 
   .projects__hovereffect{
