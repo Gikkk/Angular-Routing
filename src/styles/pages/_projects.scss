@@ -172,7 +172,7 @@
 
   .projects__item{
     display: grid;
-    height: 380px;
+    height: 350px;
     grid-template-columns: 1fr 1fr;
     column-gap: 1.5rem;
     align-items: center;
@@ -187,10 +187,6 @@
     text-align: right;
   }
 
-  .projects__img{
-    height: 380px !important;
-  }
-
   .projects__hovereffect{
     grid-area: image;
   }
@@ -201,6 +197,7 @@
 
   .projects__text{
     list-style: none;
+    font-size: 14px;
   }
 
   .text__left{
@@ -212,5 +209,17 @@
 @media (min-width: 1040px){
   .projects{
     padding: 5rem;
+
+    .projects__text {
+      font-size: 1rem;
+    }
+
+    .projects__item{
+      height: 400px;
+    }
+
+    .projects__img{
+      height: 400px;
+    }
   }
 }
