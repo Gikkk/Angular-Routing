@@ -9,3 +9,37 @@ button{
   transition: all .5s ease-out;
   padding: 1rem 0;
 }
+
+.div{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+label{
+  color: gray;
+}
+
+input{
+  background: transparent !important;
+  border: none;
+  border-right: 1px solid gray;
+  border-bottom: 1px solid gray;
+  outline: none;
+  color: white !important;
+  text-align: center;
+  padding: 0.2rem;
+  font-size: 14px;
+}
+
+textarea{
+  resize: vertical;
+  background: none;
+  border: none;
+  outline: none;
+  border-right: 1px solid gray;
+  border-bottom: 1px solid gray;
+  text-align: center;
+  padding: 0.2rem;
+  font-size: 14px;
+}

@@ -5,7 +5,7 @@
     <article class="box">
       <h3 class="box__title">SEND ME A MESSAGE</h3>
       <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
-        <div>
+        <div class="div">
           <label for="name">Your Name</label>
           <input id="name" formControlName="name" type="text" class="box__input">
           <span
@@ -13,7 +13,7 @@
           >The Name field is empty or not valid!</span>
         </div>
 
-        <div>
+        <div class="div">
           <label for="email">Your Email</label>
           <input id="email" formControlName="email" type="text" class="box__input">
           <span
@@ -21,7 +21,7 @@
           >The Email field is empty or not valid!</span>
         </div>
 
-        <div>
+        <div class="div">
           <label for="subject">Subject</label>
           <input id="subject" formControlName="subject" type="text" class="box__input">
           <span
@@ -29,9 +29,9 @@
           >The Subject field is empty or not valid!</span>
         </div>
 
-        <div>
+        <div class="div">
           <label for="message">Your Message</label>
-          <textarea id="message" formControlName="message" class="box__input"></textarea>
+          <textarea id="message" formControlName="message" rows="4" class="box__input"></textarea>
           <span
           *ngIf="!signUpForm.get('message').valid && signUpForm.get('message').touched"
           >The Message field is empty or not valid!</span>
