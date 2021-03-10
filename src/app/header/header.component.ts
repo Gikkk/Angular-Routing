@@ -28,7 +28,6 @@ export class HeaderComponent implements AfterViewInit {
     }else{
       this.renderer.removeClass(this.navbar.nativeElement, "navbar__sticky");
     }
-    console.log('event started');
   }
 
   activeClass(){
