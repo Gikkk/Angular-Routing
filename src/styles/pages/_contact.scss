@@ -42,9 +42,17 @@
     border-radius: 0.3rem;
   }
 
+  .box__status{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid white;
+  }
+
   .box__text{
     color: $primary-color;
-    margin: 0 0 0 0.5rem
+    margin: 0 0 0 0.5rem;
+    font-size: 14px;
   }
 }
 
