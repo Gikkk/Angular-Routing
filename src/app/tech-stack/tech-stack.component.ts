@@ -9,15 +9,15 @@ export class TechStackComponent implements OnInit {
 
   constructor() { }
 
-  status: boolean = false;
-  buttonText = 'Stop Animation';
+  status: boolean = true;
+  buttonText = 'Start Animation';
 
   toggleAnimation(){
     this.status = !this.status;
-    if(this.status === false){
-      this.buttonText = 'Stop Animation'
+    if(this.status === true){
+      this.buttonText = 'Start Animation'
     }else{
-      this.buttonText = "Start Animation";
+      this.buttonText = "Stop Animation";
     }
   }
 

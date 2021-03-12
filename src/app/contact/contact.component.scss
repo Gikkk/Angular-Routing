@@ -2,9 +2,10 @@ button{
   border-radius: .5rem;
   outline: none;
   margin-top: 2rem;
-  box-shadow: inset 0 0 10px #dfd9d9;
-  color: gray;
-  font-weight: 700;
+  box-shadow: inset 0 0 10px white;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   background: rgba(0,0,0,.6);
   transition: all .5s ease-out;
   padding: 1rem 0;
@@ -13,11 +14,24 @@ button{
 .div{
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  position: relative;
 }
 
 label{
-  color: rgb(180, 147, 161);
+  color: #4b6cc1;
+  font-weight: 600;
+}
+
+span{
+  color: red;
+  font-size: 10px;
+  font-weight: 600;
+  position: absolute;
+  background: white;
+  padding: 0.2rem;
+  border-radius: 2px;
+  top: 100%;
 }
 
 input{
@@ -53,17 +67,17 @@ textarea.ng-invalid.ng-touched{
   border-bottom: 1px solid red;
 }
 
-// input:-webkit-autofill,
-// input:-webkit-autofill:hover,
-// input:-webkit-autofill:focus,
-// textarea:-webkit-autofill,
-// textarea:-webkit-autofill:hover,
-// textarea:-webkit-autofill:focus,
-// select:-webkit-autofill,
-// select:-webkit-autofill:hover,
-// select:-webkit-autofill:focus {
-//   border: 1px solid green;
-//   -webkit-text-fill-color: green;
-//   -webkit-box-shadow: 0 0 0px 1000px #000 inset;
-//   transition: background-color 5000s ease-in-out 0s;
-// }
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid green;
+  -webkit-text-fill-color: green;
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}

@@ -10,6 +10,7 @@ import { EmailValidator, FormControl, FormGroup, Validators } from '@angular/for
 export class ContactComponent implements AfterViewInit, OnInit{
   availability = 'Available'
   signUpForm: FormGroup;
+
   @ViewChild("status") onlineStatus: ElementRef;
 
   constructor( private http: HttpClient, private renderer: Renderer2,) { }
@@ -21,8 +22,8 @@ export class ContactComponent implements AfterViewInit, OnInit{
       subject: new FormControl(null, Validators.required),
       message: new FormControl(null, Validators.required)
     });
-
   }
+
 
   ngAfterViewInit(){
     this.getTime();
@@ -39,7 +40,7 @@ export class ContactComponent implements AfterViewInit, OnInit{
 
   getTime(){
     let currentTime = new Date();
-    let hour = currentTime.getHours()
+    let hour = currentTime.getHours();
 
     if (hour >= 9 && hour <= 16 ) {
       this.renderer.setStyle(this.onlineStatus.nativeElement, 'backgroundColor', 'rgb(28, 221, 28)');
