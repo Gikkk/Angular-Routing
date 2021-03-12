@@ -87,7 +87,8 @@
 
   .tech__btn{
     @extend %btn--colorful;
-    padding: 16px;
+    padding: 10px;
+    border-radius: 10px;
   }
 
   // pause animation
