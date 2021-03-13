@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, ElementRef, OnInit, AfterViewInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { EmailValidator, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -7,11 +7,13 @@ import { EmailValidator, FormControl, FormGroup, Validators } from '@angular/for
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements AfterViewInit, OnInit{
-  availability = 'Available'
+export class ContactComponent implements OnInit{
+  availability = "Not available";
   signUpForm: FormGroup;
+  currentTime;
+  hour: number;
 
-  @ViewChild("status") onlineStatus: ElementRef;
+  @ViewChild("status") onlineStatus: ElementRef<HTMLElement>;
 
   constructor( private http: HttpClient, private renderer: Renderer2,) { }
 
@@ -22,11 +24,19 @@ export class ContactComponent implements AfterViewInit, OnInit{
       subject: new FormControl(null, Validators.required),
       message: new FormControl(null, Validators.required)
     });
-  }
 
+    setInterval(() => {
+      this.currentTime = new Date();
+      this.hour = this.currentTime.getHours();
 
-  ngAfterViewInit(){
-    this.getTime();
+      if (this.hour >= 9 && this.hour <= 19 ) {
+        this.renderer.setStyle(this.onlineStatus.nativeElement, 'backgroundColor', 'rgb(28, 221, 28)');
+        this.availability = "Available"
+      } else {
+        this.renderer.setStyle(this.onlineStatus.nativeElement, 'backgroundColor', 'red');
+        this.availability = "Not available"
+      }
+    }, 1800000);
   }
 
   onSubmit(){
@@ -36,17 +46,5 @@ export class ContactComponent implements AfterViewInit, OnInit{
       console.log(data);
       this.signUpForm.reset();
     });
-  }
-
-  getTime(){
-    let currentTime = new Date();
-    let hour = currentTime.getHours();
-
-    if (hour >= 9 && hour <= 16 ) {
-      this.renderer.setStyle(this.onlineStatus.nativeElement, 'backgroundColor', 'rgb(28, 221, 28)');
-    } else {
-      this.renderer.setStyle(this.onlineStatus.nativeElement, 'backgroundColor', 'red');
-      this.availability = 'Not available';
-    }
   }
 }

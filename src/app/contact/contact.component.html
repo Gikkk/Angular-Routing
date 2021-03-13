@@ -5,39 +5,41 @@
     <article class="box">
       <h3 class="box__title">SEND ME A MESSAGE</h3>
       <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
-        <div class="div">
-          <label for="name">Your Name</label>
-          <input id="name" formControlName="name" type="text" class="box__input">
-          <span
+        <div class="form__item">
+          <label for="name" class="form__label">Your Name</label>
+          <input id="name" formControlName="name" type="text" class="form__input" >
+          <span class="form__error"
           *ngIf="!signUpForm.get('name').valid && signUpForm.get('name').touched"
           >The Name field is empty or not valid!</span>
         </div>
 
-        <div class="div">
-          <label for="email">Your Email</label>
-          <input id="email" formControlName="email" type="text" class="box__input">
-          <span
+        <div class="form__item">
+          <label for="email" class="form__label">Your Email</label>
+          <input id="email" formControlName="email" type="text" class="form__input">
+          <span class="form__error"
           *ngIf="!signUpForm.get('email').valid && signUpForm.get('email').touched"
           >The Email field is empty or not valid!</span>
         </div>
 
-        <div class="div">
-          <label for="subject">Subject</label>
-          <input id="subject" formControlName="subject" type="text" class="box__input">
-          <span
+        <div class="form__item">
+          <label for="subject" class="form__label">Subject</label>
+          <input id="subject" formControlName="subject" type="text" class="form__input">
+          <span class="form__error"
           *ngIf="!signUpForm.get('subject').valid && signUpForm.get('subject').touched"
           >The Subject field is empty or not valid!</span>
         </div>
 
-        <div class="div">
-          <label for="message">Your Message</label>
-          <textarea id="message" formControlName="message" rows="4" class="box__input"></textarea>
-          <span
+        <div class="form__item">
+          <label for="message" class="form__label">Your Message</label>
+          <textarea id="message" formControlName="message" rows="4" class="form__input"></textarea>
+          <span class="form__error"
           *ngIf="!signUpForm.get('message').valid && signUpForm.get('message').touched"
           >The Message field is empty or not valid!</span>
         </div>
 
-        <button type="submit" class="submit__btn">Submit</button>
+        <div class="div">
+          <button type="submit" class="submit__btn" [disabled]="!signUpForm.valid" [ngClass]="{'submit__btn--valid':signUpForm.valid}">Submit</button>
+        </div>
       </form>
     </article>
     <article class="box__details">
