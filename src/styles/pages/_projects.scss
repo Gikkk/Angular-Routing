@@ -21,8 +21,7 @@
     object-fit: cover;
     object-position: 50% 20%;
     border-radius: 0.5rem;
-    transform: scale(1.1);
-    transition: all 0.4s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
 
   .projects__item{
@@ -39,7 +38,7 @@
       overflow: hidden;
       top: 0;
       left: 0;
-      transition: all 0.4s ease-in-out;
+      transition: all 0.5s ease-in-out;
     }
 
     .projects__box{
@@ -47,7 +46,7 @@
       border: 1px solid #fff;
       opacity: 0;
       transform: scale(1.5);
-      transition: all 0.4s ease-in-out;
+      transition: all 0.5s ease-in-out;
       height: 85%;
       width: 85%;
       position: absolute;
@@ -65,13 +64,12 @@
   }
 
   .projects__item:hover{
-
     .projects__overlay {
       background-color: rgba(170,170,170,0.4);
     }
 
     .projects__img{
-      transform: scale(1);
+      transform: scale(1.1);
     }
 
     .projects__box{
@@ -90,7 +88,6 @@
     line-height: 1.5;
     padding: 0 0 0 24px;
     margin-bottom: 2rem;
-    transition: all 0.4s ease-in-out;
   }
 
   .projects__header{
@@ -98,7 +95,7 @@
     line-height: 1.3;
     font-size: 1.5rem;
     margin: 0;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.9s ease-in-out;
   }
 
   .projects__tags{

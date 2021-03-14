@@ -12,6 +12,7 @@ export class ContactComponent implements OnInit{
   signUpForm: FormGroup;
   currentTime;
   hour: number;
+  submitted = false;
 
   @ViewChild("status") onlineStatus: ElementRef<HTMLElement>;
 
@@ -44,6 +45,7 @@ export class ContactComponent implements OnInit{
      this.signUpForm.value
      ).subscribe(data=>{
       console.log(data);
+      this.submitted = true;
       this.signUpForm.reset();
     });
   }

@@ -1,0 +1,134 @@
+.form{
+  display: flex;
+  flex-direction: column;
+
+  .form__item{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+
+  .form__error{
+    color: rgb(207, 80, 80);
+    font-family: $secondary-font;
+    border: 1px solid rgb(207, 80, 80);
+    font-size: 12px;
+    font-weight: 600;
+    position: absolute;
+    background: $primary-color;
+    padding: 0.2rem;
+    border-radius: 2px;
+    top: 100%;
+  }
+
+  .form__success{
+    border: 1px solid green;
+    font-family: $secondary-font;
+    font-size: 16px;
+    font-weight: 600;
+    position: absolute;
+    background: white;
+    border-radius: 5px;
+    padding: 4px 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .form__success--text{
+    color: green;
+  }
+
+  .form__success--exit{
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity .25s ease-in-out;
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+  .form__label{
+    color: #4b6cc1;
+    font-weight: 600;
+  }
+
+  .form__input{
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid $primary-color;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+    color: $primary-color;
+
+    &:focus{
+      border-bottom: 1px solid #4b6cc1;
+    }
+  }
+
+  .form__textarea{
+    resize: vertical;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid $primary-color;
+    text-align: center;
+    padding: 1rem;
+    font-size: 14px;
+    color: $primary-color;
+  }
+
+  .ng-invalid.ng-touched,
+  .ng-invalid.ng-touched{
+    border-bottom: 1px solid rgb(207, 80, 80);
+  }
+
+  .form__input:-webkit-autofill,
+  .form__input:-webkit-autofill:hover,
+  .form__input:-webkit-autofill:focus,
+  .form__inputt:-webkit-autofill:active  {
+    transition: background-color 5000s;
+    -webkit-text-fill-color: $primary-color;
+  }
+
+  .submit__btn{
+    border-radius: .5rem;
+    outline: none;
+    margin-top: 2rem;
+    box-shadow: inset 0 0 10px rgb(94, 89, 89);
+    color: rgb(94, 89, 89);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 900;
+    background: $secondary-background;
+    transition: all .5s ease-out;
+    padding: 1rem 0;
+  }
+
+  .submit__btn--valid{
+    box-shadow: inset 0 0 10px $primary-color;
+    color: $primary-color;
+
+    &:hover{
+      box-shadow: inset 0 0 10px #4b6cc1;
+      color: #4b6cc1;
+    }
+  }
+}
+
+@media (min-width: 640px){
+  .form{
+    .form__input{
+      text-align: left;
+    }
+
+    .form__textarea{
+      text-align: left;
+    }
+  }
+}
