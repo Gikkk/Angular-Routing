@@ -88,6 +88,11 @@
     border-bottom: 1px solid rgb(207, 80, 80);
   }
 
+  .ng-valid.ng-touched,
+  .ng-valid.ng-touched{
+    border-bottom: 1px solid #4b6cc1;
+  }
+
   .form__input:-webkit-autofill,
   .form__input:-webkit-autofill:hover,
   .form__input:-webkit-autofill:focus,

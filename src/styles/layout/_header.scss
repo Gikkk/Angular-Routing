@@ -41,14 +41,15 @@
 
 .mobnav{
   height: 100%;
-  width: 0;
+  width: 70%;
   position: fixed;
   top: 0;
   left: 0;
   padding: 2rem 0;
   background: $primary-color;
-  overflow-x: hidden;
+  overflow: scroll;
   transition: 0.5s;
+  transform: translateX(-100vw);
 
   .mobnav__list{
     list-style: none;
@@ -56,6 +57,11 @@
     display: grid;
     row-gap: 1.5rem;
     margin: 1rem 0 2rem 0;
+
+    & li{
+      display: flex;
+      align-items: center;
+    }
   }
 
   .mobnav__item{
@@ -63,7 +69,8 @@
     color: $secondary-color;
     letter-spacing: 4px;
     font-weight: 700;
-    transition: 0.3s;
+    transition: 0.5s;
+    margin-left: 8px;
 
     &:hover{
       opacity: 0.8;
@@ -72,8 +79,8 @@
   }
 
   .mobnav__line{
-    width: 4.5rem;
-    height: 3px;
+    width: 40%;
+    height: 0.5px;
     background: $secondary-color;
   }
 
@@ -84,7 +91,7 @@
   }
 }
 
-// support
+support
 .navbar__sticky{
   padding: 0.2rem 1rem;
   background-color: $background;
@@ -92,15 +99,11 @@
 }
 
 .visible{
-  width: 70%;
   padding: 2rem;
+  transform: translateX(0vw);
 }
 
 .space{
-  right: -30%;
-}
-
-.space__fade{
   z-index: 100;
   background: $secondary-color;
   opacity: 0.5;
@@ -108,7 +111,13 @@
   height: 100%;
   position: fixed;
   right: 0;
+  overflow: scroll;
   transition: 0.5s;
+  transform: translateX(100vw);
+}
+
+.space__fade{
+  transform: translateX(0vw);
 }
 
 @media (min-width: 640px){

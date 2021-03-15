@@ -23,19 +23,38 @@
     <section class="mobnav" [ngClass]="{'visible' : active}">
       <article>
         <ul class="mobnav__list">
-          <li><a class="mobnav__item" href="" >Home</a></li>
-          <li><a class="mobnav__item" href="" >Skills</a></li>
-          <li><a class="mobnav__item" href="" >Focus</a></li>
+          <li>
+            <img src="assets/mob-nav/homepage.png" alt="">
+            <a class="mobnav__item" href="" >Home</a>
+          </li>
+          <li>
+            <img src="assets/mob-nav/settings.png" alt="">
+            <a class="mobnav__item" href="" >Skills</a>
+          </li>
+          <li>
+            <img src="assets/mob-nav/aim.png" alt="">
+            <a class="mobnav__item" href="" >Focus</a>
+          </li>
           <div class="mobnav__line"></div>
-          <li><a class="mobnav__item" href="" >Who</a></li>
-          <li><a class="mobnav__item" href="" >What</a></li>
-          <li><a class="mobnav__item" href="" >Where</a></li>
+          <li>
+            <img src="assets/mob-nav/question.png" alt="">
+            <a class="mobnav__item" href="" >Who</a>
+          </li>
+          <li>
+            <img src="assets/mob-nav/what.png" alt="">
+            <a class="mobnav__item" href="" >What</a>
+          </li>
+          <li>
+            <img src="assets/mob-nav/pin.png" alt="">
+            <a class="mobnav__item" href="" >Where</a>
+          </li>
         </ul>
 
         <a href="" class="mobnav__btn">Contact</a>
       </article>
-      <div class="mobnav__space"></div>
     </section>
+
   </nav>
+  <div class="space" (click)="activeClass()" [ngClass]="{'space__fade' : active}"></div>
 </header>
-<div class="space" (click)="activeClass()" [ngClass]="{'space__fade' : active}"></div>
+
