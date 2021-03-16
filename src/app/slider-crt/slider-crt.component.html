@@ -1,0 +1,25 @@
+<div class="flex">
+  <div class="container">
+
+    <div class="mySlides fade">
+      <img class="img" src="../../assets/slider/practice.jpg">
+    </div>
+
+    <div class="mySlides fade">
+      <img class="img" src="../../assets/slider/random.jpg">
+    </div>
+
+    <div class="mySlides fade">
+      <img class="img" src="../../assets/slider/myPic.jpg">
+    </div>
+
+    <a class="prev" (click)="plusSlides(-1)"><img src="../../assets/slider/arrow-left.png" alt=""></a>
+    <a class="next" (click)="plusSlides(1)"><img src="../../assets/slider/arrow-right.png" alt=""></a>
+
+  </div>
+  <div style="text-align:center">
+    <span class="dot" (click)="currentSlide(1)"></span>
+    <span class="dot" (click)="currentSlide(2)"></span>
+    <span class="dot" (click)="currentSlide(3)"></span>
+  </div>
+</div>
