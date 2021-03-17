@@ -1,13 +1,12 @@
-import { Component, AfterViewInit, ViewChild, ElementRef, Renderer2, HostListener } from '@angular/core';
+import { Component, ViewChild, ElementRef, Renderer2, HostListener, OnInit } from '@angular/core';
 import { debounce } from '../debounce.decorator';
-
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements AfterViewInit {
+export class HeaderComponent implements OnInit {
 
   active = false;
   cancelScroll = false;
@@ -35,7 +34,8 @@ export class HeaderComponent implements AfterViewInit {
     this.cancelScroll = !this.cancelScroll
   }
 
-  ngAfterViewInit(): void {
+  ngOnInit(): void {
+
   }
 
 }
