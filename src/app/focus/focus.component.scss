@@ -1,0 +1,16 @@
+.focus{
+  opacity: 0;
+}
+
+.cssanimation{
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+  animation-name: fadeInBottom
+}
+
+@keyframes fadeInBottom {
+  from {
+      transform: translateY(50%);
+  }
+  to { opacity: 1 }
+}

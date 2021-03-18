@@ -1,0 +1,108 @@
+.contact{
+  text-align: center;
+  padding: 1rem 1rem 0  1rem;
+  background: url("../../assets/contact.jpg") no-repeat center center fixed;
+  background-size: cover;
+  box-shadow: inset 0 0 10px $primary-color;
+
+  .contact__title{
+    font-size: 2.5rem;
+    color: $primary-color;
+  }
+
+  .contact__text{
+    color: $primary-color;
+  }
+
+  .box{
+    background: $secondary-background;
+    padding: 1rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    box-shadow: inset 0 0 10px $primary-color;
+  }
+
+  .box__details{
+    background: $secondary-color;
+    padding: 1rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    box-shadow: inset 0 0 10px $primary-color;
+  }
+
+  .box__title{
+    color: $primary-color;
+  }
+
+  .box__subtitle{
+    margin: 2rem 0 0.5rem 0;
+    color: $primary-color;
+    text-transform: uppercase;
+  }
+
+  .box__item{
+    @extend %flex-centring;
+  }
+
+  .box__img{
+    width: 16px;
+    height: 16px;
+    background: $primary-color;
+    border-radius: 0.3rem;
+  }
+
+  .box__status{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid $primary-color;
+    background: red;
+  }
+
+  .box__text{
+    color: #4b6cc1;
+    margin: 0 0 0 0.5rem;
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+
+@media (min-width: 640px){
+  .contact{
+    text-align: left;
+
+    .contact__box{
+      display: grid;
+      grid-template-columns: 1fr 0.5fr;
+      padding: 0 2rem;
+    }
+
+    .box{
+      border-radius: 0.5rem 0 0 0.5rem;
+    }
+
+    .box__details{
+      border-radius: 0 0.5rem 0.5rem 0;
+    }
+
+    .contact__title{
+      text-align: center;
+      // font-size: 2rem;
+    }
+
+    .contact__text{
+      text-align: center;
+    }
+
+    .box__item{
+      justify-content: left;
+    }
+  }
+}
+
+
+@media (min-width: 1040px){
+  .contact{
+    .contact__box{
+      padding: 0 4rem;
+    }
+  }
+}

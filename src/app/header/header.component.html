@@ -1,0 +1,60 @@
+<header>
+  <nav class="navbar" #navbar>
+    <ul class="navbar__list">
+      <li><a class="navbar__item" [routerLinkActiveOptions]="{exact: true}" routerLink="/" routerLinkActive='active'>Home</a></li>
+      <li><a class="navbar__item" routerLink="/skills" routerLinkActive='active'>Skills</a></li>
+      <li><a class="navbar__item" routerLink="/focus" routerLinkActive='active'>Focus</a></li>
+    </ul>
+    <a href="">
+      <img class="header__logo" src="assets/logo.png" alt="logo">
+    </a>
+    <ul class="navbar__list">
+      <li><a class="navbar__item" routerLink="/who" routerLinkActive='active'>Who</a></li>
+      <li><a class="navbar__item" routerLink="/what" routerLinkActive='active'>What</a></li>
+      <li><a class="navbar__item" routerLink="/where" routerLinkActive='active'>Where</a></li>
+    </ul>
+
+    <section class="hamburger" (click)="activeClass()" [ngClass]="{'open' : active}">
+      <div class="hamburger__line hamburger__line--half hamburger__line--start"></div>
+      <div class="hamburger__line"></div>
+      <div class="hamburger__line hamburger__line--half hamburger__line--end"></div>
+    </section>
+
+    <section class="mobnav" [ngClass]="{'visible' : active}">
+      <article>
+        <ul class="mobnav__list">
+          <li>
+            <img src="assets/mob-nav/homepage.png" alt="">
+            <a class="mobnav__item" [routerLinkActiveOptions]="{exact: true}" routerLink="/" routerLinkActive='active'>Home</a>
+          </li>
+          <li>
+            <img src="assets/mob-nav/settings.png" alt="">
+            <a class="mobnav__item" routerLink="/skills" routerLinkActive='active'>Skills</a>
+          </li>
+          <li>
+            <img src="assets/mob-nav/aim.png" alt="">
+            <a class="mobnav__item" routerLink="/focus" routerLinkActive='active'>Focus</a>
+          </li>
+          <div class="mobnav__line"></div>
+          <li>
+            <img src="assets/mob-nav/question.png" alt="">
+            <a class="mobnav__item" routerLink="/who" routerLinkActive='active'>Who</a>
+          </li>
+          <li>
+            <img src="assets/mob-nav/what.png" alt="">
+            <a class="mobnav__item" routerLink="/what" routerLinkActive='active'>What</a>
+          </li>
+          <li>
+            <img src="assets/mob-nav/pin.png" alt="">
+            <a class="mobnav__item" routerLink="/where" routerLinkActive='active'>Where</a>
+          </li>
+        </ul>
+
+        <a href="" class="mobnav__btn">Contact</a>
+      </article>
+    </section>
+
+  </nav>
+  <div class="space" (click)="activeClass()" [ngClass]="{'space__fade' : active}"></div>
+</header>
+

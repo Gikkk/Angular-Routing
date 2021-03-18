@@ -1,0 +1,152 @@
+.navbar{
+  font-family: $secondary-font;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+  padding: 1rem 1rem 0 1rem;
+  z-index: 100;
+  text-transform: uppercase;
+
+  .header__logo{
+    width: 50px;
+    height: 50px;
+    margin: 0 2vw;
+  }
+
+
+  .navbar__list{
+    display: none;
+    list-style: none;
+    padding: 0;
+  }
+
+  .navbar__item{
+    padding-bottom: 5px;
+    margin: 0 2vw;
+    text-decoration: none;
+    color: $primary-color;
+    letter-spacing: 5px;
+    transition: all ease .3s;
+
+    &:hover{
+      opacity: 0.8;
+      text-shadow: 0px -2px 0px rgba(0,0,0,1), 0 0 5px rgba(255,255,255,1),0 -4px 5px rgba(255,255,255,1);
+    }
+  }
+}
+
+.mobnav{
+  height: 100%;
+  width: 70%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 2rem 0;
+  background: $primary-color;
+  overflow: scroll;
+  transition: 0.5s;
+  transform: translateX(-100vw);
+
+  .mobnav__list{
+    list-style: none;
+    padding: 0;
+    display: grid;
+    row-gap: 1.5rem;
+    margin: 1rem 0 2rem 0;
+
+    & li{
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .mobnav__item{
+    text-decoration: none;
+    color: $secondary-background;
+    letter-spacing: 4px;
+    font-weight: 700;
+    transition: 0.5s;
+    margin-left: 8px;
+
+    &:hover{
+      opacity: 0.8;
+      text-shadow: 0px -2px 0px rgba(0,0,0,1), 0 0 5px rgba(255,255,255,1),0 -4px 5px rgba(255,255,255,1);
+    }
+  }
+
+  .mobnav__line{
+    width: 40%;
+    height: 0.5px;
+    background: $secondary-color;
+  }
+
+  .mobnav__btn{
+    @extend %btn--scalable;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+}
+
+// support
+.navbar__sticky{
+  padding: 0.2rem 1rem;
+  background-color: $background;
+  box-shadow: inset 0 0 10px $primary-color;
+}
+
+.active{
+  border-bottom: 2px solid $secondary-background;
+  color: $secondary-color !important;
+}
+
+.visible{
+  padding: 2rem;
+  transform: translateX(0vw);
+}
+
+.space{
+  z-index: 100;
+  background: $secondary-color;
+  opacity: 0.5;
+  width: 30%;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  overflow: scroll;
+  transition: 0.5s;
+  transform: translateX(100vw);
+}
+
+.space__fade{
+  transform: translateX(0vw);
+}
+
+@media (min-width: 640px){
+
+  .navbar{
+    justify-content: center;
+
+    .navbar__list{
+      display: flex;
+    }
+  }
+
+  .active{
+    border-bottom: 2px solid $primary-color;
+    color: $primary-color !important;
+  }
+
+  .navbar__sticky{
+    padding: 0.2rem 0;
+    background-color: $primary-color;
+
+    .navbar__item{
+      color: $secondary-color;
+    }
+  }
+}

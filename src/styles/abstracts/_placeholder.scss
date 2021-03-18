@@ -1,0 +1,55 @@
+// display flex-centring
+%flex-centring{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// display grid - centring
+%grid-centring{
+  display: grid;
+  justify-items: center;
+}
+
+// positioning - absolute
+%position-absolute{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+// buttons
+%btn--colorful{
+  outline: none;
+  background-image: linear-gradient(to right, #8490ff 0%, #62bdfc 48%, #8490ff 100%);
+  background-size: 200% auto;
+  color: $primary-color;
+  border-radius: 5px;
+  font-weight: 700;
+  transition: all 300ms linear 0s;
+  text-decoration: none;
+
+  &:hover{
+    background-position: right center;
+  }
+}
+
+%btn--scalable{
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 1000px;
+  background: #4b6cc1;
+  color: $primary-color;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all ease .3s;
+
+  &:hover{
+    transform: scale(1.075);
+    box-shadow: inset 0 0 0 2px #4b6cc1;
+    background: none;
+    color: #4b6cc1;
+  }
+}

@@ -1,0 +1,135 @@
+.footer{
+  font-family: 'RocknRoll One', sans-serif;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  row-gap: 1rem;
+  padding: 1rem;
+  margin-top: 3rem;
+  background: $background;
+  position: relative;
+  box-shadow: inset 0 0 10px $primary-color;
+
+  .footer__btn{
+    background: $primary-color;
+    border-radius: 50%;
+    position: absolute;
+    top: -40px;
+    right: 0;
+    z-index: 3;
+    transition: 0.6s ease-out;
+    box-shadow: inset 0 0 10px $primary-color;
+
+    &:hover{
+      background: $background;
+
+      path{
+        fill: $primary-color;
+      }
+
+      .svg__hoverable{
+        transform: translateY(35%);
+        transition: 0.6s ease-out;
+      }
+    }
+  }
+
+  .footer__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .footer__header{
+    letter-spacing: 2px;
+    color: $primary-color;
+    margin: 0.5rem 0;
+  }
+
+  .footer__img{
+    height: 30px;
+    width: 30px;
+    margin-right: 0.5rem;
+  }
+
+  .footer__valid{
+    display: flex;
+    align-items: center;
+    letter-spacing: 2px;
+    color: $primary-color;
+  }
+
+  .footer__icons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 0.5rem;
+  }
+
+  .footer__facebook{
+    width: 35px;
+    height: 35px;
+    padding: 1px;
+    border-radius: 5px;
+    fill: $primary-color;
+    background: $secondary-background;
+
+    &:hover{
+      fill: $primary-color;
+      background: #4267B2;
+    }
+  }
+
+  .footer__instagram{
+    padding: 5px;
+    border-radius: 5px;
+    fill: $primary-color;
+    background: $secondary-background;
+
+    &:hover{
+      fill: $primary-color;
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+    }
+  }
+
+  .footer__github{
+    padding: 5px;
+    border-radius: 5px;
+    fill: $primary-color;
+    background: $secondary-background;
+
+    &:hover{
+      fill: $primary-color;
+      background: rgb(64, 120, 192);
+    }
+  }
+
+  .footer__google{
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    border-radius: 5px;
+    fill: $primary-color;
+    background: $secondary-background;
+
+    &:hover{
+      fill: $primary-color;
+      background: linear-gradient( 45deg, #EB4335, #FBBC05, #34A853, #4285F4);
+    }
+  }
+}
+
+@media(min-width: 640px){
+  .footer{
+    grid-template-columns: 1fr 1fr;
+
+    .footer__content{
+      margin: 0;
+      flex-direction: row;
+    }
+
+    .footer__header{
+      margin: 0 1rem 0 0;
+    }
+  }
+}
