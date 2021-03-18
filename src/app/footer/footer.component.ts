@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ScrollService } from  '../scroll.service'
 
 @Component({
   selector: 'app-footer',
@@ -7,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  constructor( private scrollService: ScrollService) {
+    this.scrollService.scrollToTop();
+  }
 
   backToTop(){
-    window.scrollTo({top: 0, behavior: "smooth"});
+    this.scrollService.scrollToTop();
   }
 
   ngOnInit(): void {

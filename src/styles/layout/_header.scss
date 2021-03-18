@@ -26,6 +26,7 @@
   }
 
   .navbar__item{
+    padding-bottom: 5px;
     margin: 0 2vw;
     text-decoration: none;
     color: $primary-color;
@@ -66,7 +67,7 @@
 
   .mobnav__item{
     text-decoration: none;
-    color: $secondary-color;
+    color: $secondary-background;
     letter-spacing: 4px;
     font-weight: 700;
     transition: 0.5s;
@@ -96,6 +97,11 @@
   padding: 0.2rem 1rem;
   background-color: $background;
   box-shadow: inset 0 0 10px $primary-color;
+}
+
+.active{
+  border-bottom: 2px solid $secondary-background;
+  color: $secondary-color !important;
 }
 
 .visible{
@@ -128,6 +134,11 @@
     .navbar__list{
       display: flex;
     }
+  }
+
+  .active{
+    border-bottom: 2px solid $primary-color;
+    color: $primary-color !important;
   }
 
   .navbar__sticky{

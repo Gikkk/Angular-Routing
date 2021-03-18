@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { ParticlesModule } from 'angular-particle';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
@@ -16,6 +17,16 @@ import { FooterComponent } from './footer/footer.component';
 import { CircularMenuComponent } from './main/circular-menu/circular-menu.component';
 import { TechStackComponent } from './tech-stack/tech-stack.component';
 import { FocusComponent } from './focus/focus.component';
+import { NavigationComponent } from './navigation/navigation.component';
+
+const appRoutes: Routes = [
+  {path: '', component: MainComponent},
+  {path: 'skills', component: TechStackComponent},
+  {path: 'focus', component: FocusComponent},
+  {path: 'who', component: AboutComponent},
+  {path: 'what', component: ProjectComponent},
+  {path: 'where', component: ContactComponent}
+]
 
 @NgModule({
   declarations: [
@@ -31,13 +42,19 @@ import { FocusComponent } from './focus/focus.component';
     CircularMenuComponent,
     TechStackComponent,
     FocusComponent,
+    NavigationComponent,
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     ParticlesModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes, {
+      // useHash: true,
+      anchorScrolling: 'enabled'
+    })
   ],
+  exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })

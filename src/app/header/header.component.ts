@@ -1,5 +1,7 @@
 import { Component, ViewChild, ElementRef, Renderer2, HostListener, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { debounce } from '../debounce.decorator';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +14,7 @@ export class HeaderComponent implements OnInit {
   cancelScroll = false;
 
   @ViewChild("navbar") navbar: ElementRef;
-  constructor( private renderer: Renderer2) {}
+  constructor( private renderer: Renderer2, private activatedRoute: ActivatedRoute, private viewportScroller: ViewportScroller ) {}
 
   @HostListener("window:scroll", [])
   @debounce()
@@ -29,9 +31,19 @@ export class HeaderComponent implements OnInit {
     }
   }
 
+
   activeClass(){
     this.active = !this.active;
     this.cancelScroll = !this.cancelScroll
+  }
+
+  scroll() {
+    this.activatedRoute.fragment.subscribe((fragment: string) => {
+      if (fragment) {
+        this.viewportScroller.scrollToAnchor(fragment);
+        console.log(fragment);
+      }
+    })
   }
 
   ngOnInit(): void {

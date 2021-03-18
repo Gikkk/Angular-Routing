@@ -1,17 +1,17 @@
 <header>
   <nav class="navbar" #navbar>
     <ul class="navbar__list">
-      <li><a href="" class="navbar__item">Home</a></li>
-      <li><a href="" class="navbar__item">Skills</a></li>
-      <li><a href="" class="navbar__item">Focus</a></li>
+      <li><a class="navbar__item" [routerLinkActiveOptions]="{exact: true}" routerLink="/" routerLinkActive='active'>Home</a></li>
+      <li><a class="navbar__item" routerLink="/skills" routerLinkActive='active' fragment='test' (click)='scroll()'>Skills</a></li>
+      <li><a class="navbar__item" routerLink="/focus" routerLinkActive='active'>Focus</a></li>
     </ul>
     <a href="">
       <img class="header__logo" src="assets/logo.png" alt="logo">
     </a>
     <ul class="navbar__list">
-      <li><a href="" class="navbar__item">Who</a></li>
-      <li><a href="" class="navbar__item">What</a></li>
-      <li><a href="" class="navbar__item">Where</a></li>
+      <li><a class="navbar__item" routerLink="/who" routerLinkActive='active'>Who</a></li>
+      <li><a class="navbar__item" routerLink="/what" routerLinkActive='active'>What</a></li>
+      <li><a class="navbar__item" routerLink="/where" routerLinkActive='active'>Where</a></li>
     </ul>
 
     <section class="hamburger" (click)="activeClass()" [ngClass]="{'open' : active}">
@@ -25,28 +25,28 @@
         <ul class="mobnav__list">
           <li>
             <img src="assets/mob-nav/homepage.png" alt="">
-            <a class="mobnav__item" href="" >Home</a>
+            <a class="mobnav__item" [routerLinkActiveOptions]="{exact: true}" routerLink="/" routerLinkActive='active'>Home</a>
           </li>
           <li>
             <img src="assets/mob-nav/settings.png" alt="">
-            <a class="mobnav__item" href="" >Skills</a>
+            <a class="mobnav__item" routerLink="/skills" routerLinkActive='active'>Skills</a>
           </li>
           <li>
             <img src="assets/mob-nav/aim.png" alt="">
-            <a class="mobnav__item" href="" >Focus</a>
+            <a class="mobnav__item" routerLink="/focus" routerLinkActive='active'>Focus</a>
           </li>
           <div class="mobnav__line"></div>
           <li>
             <img src="assets/mob-nav/question.png" alt="">
-            <a class="mobnav__item" href="" >Who</a>
+            <a class="mobnav__item" routerLink="/who" routerLinkActive='active'>Who</a>
           </li>
           <li>
             <img src="assets/mob-nav/what.png" alt="">
-            <a class="mobnav__item" href="" >What</a>
+            <a class="mobnav__item" routerLink="/what" routerLinkActive='active'>What</a>
           </li>
           <li>
             <img src="assets/mob-nav/pin.png" alt="">
-            <a class="mobnav__item" href="" >Where</a>
+            <a class="mobnav__item" routerLink="/where" routerLinkActive='active'>Where</a>
           </li>
         </ul>
 
