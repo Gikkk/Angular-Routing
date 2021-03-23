@@ -10,8 +10,7 @@ export class FocusComponent implements AfterViewInit, OnDestroy {
   constructor(private renderer: Renderer2) { }
 
   @ViewChild('testing') test: ElementRef;
-  private observer: IntersectionObserver;
-
+  private observer: IntersectionObserver | undefined;
 
   ngAfterViewInit() {
     this.observer = new IntersectionObserver( entries => {
@@ -30,8 +29,14 @@ export class FocusComponent implements AfterViewInit, OnDestroy {
     this.observer.observe(this.test.nativeElement as HTMLElement);
   }
 
-  ngOnDestroy() {
-    this.observer.disconnect();
+  ngOnDestroy(){
+    if (this.observer) {
+      this.observer.disconnect();
+      this.observer = undefined;
+      console.log(this.observer + ' test');
+
+    }
+    console.log(this.observer + ' test');
   }
 
 }
