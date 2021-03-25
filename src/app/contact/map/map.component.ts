@@ -62,6 +62,11 @@ export class MapComponent implements OnInit {
     });
   }
 
+
+  onMouseWheel() {
+    console.log('tes');
+  }
+
   ngOnInit(): void {
     this.initMap();
   }
