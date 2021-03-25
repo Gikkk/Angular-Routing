@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import Map from 'ol/Map';
 import View from 'ol/View';
 import OSM from 'ol/source/OSM';
@@ -23,6 +24,8 @@ export class MapComponent implements OnInit {
   map: Map;
   vectorSource: VectorSource;
   vectorLayer: VectorLayer;
+  mapZoom =  false;
+  mapOverlay = true;
 
   constructor() { }
 
@@ -62,9 +65,13 @@ export class MapComponent implements OnInit {
     });
   }
 
-
   onMouseWheel() {
-    console.log('tes');
+    this.mapZoom = true;
+  }
+
+  onMouseClick(){
+    this.mapZoom = false;
+    this.mapOverlay = false;
   }
 
   ngOnInit(): void {
