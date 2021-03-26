@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ParticlesModule } from 'angular-particle';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
@@ -47,11 +48,13 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     ParticlesModule,
     HttpClientModule,
+    NgxSpinnerModule,
     RouterModule.forRoot(appRoutes, {
       anchorScrolling: 'enabled'
     })
   ],
   exports: [RouterModule],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })

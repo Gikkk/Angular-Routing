@@ -21,6 +21,7 @@
     "@angular/router": "~10.0.3",
     "angular-particle": "^1.0.4",
     "ngx-owl-carousel-o": "^5.0.0",
+    "ngx-spinner": "^10.0.1",
     "ol": "^6.5.0",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",

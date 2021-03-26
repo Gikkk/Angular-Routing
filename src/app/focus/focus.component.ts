@@ -9,7 +9,7 @@ export class FocusComponent implements AfterViewInit, OnDestroy {
 
   constructor(private renderer: Renderer2) { }
 
-  @ViewChild('testing') test: ElementRef;
+  @ViewChild('fadeIn') fadeInEl: ElementRef;
   private observer: IntersectionObserver | undefined;
 
   ngAfterViewInit() {
@@ -17,7 +17,7 @@ export class FocusComponent implements AfterViewInit, OnDestroy {
       entries.forEach(entry => {
         if (entry.isIntersecting === true ) {
           console.log(entries);
-          this.renderer.addClass(this.test.nativeElement, 'cssanimation');
+          this.renderer.addClass(this.fadeInEl.nativeElement, 'fadeInAnim');
         } else {
           console.log(entries);
         }
@@ -26,17 +26,14 @@ export class FocusComponent implements AfterViewInit, OnDestroy {
       threshold: 0.5
     });
 
-    this.observer.observe(this.test.nativeElement as HTMLElement);
+    this.observer.observe(this.fadeInEl.nativeElement as HTMLElement);
   }
 
   ngOnDestroy(){
     if (this.observer) {
       this.observer.disconnect();
       this.observer = undefined;
-      console.log(this.observer + ' test');
-
     }
-    console.log(this.observer + ' test');
   }
 
 }
