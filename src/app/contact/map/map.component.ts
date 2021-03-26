@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, Renderer2 } from '@angular/core';
 
 import Map from 'ol/Map';
 import View from 'ol/View';
@@ -20,6 +20,8 @@ import VectorLayer from 'ol/layer/Vector';
 })
 export class MapComponent implements OnInit {
 
+  @ViewChild("mapOverlay") mapOver: ElementRef;
+
   Telavi;
   map: Map;
   vectorSource: VectorSource;
@@ -27,7 +29,7 @@ export class MapComponent implements OnInit {
   mapZoom =  false;
   mapOverlay = true;
 
-  constructor() { }
+  constructor( private renderer: Renderer2) { }
 
   initMap(){
     this.Telavi = new Feature({
@@ -67,6 +69,7 @@ export class MapComponent implements OnInit {
 
   onMouseWheel() {
     this.mapZoom = true;
+    this.renderer.setStyle(this.mapOver.nativeElement, 'background-color', 'rgba(41, 38, 38, 0.296)');
   }
 
   onMouseClick(){
