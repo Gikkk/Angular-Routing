@@ -16,10 +16,7 @@ export class FocusComponent implements AfterViewInit, OnDestroy {
     this.observer = new IntersectionObserver( entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting === true ) {
-          console.log(entries);
           this.renderer.addClass(this.fadeInEl.nativeElement, 'fadeInAnim');
-        } else {
-          console.log(entries);
         }
       });
     },{

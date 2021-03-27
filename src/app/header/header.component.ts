@@ -1,43 +1,47 @@
-import { Component, ViewChild, ElementRef, Renderer2, HostListener, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { debounce } from '../debounce.decorator';
-import { ViewportScroller } from '@angular/common';
+import { Component, ViewChild, ElementRef, Renderer2, AfterViewInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements AfterViewInit, OnDestroy {
 
   active = false;
   cancelScroll = false;
 
+  constructor(private renderer: Renderer2) { }
+
   @ViewChild("navbar") navbar: ElementRef;
-  constructor( private renderer: Renderer2, private activatedRoute: ActivatedRoute, private viewportScroller: ViewportScroller ) {}
+  private observer: IntersectionObserver | undefined;
 
-  @HostListener("window:scroll", [])
-  @debounce()
-  onWindowScroll() {
-    let currentScrollPos = window.pageYOffset;
-    if (this.cancelScroll) {
-      return;
-    }
+  ngAfterViewInit() {
+    this.observer = new IntersectionObserver( entries => {
+      entries.forEach(entry => {
+        if (entry.boundingClientRect.top < 0 && entry.boundingClientRect.bottom > 0) {
+          this.renderer.addClass(this.navbar.nativeElement, 'navbar__sticky')
+        }else{
+          // this.renderer.removeClass(this.navbar.nativeElement, 'navbar__sticky')
+          console.log(entry);
+        }
+      });
+    },{
+      threshold: [0, .25, .5, .75, 1]
+    });
 
-    if(currentScrollPos > 0){
-      this.renderer.addClass(this.navbar.nativeElement, "navbar__sticky");
-    }else{
-      this.renderer.removeClass(this.navbar.nativeElement, "navbar__sticky");
+    this.observer.observe(this.navbar.nativeElement as HTMLElement);
+  }
+
+  ngOnDestroy(){
+    if (this.observer) {
+      this.observer.disconnect();
+      this.observer = undefined;
     }
   }
 
   activeClass(){
     this.active = !this.active;
     this.cancelScroll = !this.cancelScroll
-  }
-
-  ngOnInit(): void {
-
   }
 
 }
