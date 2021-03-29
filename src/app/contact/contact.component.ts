@@ -32,20 +32,28 @@ export class ContactComponent implements OnInit{
 
       if (this.hour >= 9 && this.hour <= 19 ) {
         this.renderer.setStyle(this.onlineStatus.nativeElement, 'backgroundColor', 'rgb(28, 221, 28)');
-        this.availability = "Available"
+        this.availability = "Available";
+        console.log('sdada');
+
       } else {
         this.renderer.setStyle(this.onlineStatus.nativeElement, 'backgroundColor', 'red');
-        this.availability = "Not available"
+        this.availability = "Not available";
+        console.log('sdadadadadasda');
+
       }
-    }, 1800000);
+    }, 3600000);
   }
 
   onSubmit(){
     this.http.post<{name: string, email: EmailValidator, subject: string, message: string}>('https://giorgi-zho-default-rtdb.europe-west1.firebasedatabase.app/messages.json',
      this.signUpForm.value
      ).subscribe(data=>{
-      console.log(data);
       this.submitted = true;
+
+      setTimeout(() => {
+        this.submitted = false;
+      }, 3000);
+
       this.signUpForm.reset();
     });
   }

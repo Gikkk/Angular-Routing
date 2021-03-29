@@ -24,6 +24,7 @@
 
   .form__success{
     border: 1px solid green;
+    color: green;
     font-family: $secondary-font;
     font-size: 16px;
     font-weight: 600;
@@ -32,23 +33,6 @@
     border-radius: 5px;
     padding: 4px 10px;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .form__success--text{
-    color: green;
-  }
-
-  .form__success--exit{
-    opacity: 0.5;
-    cursor: pointer;
-    transition: opacity .25s ease-in-out;
-
-    &:hover{
-      opacity: 1;
-    }
   }
 
   .form__label{

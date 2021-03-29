@@ -38,10 +38,7 @@
         </div>
 
         <div class="form__item">
-          <div *ngIf="submitted" class="form__success">
-            <span class="form__success--text">Successfully submitted</span>
-            <span class="form__success--exit" (click)='submitted = false' >&#10006;</span>
-          </div>
+          <span *ngIf="submitted" class="form__success">Successfully submitted</span>
           <button type="submit" class="submit__btn" [disabled]="!signUpForm.valid" [ngClass]="{'submit__btn--valid':signUpForm.valid}">Submit</button>
         </div>
       </form>

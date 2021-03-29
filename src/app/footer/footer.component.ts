@@ -10,24 +10,24 @@ export class FooterComponent implements OnInit {
 
   constructor( private scrollService: ScrollService) {}
 
-  Imagedata = ['../../assets/slider/myPic.jpg', '../../assets/slider/practice.jpg', '../../assets/slider/random.jpg']
-  startIndex = 0;
-
   backToTop(){
     this.scrollService.scrollToTop();
   }
 
-  Repeat() {
+  Imagedata = ['../../assets/slider/myPic.jpg', '../../assets/slider/practice.jpg', '../../assets/slider/random.jpg']
+  startIndex = 1;
+
+  repeat() {
     setTimeout(() => {
-      this.__FunctionSlide();
-      this.Repeat();
+      this.functionSlide();
+      this.repeat();
     }, 2000);
   }
 
-  __FunctionSlide() {
+  functionSlide() {
     const slides = Array.from(document.getElementsByClassName('mall-show-slide'));
     if (slides === []) {
-      this.Repeat();
+      this.repeat();
     }
     for (const x of slides) {
       const y = x as HTMLElement;
@@ -47,7 +47,7 @@ export class FooterComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.Repeat();
+    this.repeat();
   }
 }
 
