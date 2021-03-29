@@ -21,25 +21,27 @@ export class FooterComponent implements OnInit {
     setTimeout(() => {
       this.functionSlide();
       this.repeat();
-    }, 2000);
+    }, 5000);
   }
 
   functionSlide() {
     const slides = Array.from(document.getElementsByClassName('mall-show-slide'));
+
     if (slides === []) {
       this.repeat();
     }
+
     for (const x of slides) {
       const y = x as HTMLElement;
       y.style.display = 'none';
     }
+
     if (this.startIndex > slides.length - 1) {
       this.startIndex = 0;
       const slide = slides[this.startIndex] as HTMLElement;
       slide.style.display = 'block';
       this.startIndex++;
     } else {
-
       const slide = slides[this.startIndex] as HTMLElement;
       slide.style.display = 'block';
       this.startIndex++;

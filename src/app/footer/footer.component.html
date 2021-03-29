@@ -118,14 +118,14 @@
     <span>Copyright ©2021</span>
   </section>
 </footer>
-<div class="mall-slide">
-  <div class="slid-content">
+<div class="slider">
+  <div class="slider__content">
       <div class="mall-show-slide fade" *ngFor="let item of Imagedata;">
-          <img src="{{item}}" style="width:100%">
+          <img src="{{item}}" class="slider__img">
       </div>
-      <div class="mall-carousel-ind">
-          <ul>
-              <li *ngFor="let item of Imagedata; let i = index;" [class.mall-this]="startIndex - 1 === i"></li>
+      <div class="slider__dots">
+          <ul class="slider__list">
+              <li class="slider__item" *ngFor="let item of Imagedata; let i = index;" [class.mall-this]="startIndex - 1 === i"></li>
           </ul>
       </div>
   </div>
