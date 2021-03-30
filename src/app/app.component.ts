@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NgxSpinnerService } from "ngx-spinner";
 
 @Component({
   selector: 'app-root',
@@ -9,12 +8,7 @@ import { NgxSpinnerService } from "ngx-spinner";
 export class AppComponent {
   title = 'My-Portfolio-New';
 
-  constructor( private spinner: NgxSpinnerService) {
-    // this.spinner.show();
-
-    // setTimeout(() => {
-    //   this.spinner.hide();
-    // }, 2000);
+  constructor() {
   }
 }
 

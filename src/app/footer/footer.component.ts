@@ -1,29 +1,48 @@
-import { AfterViewInit, Component, OnInit, QueryList, ViewChildren} from '@angular/core';
+import { animate, state, style, transition, trigger } from '@angular/animations';
+import { Component, OnInit } from '@angular/core';
 import { ScrollService } from  '../scroll.service';
 
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.scss']
+  styleUrls: ['./footer.component.scss'],
+  animations: [trigger("fade", [
+  state("void", style({ opacity: 0 })),
+  transition("void <=> *", [animate("0.5s ease-in-out")])
+  ])]
 })
-export class FooterComponent implements OnInit, AfterViewInit {
+export class FooterComponent implements OnInit{
 
   constructor( private scrollService: ScrollService) {}
 
-  @ViewChildren('testing') slides: QueryList<any>;
-  @ViewChildren('slider__nav') navLinks: QueryList<any>;
+  ngOnInit(): void {
+
+  }
 
   backToTop(){
     this.scrollService.scrollToTop();
   }
 
-  ngAfterViewInit(){
+  counter = 0;
+  slideItems = [
+    { src: 'https://placeimg.com/600/600/any', title: 'Title 1' },
+    { src: 'https://placeimg.com/600/600/nature', title: 'Title 2' },
+    { src: 'https://placeimg.com/600/600/sepia', title: 'Title 3' },
+    { src: 'https://placeimg.com/600/600/people', title: 'Title 4' },
+    { src: 'https://placeimg.com/600/600/tech', title: 'Title 5' }
+  ];
 
+  showNextImage() {
+    if (this.counter < this.slideItems.length -1) {
+      this.counter += 1;
+    }
   }
 
-  ngOnInit(): void {
-
+  showPreviousImage() {
+    if (this.counter >= 1) {
+      this.counter = this.counter - 1;
+    }
   }
 }
 

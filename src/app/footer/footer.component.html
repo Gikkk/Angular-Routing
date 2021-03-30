@@ -119,7 +119,7 @@
   </section>
 </footer> -->
 
-  <div class="carousel">
+  <!-- <div class="carousel">
     <div class="slides">
       <img src="../../assets/slider/myPic.jpg"alt="random" class="slider__img active" #testing/>
       <img src="../../assets/slider/practice.jpg"alt="random" class="slider__img" #testing/>
@@ -130,4 +130,13 @@
       <li class="slider__dot" #slider__nav></li>
       <li class="slider__dot" #slider__nav></li>
     </ul>
-  </div>
+  </div> -->
+
+  <ul>
+    <li *ngFor="let item of slideItems;let i = index">
+      <img  *ngIf="i == counter" @fade [src]="slideItems[i].src" alt="item.title">
+    </li>
+  </ul>
+
+  <button (click)="showPreviousImage()">previous</button> ||
+  <button (click)="showNextImage()">next</button>
