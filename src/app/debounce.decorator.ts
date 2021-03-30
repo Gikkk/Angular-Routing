@@ -1,4 +1,4 @@
-export function debounce(delay: number = 100){
+export function debounce(delay: number){
   return function (target: any, propertyKey: string, descriptor: PropertyDescriptor) {
 
     const original = descriptor.value;

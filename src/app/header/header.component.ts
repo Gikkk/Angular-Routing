@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   @ViewChild("navbar") navbar: ElementRef;
 
   @HostListener("window:scroll", [])
-  @debounce()
+  @debounce(100)
   onWindowScroll() {
     let currentScrollPos = window.pageYOffset;
 

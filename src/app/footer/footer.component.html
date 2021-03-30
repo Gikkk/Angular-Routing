@@ -1,4 +1,4 @@
-<footer class="footer">
+<!-- <footer class="footer">
   <a class="footer__btn" (click)='backToTop()'>
     <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
     width="80" height="80" viewBox="0 0 300.000000 300.000000"
@@ -117,18 +117,17 @@
     <img src="../../assets/footer.png" alt="footer image" class="footer__img">
     <span>Copyright ©2021</span>
   </section>
-</footer>
-<div class="slider">
-  <div class="slider__content">
-      <div class="mall-show-slide fade" *ngFor="let item of Imagedata;">
-          <img src="{{item}}" class="slider__img">
-      </div>
-      <div class="slider__dots">
-          <ul class="slider__list">
-              <li class="slider__item" *ngFor="let item of Imagedata; let i = index;" [class.mall-this]="startIndex - 1 === i"></li>
-          </ul>
-      </div>
+</footer> -->
+
+  <div class="carousel">
+    <div class="slides">
+      <img src="../../assets/slider/myPic.jpg"alt="random" class="slider__img active" #testing/>
+      <img src="../../assets/slider/practice.jpg"alt="random" class="slider__img" #testing/>
+      <img src="../../assets/slider/random.jpg"alt="random" class="slider__img" #testing/>
+    </div>
+    <ul class="slider__dots">
+      <li class="slider__dot active" #slider__nav></li>
+      <li class="slider__dot" #slider__nav></li>
+      <li class="slider__dot" #slider__nav></li>
+    </ul>
   </div>
-</div>
-
-
