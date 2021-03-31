@@ -1,80 +1,98 @@
-$animationSpeed: 10s;
-
-.body {
+.container {
+  position: relative;
+  height: 500px;
+  top: 60px;
   display: flex;
-	align-items: center;
-	justify-content: center;
+  justify-content: center;
 }
 
-.slider {
-  margin-bottom: 3rem;
-  margin-top: 3rem;
-	background: white;
-	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .325);
-	height: 120px;
-	overflow:hidden;
-	position: relative;
-	width: 100%;
+.card {
+  display: flex;
+  height: 280px;
+  width: 200px;
+  background-color: #17141d;
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem #000;
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+}
 
-	&::before,
-	&::after {
-		background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-		content: "";
-		height: 120px;
-		position: absolute;
-		width: 80px;
-		z-index: 2;
-	}
+.card:not(:first-child) {
+    margin-left: -50px;
+}
 
-	&::after {
-		right: 0;
-		top: 0;
-		transform: rotateZ(180deg);
-	}
+.card:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+  .circle{
+    transform: translateX(50px);
+  }
 
-	&::before {
-		left: 0;
-		top: 0;
-	}
-
-	.slide-track {
-		animation: scroll $animationSpeed linear infinite;
-		display: flex;
-		width: calc(150px * 16);
-
-    &:hover{
-      animation-play-state: paused;
-    }
-	}
-
-	.slide {
-		height: 100px;
-		width: 150px;
-    text-align: center;
-	}
-
-  img{
-    width: 100px;
-    height: 100px;
-
-    &:hover{
-      background: chartreuse;
-    }
+  .title{
+    transform: translateX(50px);
   }
 }
 
-@media(min-width: 640px){
-  .slider{
-    width: 90%;
-  }
-
-  @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-300px * 8))}
-  }
+.card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
 }
 
-@keyframes scroll {
-	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(-150px * 8))}
+.title {
+  color: white;
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  transition: .4s ease-out;
 }
+
+.bar {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  height: 5px;
+  width: 150px;
+}
+
+.emptybar {
+  background-color: #2e3033;
+  width: 100%;
+  height: 100%;
+}
+
+.filledbar {
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  width: 0px;
+  height: 100%;
+  background: rgb(0,154,217);
+  background: linear-gradient(90deg, rgb(212, 49, 27) 0%, rgb(169, 177, 58) 65%, rgb(35, 172, 1) 100%);
+  transition: 0.6s ease-out;
+}
+
+.card:hover:nth-child(1) .filledbar {
+  width: 150px;
+  transition: 0.4s ease-out;
+}
+
+.card:hover:nth-child(2) .filledbar {
+  width: 115px;
+  transition: 0.4s ease-out;
+}
+
+.card:hover:nth-child(3) .filledbar {
+  width: 80px;
+  transition: 0.4s ease-out;
+}
+
+.circle {
+  position: absolute;
+  top: 150px;
+  left: 20px;
+  transition: 0.4s ease-out;
+}
+
