@@ -1,12 +1,32 @@
-<section class="slider">
-  <div class="slider__content">
-      <div class="slider__fade" *ngFor="let item of Imagedata;">
-          <img src="{{item}}" class="slider__img">
-      </div>
-      <div class="slider__dots">
-          <ul class="slider__list">
-              <li *ngFor="let item of Imagedata; let i = index;" [class.slider__item]="startIndex - 1 === i"></li>
-          </ul>
-      </div>
+<section class="language">
+  <div class="language__card">
+    <h3 class="language__title">Georgian</h3>
+    <div class="language__bar">
+      <div class="language__emptybar"></div>
+      <div class="language__filledbar"></div>
+    </div>
+    <div class="language__flag">
+      <img src="assets/card/georgia.png" alt="geo flag">
+    </div>
+  </div>
+  <div class="language__card">
+    <h3 class="language__title">English</h3>
+    <div class="language__bar">
+      <div class="language__emptybar"></div>
+      <div class="language__filledbar"></div>
+    </div>
+    <div class="language__flag">
+      <img src="assets/card/united-states.png" alt="eng flag">
+    </div>
+  </div>
+  <div class="language__card">
+    <h3 class="language__title">Russian</h3>
+    <div class="language__bar">
+      <div class="language__emptybar"></div>
+      <div class="language__filledbar"></div>
+    </div>
+    <div class="language__flag">
+      <img src="assets/card/russia.png" alt="rus flag">
+    </div>
   </div>
 </section>
