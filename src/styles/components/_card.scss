@@ -31,13 +31,16 @@
 
   &__card:hover:nth-child(1) &__filledbar {
     width: 100%;
+    background: linear-gradient(90deg, rgb(212, 49, 27) 0%, rgb(169, 177, 58) 65%, rgb(35, 172, 1) 100%);
   }
 
   &__card:hover:nth-child(2) &__filledbar {
     width: 70%;
+    background: linear-gradient(90deg, rgb(212, 49, 27) 0%, rgb(169, 177, 58) 80%, rgb(105, 185, 85) 100%);
   }
 
   &__card:hover:nth-child(3) &__filledbar {
+    background: linear-gradient(90deg, rgb(212, 49, 27) 0%, rgb(169, 177, 58) 100%);
     width: 50%;
   }
 
@@ -71,8 +74,7 @@
     z-index: 3;
     width: 0px;
     height: 100%;
-    background: rgb(0,154,217);
-    background: linear-gradient(90deg, rgb(212, 49, 27) 0%, rgb(169, 177, 58) 65%, rgb(35, 172, 1) 100%);
+    background: linear-gradient(90deg, rgb(212, 49, 27) 0%, rgb(169, 177, 58) 80%, rgb(113, 224, 85) 100%);
     transition: 0.6s ease-out;
   }
 

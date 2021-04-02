@@ -141,9 +141,10 @@
   }
 
   .intro__btn{
-    @extend %btn--colorful;
+    @extend %btn--scalable;
     padding: 16px 32px;
     margin-top: 2rem;
+    box-shadow: inset 0 0 10px white;
   }
 
 @media (min-width: 640px){

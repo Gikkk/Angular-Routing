@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild, Renderer2 } from '@angular/core';
+import { trigger, style, animate, transition } from '@angular/animations';
 
 import Map from 'ol/Map';
 import View from 'ol/View';
@@ -11,12 +12,24 @@ import {Icon, Style} from 'ol/style';
 import VectorSource from 'ol/source/Vector';
 import VectorLayer from 'ol/layer/Vector';
 
-
-
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
-  styleUrls: ['./map.component.scss']
+  styleUrls: ['./map.component.scss'],
+  animations: [
+    trigger(
+      'enterAnimation', [
+        transition(':enter', [
+          style({ opacity: 0}),
+          animate('500ms', style({ opacity: 1}))
+        ]),
+        transition(':leave', [
+          style({opacity: 1}),
+          animate('500ms', style({ opacity: 0}))
+        ])
+      ]
+    )
+  ],
 })
 export class MapComponent implements OnInit {
 

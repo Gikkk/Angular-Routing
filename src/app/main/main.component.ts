@@ -12,16 +12,9 @@ export class MainComponent implements OnInit {
   myStyle: object = {};
   myParams: object = {};
   windowHeight: number;
-  windowWidth: number;
 
   onResize(){
     this.windowHeight = window.innerHeight;
-    this.windowWidth = window.innerWidth;
-
-    if(this.windowWidth < 640){
-      this.windowHeight = this.windowHeight/1.75;
-    }
-
 
     this.myStyle = {
       'height': `${this.windowHeight}px`,
