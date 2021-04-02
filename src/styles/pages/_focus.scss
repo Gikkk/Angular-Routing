@@ -11,13 +11,18 @@
   .focus__title{
     color: $primary-color;
     margin: 2rem 0;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-style: italic
   }
 
   .focus__item{
     @extend %flex-centring;
     flex-direction: column;
+  }
+
+  .focus__img{
+    width: 200px;
+    height: 200px;
   }
 
   .focus__img:hover{
@@ -55,18 +60,6 @@
   }
 }
 
-// supporting
-.fadeInAnim{
-  animation: 0.8s both fadeInContent;
-}
-
-@keyframes fadeInContent {
-  from {
-      transform: translateY(50%);
-  }
-  to { opacity: 1 }
-}
-
 @media (min-width: 640px){
   .focus{
     margin: 3rem 3rem;
@@ -82,10 +75,6 @@
 @media (min-width: 1024px){
   .focus{
     margin: 3rem 5rem;
-
-    .focus__title{
-      font-size: 2rem;
-    }
 
     .focus__img{
       width: 350px;

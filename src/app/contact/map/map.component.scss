@@ -20,15 +20,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
-
-  p{
-    font-style: italic;
-    font-weight: 700;
-    font-size: 2rem;
-    color: rgb(41, 38, 38);
-    background: transparent;
-    margin: 0;
-  }
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 700;
+  color: rgb(41, 38, 38);
 }
 
 @media (min-width: 640px){
@@ -36,6 +31,10 @@
     height: 650px;
     margin: 4rem 2rem 0 2rem;
     padding-bottom: 2rem;
+  }
+
+  .map__overlay--text{
+    font-size: 2rem;
   }
 }
 

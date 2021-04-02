@@ -41,7 +41,7 @@ const appRoutes: Routes = [
     CircularMenuComponent,
     TechStackComponent,
     FocusComponent,
-    CardComponent
+    CardComponent,
 ],
   imports: [
     BrowserModule,

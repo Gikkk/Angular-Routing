@@ -2,6 +2,7 @@
   @extend %flex-centring;
   flex-direction: column;
   text-decoration: underline;
+  opacity: 0;
 
   .carousel__title{
     font-size: 2rem;
@@ -27,6 +28,7 @@
     transform-origin: center;
     transform-style: preserve-3d;
     animation: carousel 15s infinite cubic-bezier(0.77, 0, 0.175, 1) forwards;
+    animation-play-state: paused;
   }
 
   // Individual item
@@ -84,6 +86,18 @@
       }
     }
   }
+}
+
+// supporting
+.fadeInAnim{
+  animation: 0.8s both fadeInContent;
+}
+
+@keyframes fadeInContent {
+  from {
+      transform: translateY(20%);
+  }
+  to { opacity: 1 }
 }
 
 // Carousel animation
