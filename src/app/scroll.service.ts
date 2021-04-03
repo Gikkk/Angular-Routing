@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
 
 @Injectable({
@@ -7,7 +6,7 @@ import { ViewportScroller } from '@angular/common';
 })
 export class ScrollService {
 
-  constructor( private activatedRoute: ActivatedRoute, private viewportScroller: ViewportScroller) {}
+  constructor( private viewportScroller: ViewportScroller) {}
 
   scrollToTop() {
     this.viewportScroller.scrollToPosition([0, 0])

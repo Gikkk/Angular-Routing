@@ -9,6 +9,8 @@ export class ProjectComponent implements OnInit {
 
   constructor() {}
 
+  showMyElement;
+
   ngOnInit(): void {
   }
 

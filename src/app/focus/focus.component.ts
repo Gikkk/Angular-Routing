@@ -17,6 +17,7 @@ export class FocusComponent implements AfterViewInit, OnDestroy {
       entries.forEach(entry => {
         if (entry.isIntersecting === true ) {
           this.renderer.addClass(this.fadeInEl.nativeElement, 'fadeInAnim');
+          console.log('focus loaded');
         }
       });
     },{

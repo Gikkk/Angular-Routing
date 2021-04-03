@@ -20,6 +20,7 @@ export class TechStackComponent implements AfterViewInit, OnDestroy {
         if (entry.isIntersecting === true ) {
           this.renderer.addClass(this.fadeInEl.nativeElement, 'fadeInAnim');
           this.renderer.setStyle(this.rotatableEl.nativeElement, 'animation-play-state', 'running');
+          console.log('tech stack loaded');
         }
       });
     },{
