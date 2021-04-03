@@ -17,9 +17,10 @@ export class TechStackComponent implements AfterViewInit, OnDestroy {
   ngAfterViewInit() {
     this.observer = new IntersectionObserver( entries => {
       entries.forEach(entry => {
-        if (entry.isIntersecting === true ) {
+        if (entry.isIntersecting) {
           this.renderer.addClass(this.fadeInEl.nativeElement, 'fadeInAnim');
           this.renderer.setStyle(this.rotatableEl.nativeElement, 'animation-play-state', 'running');
+          this.observer.unobserve(entry.target)
           console.log('tech stack loaded');
         }
       });
