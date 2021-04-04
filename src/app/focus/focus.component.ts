@@ -1,38 +1,16 @@
-import { AfterViewInit, Component, ElementRef, OnDestroy,Renderer2,ViewChild } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 
 @Component({
   selector: 'app-focus',
   templateUrl: './focus.component.html',
   styleUrls: ['./focus.component.scss']
 })
-export class FocusComponent implements AfterViewInit, OnDestroy {
+export class FocusComponent implements AfterViewInit{
 
-  constructor(private renderer: Renderer2) { }
+  constructor() { }
 
-  @ViewChild('fadeIn') fadeInEl: ElementRef;
   private observer: IntersectionObserver | undefined;
 
   ngAfterViewInit() {
-    this.observer = new IntersectionObserver( entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          this.renderer.addClass(this.fadeInEl.nativeElement, 'fadeInAnim');
-          console.log('focus loaded');
-          this.observer.unobserve(entry.target)
-        }
-      });
-    },{
-      threshold: 0.5
-    });
-
-    this.observer.observe(this.fadeInEl.nativeElement as HTMLElement);
   }
-
-  ngOnDestroy(){
-    if (this.observer) {
-      this.observer.disconnect();
-      this.observer = undefined;
-    }
-  }
-
 }

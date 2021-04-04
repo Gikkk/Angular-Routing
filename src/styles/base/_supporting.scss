@@ -2,6 +2,14 @@
   animation: 0.8s both fadeInContent;
 }
 
+.fadeInAnimLeft{
+  animation: 0.8s both fadeInContentLeft;
+}
+
+.fadeInAnimRight{
+  animation: 0.8s both fadeInContentRight;
+}
+
 @keyframes fadeInContent {
   from {
       transform: translateY(20%);
