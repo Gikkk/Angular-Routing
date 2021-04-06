@@ -25,11 +25,10 @@ export class ProjectComponent implements AfterViewInit, OnDestroy {
         }
       });
     },{
-      threshold: 0.8
+      threshold: 0.5
     });
 
     this.observer.observe(this.fadeInLeft.nativeElement as HTMLElement);
-    this.observer.observe(this.fadeInRight.nativeElement as HTMLElement);
   }
 
   ngOnDestroy(){

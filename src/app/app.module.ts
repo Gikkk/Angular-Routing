@@ -18,6 +18,7 @@ import { CircularMenuComponent } from './main/circular-menu/circular-menu.compon
 import { TechStackComponent } from './tech-stack/tech-stack.component';
 import { FocusComponent } from './focus/focus.component';
 import { CardComponent } from './about/card/card.component';
+import { LazyLoadDirective } from './lazy-load.directive';
 
 const appRoutes: Routes = [
   {path: '', component: MainComponent},
@@ -42,6 +43,7 @@ const appRoutes: Routes = [
     TechStackComponent,
     FocusComponent,
     CardComponent,
+    LazyLoadDirective,
 ],
   imports: [
     BrowserModule,
