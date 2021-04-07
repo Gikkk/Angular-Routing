@@ -1,4 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy,Renderer2,ViewChild } from '@angular/core';
+import { TechStackComponent } from './tech-stack/tech-stack.component';
+import { ScrollService } from '../scroll.service'
 
 @Component({
   selector: 'app-about',
@@ -7,7 +9,7 @@ import { AfterViewInit, Component, ElementRef, OnDestroy,Renderer2,ViewChild } f
 })
 export class AboutComponent implements AfterViewInit, OnDestroy{
 
-  constructor(private renderer: Renderer2) { }
+  constructor(private renderer: Renderer2, private scrollserv: ScrollService) { }
 
   @ViewChild('fadeInRight') fadeInRight: ElementRef;
 

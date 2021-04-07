@@ -33,13 +33,9 @@ export class ContactComponent implements OnInit{
       if (this.hour >= 9 && this.hour <= 19 ) {
         this.renderer.setStyle(this.onlineStatus.nativeElement, 'backgroundColor', 'rgb(28, 221, 28)');
         this.availability = "Available";
-        console.log('sdada');
-
       } else {
         this.renderer.setStyle(this.onlineStatus.nativeElement, 'backgroundColor', 'red');
         this.availability = "Not available";
-        console.log('sdadadadadasda');
-
       }
     }, 3600000);
   }

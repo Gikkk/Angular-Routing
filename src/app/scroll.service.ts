@@ -12,7 +12,7 @@ export class ScrollService {
     this.viewportScroller.scrollToPosition([0, 0])
   }
 
-  scrollToAnchor(elementId: string): void {
+  scrollToAnchor(elementId): void {
     this.viewportScroller.scrollToAnchor(elementId);
   }
 }

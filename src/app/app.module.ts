@@ -15,16 +15,15 @@ import { ProjectComponent } from './project/project.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CircularMenuComponent } from './main/circular-menu/circular-menu.component';
-import { TechStackComponent } from './tech-stack/tech-stack.component';
-import { FocusComponent } from './focus/focus.component';
+import { TechStackComponent } from './about/tech-stack/tech-stack.component';
+import { FocusComponent } from './about/focus/focus.component';
 import { CardComponent } from './about/card/card.component';
-import { LazyLoadDirective } from './lazy-load.directive';
 
 const appRoutes: Routes = [
   {path: '', component: MainComponent},
-  {path: 'about', component: TechStackComponent},
-  {path: 'projects', component: FocusComponent},
-  {path: 'contact', component: AboutComponent},
+  {path: 'about', component: AboutComponent},
+  {path: 'projects', component: ProjectComponent},
+  {path: 'contact', component: ContactComponent},
 ]
 
 @NgModule({
@@ -41,7 +40,6 @@ const appRoutes: Routes = [
     TechStackComponent,
     FocusComponent,
     CardComponent,
-    LazyLoadDirective,
 ],
   imports: [
     BrowserModule,
@@ -49,9 +47,7 @@ const appRoutes: Routes = [
     ParticlesModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(appRoutes, {
-      anchorScrolling: 'enabled'
-    })
+    RouterModule.forRoot(appRoutes)
   ],
   exports: [RouterModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

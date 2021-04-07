@@ -14,7 +14,7 @@ export class TechStackComponent implements AfterViewInit, OnDestroy {
 
   options = {
     rootMargin: '0px',
-    threshold: 0.1
+    threshold: 0.5
   };
   private observer: IntersectionObserver | undefined;
 
