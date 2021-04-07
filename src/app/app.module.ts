@@ -22,11 +22,9 @@ import { LazyLoadDirective } from './lazy-load.directive';
 
 const appRoutes: Routes = [
   {path: '', component: MainComponent},
-  {path: 'skills', component: TechStackComponent},
-  {path: 'focus', component: FocusComponent},
-  {path: 'who', component: AboutComponent},
-  {path: 'what', component: ProjectComponent},
-  {path: 'where', component: ContactComponent}
+  {path: 'about', component: TechStackComponent},
+  {path: 'projects', component: FocusComponent},
+  {path: 'contact', component: AboutComponent},
 ]
 
 @NgModule({
