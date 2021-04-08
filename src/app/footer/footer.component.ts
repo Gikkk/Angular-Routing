@@ -1,7 +1,5 @@
-import { animate, state, style, transition, trigger } from '@angular/animations';
+import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { ScrollService } from  '../scroll.service';
-
 
 @Component({
   selector: 'app-footer',
@@ -10,13 +8,13 @@ import { ScrollService } from  '../scroll.service';
 })
 export class FooterComponent implements OnInit{
 
-  constructor( private scrollService: ScrollService) {}
+  constructor( private viewportScroller: ViewportScroller) {}
 
   ngOnInit(): void {
 
   }
 
-  backToTop(){
-    this.scrollService.scrollToTop();
+  scrollToTop() {
+    this.viewportScroller.scrollToPosition([0, 0])
   }
 }

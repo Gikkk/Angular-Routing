@@ -1,6 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy,Renderer2,ViewChild } from '@angular/core';
-import { TechStackComponent } from './tech-stack/tech-stack.component';
-import { ScrollService } from '../scroll.service'
+import { FocusComponent } from '../focus/focus.component';
 
 @Component({
   selector: 'app-about',
@@ -9,13 +8,14 @@ import { ScrollService } from '../scroll.service'
 })
 export class AboutComponent implements AfterViewInit, OnDestroy{
 
-  constructor(private renderer: Renderer2, private scrollserv: ScrollService) { }
+  constructor(private renderer: Renderer2) { }
 
   @ViewChild('fadeInRight') fadeInRight: ElementRef;
+  @ViewChild('child') childcomp: FocusComponent;
 
   options = {
     rootMargin: '0px',
-    threshold: 0.1
+    threshold: 0.3
   };
   private observer: IntersectionObserver | undefined;
 
@@ -39,5 +39,4 @@ export class AboutComponent implements AfterViewInit, OnDestroy{
       this.observer = undefined;
     }
   }
-
 }

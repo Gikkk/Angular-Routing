@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { ParticlesModule } from 'angular-particle';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -8,33 +8,35 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
-import { MainComponent } from './main/main.component';
+import { HomepageComponent } from './homepage/homepage';
 import { MapComponent } from './contact/map/map.component';
 import { AboutComponent } from './about/about.component';
 import { ProjectComponent } from './project/project.component';
-import { HeaderComponent } from './header/header.component';
+import { NavigationComponent } from './navigation/navigation.component';
 import { FooterComponent } from './footer/footer.component';
-import { CircularMenuComponent } from './main/circular-menu/circular-menu.component';
-import { TechStackComponent } from './about/tech-stack/tech-stack.component';
-import { FocusComponent } from './about/focus/focus.component';
+import { CircularMenuComponent } from './homepage/circular-menu/circular-menu.component';
+import { TechStackComponent } from './tech-stack/tech-stack.component';
+import { FocusComponent } from './focus/focus.component';
 import { CardComponent } from './about/card/card.component';
 
 const appRoutes: Routes = [
-  {path: '', component: MainComponent},
+  {path: '', component: HomepageComponent},
   {path: 'about', component: AboutComponent},
   {path: 'projects', component: ProjectComponent},
   {path: 'contact', component: ContactComponent},
+  {path: 'focus', component: FocusComponent},
+  {path: 'skills', component: TechStackComponent},
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactComponent,
-    MainComponent,
+    HomepageComponent,
     MapComponent,
     AboutComponent,
     ProjectComponent,
-    HeaderComponent,
+    NavigationComponent,
     FooterComponent,
     CircularMenuComponent,
     TechStackComponent,
@@ -47,10 +49,9 @@ const appRoutes: Routes = [
     ParticlesModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
   ],
   exports: [RouterModule],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })

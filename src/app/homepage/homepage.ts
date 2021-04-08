@@ -1,11 +1,11 @@
 import { Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-main',
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss']
+  selector: 'app-homepage',
+  templateUrl: './homepage.component.html',
+  styleUrls: ['./homepage.component.scss']
 })
-export class MainComponent implements OnInit {
+export class HomepageComponent implements OnInit {
 
   constructor() { }
 
@@ -14,7 +14,7 @@ export class MainComponent implements OnInit {
   windowHeight: number;
 
   onResize(){
-    this.windowHeight = window.innerHeight;
+    this.windowHeight = window.innerHeight - 5;
 
     this.myStyle = {
       'height': `${this.windowHeight}px`,

@@ -9,7 +9,7 @@ export class FocusComponent implements AfterViewInit{
 
   constructor() { }
 
-  private observer: IntersectionObserver | undefined;
+  testing = 'anchorId'
 
   ngAfterViewInit() {
   }

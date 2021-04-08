@@ -1,17 +1,18 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, ViewChild, ElementRef, Renderer2, HostListener, OnInit } from '@angular/core';
 import { debounce } from '../debounce.decorator';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  selector: 'app-navigation',
+  templateUrl: './navigation.component.html',
+  styleUrls: ['./navigation.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class NavigationComponent implements OnInit {
 
   active = false;
   cancelScroll = false;
 
-  constructor(private renderer: Renderer2) { }
+  constructor(private renderer: Renderer2, private viewportScroller: ViewportScroller) { }
   @ViewChild("navbar") navbar: ElementRef;
 
   @HostListener("window:scroll", [])
@@ -36,6 +37,10 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  navigate(elem) {
+    elem.scrollIntoView({ behavior: 'smooth' });
   }
 
 }
