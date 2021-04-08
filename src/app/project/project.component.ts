@@ -20,16 +20,7 @@ export class ProjectComponent implements AfterViewInit, OnDestroy {
   private observer: IntersectionObserver | undefined;
 
   ngAfterViewInit() {
-    this.observer = new IntersectionObserver( entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          this.renderer.addClass(this.fadeInRight.nativeElement, 'fadeInAnimRight');
-          this.observer.unobserve(entry.target)
-        }
-      });
-    }, this.options);
 
-    this.observer.observe(this.fadeInRight.nativeElement as HTMLElement);
   }
 
   ngOnDestroy(){
