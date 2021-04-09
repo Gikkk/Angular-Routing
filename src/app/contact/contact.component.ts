@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild, AfterViewInit, OnDestroy } from '@angular/core';
 import { EmailValidator, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -7,7 +7,7 @@ import { EmailValidator, FormControl, FormGroup, Validators } from '@angular/for
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit{
+export class ContactComponent implements OnInit, AfterViewInit, OnDestroy {
   availability = "Not available";
   signUpForm: FormGroup;
   currentTime;
@@ -15,6 +15,9 @@ export class ContactComponent implements OnInit{
   submitted = false;
 
   @ViewChild("status") onlineStatus: ElementRef<HTMLElement>;
+  @ViewChild('fadeInAnim') fadeInAnim: ElementRef;
+  @ViewChild('fadeInRight') fadeInRight: ElementRef;
+  @ViewChild('fadeInLeft') fadeInLeft: ElementRef;
 
   constructor( private http: HttpClient, private renderer: Renderer2,) { }
 
@@ -52,5 +55,32 @@ export class ContactComponent implements OnInit{
 
       this.signUpForm.reset();
     });
+  }
+
+  options = {
+    rootMargin: '0px',
+    threshold: 0.2
+  };
+  private observer: IntersectionObserver | undefined;
+
+  ngAfterViewInit() {
+    this.observer = new IntersectionObserver( entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          this.renderer.addClass(this.fadeInLeft.nativeElement, 'fadeInAnimLeft');
+          this.renderer.addClass(this.fadeInRight.nativeElement, 'fadeInAnimRight');
+          this.observer.unobserve(entry.target);
+        }
+      });
+    }, this.options);
+
+    this.observer.observe(this.fadeInAnim.nativeElement as HTMLElement);
+  }
+
+  ngOnDestroy(){
+    if (this.observer) {
+      this.observer.disconnect();
+      this.observer = undefined;
+    }
   }
 }

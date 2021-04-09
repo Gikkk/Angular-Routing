@@ -1,8 +1,8 @@
-<section class="contact">
+<section class="contact" #fadeInAnim>
   <h2 class="contact__title">Contact Me</h2>
   <h3 class="contact__text">Write me about anything or just say hello</h3>
   <div class="contact__box">
-    <article class="box">
+    <article class="box" #fadeInLeft>
       <h3 class="box__title">SEND ME A MESSAGE</h3>
       <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()" class="form">
         <div class="form__item">
@@ -43,7 +43,7 @@
         </div>
       </form>
     </article>
-    <article class="box__details">
+    <article class="box__details" #fadeInRight>
       <h3 class="box__title">CONTACT INFO</h3>
       <h4 class="box__subtitle">Where to Find Me</h4>
       <div class="box__item">
