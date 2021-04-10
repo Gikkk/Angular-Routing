@@ -36,11 +36,9 @@ export class NavigationComponent implements OnInit {
     this.cancelScroll = !this.cancelScroll
   }
 
-  ngOnInit(): void {
-  }
-
-  navigate(elementId) {
+  scrollToElement(elementId: string): void {
     this.viewportScroller.scrollToAnchor(elementId);
   }
 
+  ngOnInit() {}
 }

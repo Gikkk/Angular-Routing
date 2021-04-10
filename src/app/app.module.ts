@@ -15,8 +15,8 @@ import { ProjectComponent } from './project/project.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { FooterComponent } from './footer/footer.component';
 import { CircularMenuComponent } from './homepage/circular-menu/circular-menu.component';
-import { TechStackComponent } from './tech-stack/tech-stack.component';
-import { FocusComponent } from './focus/focus.component';
+import { TechStackComponent } from './about/tech-stack/tech-stack.component';
+import { FocusComponent } from './about/focus/focus.component';
 import { CardComponent } from './about/card/card.component';
 
 const appRoutes: Routes = [

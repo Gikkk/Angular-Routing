@@ -3,17 +3,15 @@
   <!-- desktop navbar  -->
   <nav class="navbar" #navbar>
     <ul class="navbar__list">
-      <li><a class="navbar__item" [routerLinkActiveOptions]="{exact: true}" routerLink="/" routerLinkActive='navbar__active'>Home</a></li>
-      <li><a class="navbar__item" routerLink="/about" routerLinkActive='navbar__active'>About</a></li>
-      <li><a class="navbar__item" routerLink="/skills" routerLinkActive='navbar__active'>Skills</a></li>
+      <li><a class="navbar__item" [routerLinkActiveOptions]="{exact: true}" routerLink="/" routerLinkActive='navbar__active' (click)="scrollToElement('home')">Home</a></li>
+      <li><a class="navbar__item" routerLink="/about" routerLinkActive='navbar__active' (click)="scrollToElement('about')">About</a></li>
     </ul>
     <a>
       <img class="header__logo" src="assets/logo.png" alt="logo">
     </a>
     <ul class="navbar__list">
-      <li><a class="navbar__item" routerLink="/focus" routerLinkActive='navbar__active'>Focus</a></li>
-      <li><a class="navbar__item" routerLink="/projects" routerLinkActive='navbar__active'>Projects</a></li>
-      <li><a class="navbar__item" routerLink="/contact" routerLinkActive='navbar__active'>Contact</a></li>
+      <li><a class="navbar__item" routerLink="/projects" routerLinkActive='navbar__active' (click)="scrollToElement('project')">Projects</a></li>
+      <li><a class="navbar__item" routerLink="/contact" routerLinkActive='navbar__active' (click)="scrollToElement('contact')">Contact</a></li>
     </ul>
 
     <!-- hamburger menu icon -->
@@ -27,30 +25,22 @@
     <section class="mobnav" [ngClass]="{'visible' : active}">
       <article>
         <ul class="mobnav__list" >
-          <li>
+          <li (click)="activeClass()">
             <img src="assets/mob-nav/homepage.png" alt="homepage icon" loading="lazy">
-            <a class="mobnav__item" [routerLinkActiveOptions]="{exact: true}" routerLink="/" routerLinkActive='navbar__active'>Home</a>
+            <a class="mobnav__item" [routerLinkActiveOptions]="{exact: true}" routerLink="/" routerLinkActive='navbar__active' (click)="scrollToElement('home')">Home</a>
           </li>
           <li>
             <img src="assets/mob-nav/settings.png" alt="skills icon" loading="lazy">
-            <a class="mobnav__item" routerLink="/about" routerLinkActive='navbar__active'>About</a>
-          </li>
-          <li>
-            <img src="assets/mob-nav/settings.png" alt="skills icon" loading="lazy">
-            <a class="mobnav__item" routerLink="/skills" routerLinkActive='navbar__active'>Skills</a>
+            <a class="mobnav__item" routerLink="/about" routerLinkActive='navbar__active' (click)="scrollToElement('about')">About</a>
           </li>
           <div class="test1"></div>
           <li>
-            <img src="assets/mob-nav/settings.png" alt="skills icon" loading="lazy">
-            <a class="mobnav__item" routerLink="/focus" routerLinkActive='navbar__active'>Focus</a>
-          </li>
-          <li>
             <img src="assets/mob-nav/aim.png" alt="focus icon" loading="lazy">
-            <a class="mobnav__item" routerLink="/projects" routerLinkActive='navbar__active'>Projects</a>
+            <a class="mobnav__item" routerLink="/projects" routerLinkActive='navbar__active' (click)="scrollToElement('project')">Projects</a>
           </li>
           <li>
             <img src="assets/mob-nav/question.png" alt="who icon" loading="lazy">
-            <a class="mobnav__item" routerLink="/contact" routerLinkActive='navbar__active'>Contact</a>
+            <a class="mobnav__item" routerLink="/contact" routerLinkActive='navbar__active' (click)="scrollToElement('contact')">Contact</a>
           </li>
         </ul>
         <div class="test"></div>
@@ -67,12 +57,11 @@
     </section>
 
   </nav>
-  <div class="space" (click)="activeClass()" [ngClass]="{'space__fade' : active}"></div>
+  <!-- <div class="space" (click)="activeClass()" [ngClass]="{'space__fade' : active}"></div> -->
 </header>
-<app-homepage #home></app-homepage>
+
+<app-homepage id="home"></app-homepage>
 <app-about id="about"></app-about>
-<app-tech-stack id="tech"></app-tech-stack>
-<app-focus id="focus"></app-focus>
 <app-project id="project"></app-project>
 <app-contact id="contact"></app-contact>
 <app-footer></app-footer>
