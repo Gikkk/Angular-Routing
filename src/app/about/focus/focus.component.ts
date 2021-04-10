@@ -9,8 +9,6 @@ export class FocusComponent implements AfterViewInit{
 
   constructor() { }
 
-  testing = 'anchorId'
-
   ngAfterViewInit() {
   }
 }

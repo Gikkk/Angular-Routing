@@ -25,7 +25,6 @@ export class TechStackComponent implements AfterViewInit, OnDestroy {
           this.renderer.addClass(this.fadeInEl.nativeElement, 'fadeInAnim');
           this.renderer.setStyle(this.rotatableEl.nativeElement, 'animation-play-state', 'running');
           this.observer.unobserve(entry.target);
-          console.log('tech loaded');
         }
       });
     }, this.options);
