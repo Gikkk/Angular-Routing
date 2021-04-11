@@ -49,7 +49,7 @@ const appRoutes: Routes = [
     ParticlesModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes, {}),
   ],
   exports: [RouterModule],
   providers: [],
