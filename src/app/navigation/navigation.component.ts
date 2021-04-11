@@ -1,6 +1,7 @@
 import { ViewportScroller } from '@angular/common';
-import { Component, ViewChild, ElementRef, Renderer2, HostListener, OnInit } from '@angular/core';
+import { Component, ViewChild, ElementRef, Renderer2, HostListener, OnInit, Inject } from '@angular/core';
 import { debounce } from '../debounce.decorator';
+import { DOCUMENT } from  '@angular/common';
 
 @Component({
   selector: 'app-navigation',
@@ -9,20 +10,20 @@ import { debounce } from '../debounce.decorator';
 })
 export class NavigationComponent implements OnInit {
 
-  active = false;
-  cancelScroll = false;
+  constructor(
+    private renderer: Renderer2,
+    private viewportScroller: ViewportScroller,
+    @Inject(DOCUMENT) private document: Document,
+  ){ }
 
-  constructor(private renderer: Renderer2, private viewportScroller: ViewportScroller) { }
+  active = false;
   @ViewChild("navbar") navbar: ElementRef;
 
+  // sticky header
   @HostListener("window:scroll", [])
   @debounce(100)
   onWindowScroll() {
     let currentScrollPos = window.pageYOffset;
-
-    if (this.cancelScroll) {
-      return;
-    }
 
     if(currentScrollPos > 0){
       this.renderer.addClass(this.navbar.nativeElement, "navbar__sticky");
@@ -31,14 +32,21 @@ export class NavigationComponent implements OnInit {
     }
   }
 
+  // mobnav menu
   activeClass(){
-    this.active = !this.active;
-    this.cancelScroll = !this.cancelScroll
+    if(this.active === false){
+      this.renderer.setStyle(this.document.body, 'overflow', 'hidden');
+      this.active = true;
+    }else{
+      this.renderer.setStyle(this.document.body, 'overflow', 'hidden auto');
+      this.active = false;
+    }
   }
 
-  scrollToElement(elementId: string): void {
-    this.viewportScroller.scrollToAnchor(elementId);
-  }
+  // same page navgiation
+  // scrollToElement(elementId: string): void {
+  //   this.viewportScroller.scrollToAnchor(elementId);
+  // }
 
   ngOnInit() {}
 }

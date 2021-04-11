@@ -3,15 +3,15 @@
   <!-- desktop navbar  -->
   <nav class="navbar" #navbar>
     <ul class="navbar__list">
-      <li><a class="navbar__item" [routerLinkActiveOptions]="{exact: true}" routerLink="/" routerLinkActive='navbar__active' (click)="scrollToElement('home')">Home</a></li>
-      <li><a class="navbar__item" routerLink="/about" routerLinkActive='navbar__active' (click)="scrollToElement('about')">About</a></li>
+      <li><a class="navbar__item" [routerLinkActiveOptions]="{exact: true}" routerLink="/" routerLinkActive='navbar__active'>Home</a></li>
+      <li><a class="navbar__item" routerLink="/about" routerLinkActive='navbar__active'>About</a></li>
     </ul>
     <a>
       <img class="header__logo" src="assets/general/logo.png" alt="logo">
     </a>
     <ul class="navbar__list">
-      <li><a class="navbar__item" routerLink="/projects" routerLinkActive='navbar__active' (click)="scrollToElement('project')">Projects</a></li>
-      <li><a class="navbar__item" routerLink="/contact" routerLinkActive='navbar__active' (click)="scrollToElement('contact')">Contact</a></li>
+      <li><a class="navbar__item" routerLink="/projects" routerLinkActive='navbar__active'>Projects</a></li>
+      <li><a class="navbar__item" routerLink="/contact" routerLinkActive='navbar__active'>Contact</a></li>
     </ul>
 
     <!-- hamburger menu icon -->
@@ -27,28 +27,27 @@
         <ul class="mobnav__list" >
           <li (click)="activeClass()">
             <img src="assets/mob-nav/homepage.png" alt="homepage icon" loading="lazy">
-            <a class="mobnav__item" [routerLinkActiveOptions]="{exact: true}" routerLink="/" routerLinkActive='navbar__active' (click)="scrollToElement('home')">Home</a>
+            <a class="mobnav__item" [routerLinkActiveOptions]="{exact: true}" routerLink="/" routerLinkActive='navbar__active'>Home</a>
           </li>
-          <li>
+          <li (click)="activeClass()">
             <img src="assets/mob-nav/settings.png" alt="skills icon" loading="lazy">
-            <a class="mobnav__item" routerLink="/about" routerLinkActive='navbar__active' (click)="scrollToElement('about')">About</a>
+            <a class="mobnav__item" routerLink="/about" routerLinkActive='navbar__active'>About</a>
           </li>
-          <div class="test1"></div>
-          <li>
+          <div class="mobnav__line"></div>
+          <li (click)="activeClass()">
             <img src="assets/mob-nav/aim.png" alt="focus icon" loading="lazy">
-            <a class="mobnav__item" routerLink="/projects" routerLinkActive='navbar__active' (click)="scrollToElement('project')">Projects</a>
+            <a class="mobnav__item" routerLink="/projects" routerLinkActive='navbar__active'>Projects</a>
           </li>
-          <li>
+          <li (click)="activeClass()">
             <img src="assets/mob-nav/question.png" alt="who icon" loading="lazy">
-            <a class="mobnav__item" routerLink="/contact" routerLinkActive='navbar__active' (click)="scrollToElement('contact')">Contact</a>
+            <a class="mobnav__item" routerLink="/contact" routerLinkActive='navbar__active'>Contact</a>
           </li>
         </ul>
-        <div class="test"></div>
-        <a href="" class="mobnav__btn" routerLink="/contact">Contact</a>
+        <div class="mobnav__line"></div>
       </article>
-      <div class="test"></div>
+      <div class="mobnav__line"></div>
       <div>
-        <div>Language</div>
+        <p>Language</p>
         <div>
           <button class="buttonactive">English</button>
           <button >ქართული</button>
@@ -57,11 +56,5 @@
     </section>
 
   </nav>
-  <!-- <div class="space" (click)="activeClass()" [ngClass]="{'space__fade' : active}"></div> -->
+  <div class="space" (click)="activeClass()" [ngClass]="{'space__fade' : active}"></div>
 </header>
-
-<app-homepage id="home"></app-homepage>
-<app-about id="about"></app-about>
-<app-project id="project"></app-project>
-<app-contact id="contact"></app-contact>
-<app-footer></app-footer>
