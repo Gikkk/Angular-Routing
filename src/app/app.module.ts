@@ -49,7 +49,9 @@ const appRoutes: Routes = [
     ParticlesModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(appRoutes, {}),
+    RouterModule.forRoot(appRoutes, {
+      scrollPositionRestoration: 'enabled',
+    }),
   ],
   exports: [RouterModule],
   providers: [],
