@@ -12,6 +12,12 @@
   z-index: 100;
   text-transform: uppercase;
   cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
   .header__logo{
     width: 50px;
@@ -30,7 +36,7 @@
     padding-bottom: 5px;
     margin: 0 2vw;
     text-decoration: none;
-    color: $primary-color;
+    color: $secondary-color;
     letter-spacing: 5px;
     transition: all ease .3s;
 
@@ -41,6 +47,7 @@
   }
 }
 
+// mobile navbar
 .mobnav{
   height: 100%;
   width: 70%;
@@ -100,7 +107,8 @@
 }
 
 .navbar__active{
-  color: red !important;
+  opacity: 0.8;
+  text-shadow: 0px -2px 0px rgba(0,0,0,1), 0 0 5px rgba(255,255,255,1),0 -4px 5px rgba(255,255,255,1);
 }
 
 .visible{
@@ -134,7 +142,8 @@
   }
 
   .navbar__active{
-    color: red !important;
+    opacity: 0.8;
+    text-shadow: 0px -2px 0px rgba(0,0,0,1), 0 0 5px rgba(255,255,255,1),0 -4px 5px rgba(255,255,255,1);
   }
 
   .navbar__sticky{

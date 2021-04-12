@@ -14,7 +14,7 @@ import { AboutComponent } from './about/about.component';
 import { ProjectComponent } from './project/project.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { FooterComponent } from './footer/footer.component';
-import { CircularMenuComponent } from './homepage/circular-menu/circular-menu.component';
+import { CircularMenuComponent } from './circular-menu/circular-menu.component';
 import { TechStackComponent } from './about/tech-stack/tech-stack.component';
 import { FocusComponent } from './about/focus/focus.component';
 import { CardComponent } from './about/card/card.component';

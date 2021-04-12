@@ -31,6 +31,15 @@
   z-index: 8;
 }
 
+.homepage__subtitle--img{
+  height: 40px;
+  width: 160px;
+
+  g{
+    fill: $background;
+  }
+}
+
 @media(min-width: 640px){
   .homepage__title--img{
     height: 80px;

@@ -1,7 +1,7 @@
 .contact{
   text-align: center;
   padding: 1rem 1rem 0  1rem;
-  background: url("../../assets/general/contact.jpg") no-repeat center center fixed;
+  background: url("../../assets/general/contact-day.jpg") no-repeat center center fixed;
   background-size: cover;
   box-shadow: inset 0 0 10px $primary-color;
 
@@ -9,11 +9,11 @@
     font-size: 2.5rem;
     margin: 0;
     padding: 4rem 0 1rem 0;
-    color: $primary-color;
+    color: $background;
   }
 
   .contact__text{
-    color: $primary-color;
+    color: $secondary-background;
   }
 
   .box{
