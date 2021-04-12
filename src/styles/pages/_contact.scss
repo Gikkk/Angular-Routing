@@ -17,28 +17,28 @@
   }
 
   .box{
-    background: rgba(0, 0, 0, 0.89);
+    background: $secondary-background--light;
     padding: 1rem;
     border-radius: 0.5rem 0.5rem 0 0;
-    box-shadow: inset 0 0 10px $primary-color;
+    box-shadow: inset 0 0 10px $secondary-color;
     opacity: 0;
   }
 
   .box__details{
-    background: $secondary-color;
+    background: $secondary-background--light;
     padding: 1rem;
     border-radius: 0 0 0.5rem 0.5rem;
-    box-shadow: inset 0 0 10px $primary-color;
+    box-shadow: inset 0 0 10px $secondary-color;
     opacity: 0;
   }
 
   .box__title{
-    color: $primary-color;
+    color: $background;
   }
 
   .box__subtitle{
     margin: 2rem 0 0.5rem 0;
-    color: $primary-color;
+    color: $background;
     text-transform: uppercase;
   }
 
@@ -62,7 +62,7 @@
   }
 
   .box__text{
-    color: #4b6cc1;
+    color: $secondary-background;
     margin: 0 0 0 0.5rem;
     font-size: 14px;
     font-weight: 600;

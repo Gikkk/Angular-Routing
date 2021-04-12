@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, Renderer2, ViewChild, ElementRef} from '@angular/core';
 
 @Component({
   selector: 'app-homepage',
@@ -7,8 +7,12 @@ import { Component, OnInit} from '@angular/core';
 })
 export class HomepageComponent implements OnInit {
 
-  constructor() { }
+  constructor( private renderer: Renderer2) { }
 
+  @ViewChild('background') mainBackground: ElementRef;
+
+  currentTime;
+  hour: number;
   myStyle: object = {};
   myParams: object = {};
   windowHeight: number;
@@ -64,7 +68,7 @@ export class HomepageComponent implements OnInit {
         "line_linked": {
           "enable": true,
           "distance": 120,
-          "color": "#155D8C",
+          "color": "#fff",
           "opacity": 0.8,
           "width": 1
         },
@@ -128,6 +132,17 @@ export class HomepageComponent implements OnInit {
 
   ngOnInit() {
     this.onResize();
+    // let theme = ()=>{
+    //   this.currentTime = new Date();
+    //   this.hour = this.currentTime.getHours();
+
+    //   if (this.hour <= 9 && this.hour >= 19 ) {
+    //     this.renderer.addClass(this.mainBackground.nativeElement, 'particles__backgr--day');
+    //   } else {
+    //     this.renderer.addClass(this.mainBackground.nativeElement, 'particles__backgr--night');
+    //   }
+    // }
+    // setInterval( theme, 1000);
   }
 
 }
