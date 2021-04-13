@@ -15,17 +15,15 @@ import { ProjectComponent } from './project/project.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { FooterComponent } from './footer/footer.component';
 import { CircularMenuComponent } from './circular-menu/circular-menu.component';
-import { TechStackComponent } from './about/tech-stack/tech-stack.component';
+import { TechStackComponent } from './homepage/tech-stack/tech-stack.component';
 import { FocusComponent } from './about/focus/focus.component';
 import { CardComponent } from './about/card/card.component';
 
 const appRoutes: Routes = [
-  {path: '', component: HomepageComponent},
-  {path: 'about', component: AboutComponent},
-  {path: 'projects', component: ProjectComponent},
-  {path: 'contact', component: ContactComponent},
-  {path: 'focus', component: FocusComponent},
-  {path: 'skills', component: TechStackComponent},
+  { path: '', component: HomepageComponent , data: {animation: 'Home'} },
+  { path: 'about', component: AboutComponent , data: {animation: 'About'} },
+  { path: 'projects', component: ProjectComponent , data: {animation: 'Projects'} },
+  { path: 'contact', component: ContactComponent , data: {animation: 'Contact'} }
 ]
 
 @NgModule({
@@ -50,7 +48,7 @@ const appRoutes: Routes = [
     HttpClientModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes, {
-      scrollPositionRestoration: 'enabled',
+      // scrollPositionRestoration: 'enabled',
     }),
   ],
   exports: [RouterModule],
