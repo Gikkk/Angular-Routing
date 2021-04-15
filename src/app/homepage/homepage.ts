@@ -132,17 +132,6 @@ export class HomepageComponent implements OnInit {
 
   ngOnInit() {
     this.onResize();
-    // let theme = ()=>{
-    //   this.currentTime = new Date();
-    //   this.hour = this.currentTime.getHours();
-
-    //   if (this.hour <= 9 && this.hour >= 19 ) {
-    //     this.renderer.addClass(this.mainBackground.nativeElement, 'particles__backgr--day');
-    //   } else {
-    //     this.renderer.addClass(this.mainBackground.nativeElement, 'particles__backgr--night');
-    //   }
-    // }
-    // setInterval( theme, 1000);
   }
 
 }
