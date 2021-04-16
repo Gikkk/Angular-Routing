@@ -11,6 +11,7 @@ export class NavigationComponent implements OnInit {
 
   constructor( private renderer: Renderer2 ){ }
 
+  prevScrollpos = window.pageYOffset;
   active = false;
   @ViewChild("navbar") navbar: ElementRef;
 
@@ -20,11 +21,24 @@ export class NavigationComponent implements OnInit {
   onWindowScroll() {
     let currentScrollPos = window.pageYOffset;
 
+    // if (currentScrollPos === 0) {
+    //   console.log('transperent');
+    // } else if( currentScrollPos > 0){
+    //   console.log('hide');
+    // }else if(this.prevScrollpos > currentScrollPos){
+    //   console.log('show');
+    // }
+
     if(currentScrollPos > 0){
       this.renderer.addClass(this.navbar.nativeElement, "navbar__sticky");
+      console.log(currentScrollPos);
+
     }else{
       this.renderer.removeClass(this.navbar.nativeElement, "navbar__sticky");
-    }
+    };
+
+    currentScrollPos = this.prevScrollpos;
+    console.log(currentScrollPos);
   }
 
   // mobnav menu

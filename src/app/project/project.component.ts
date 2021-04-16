@@ -9,6 +9,10 @@ export class ProjectComponent implements AfterViewInit {
 
   constructor() { }
 
+  fk(targ){
+    console.log(targ)
+  }
+
   ngAfterViewInit() {
 
   }

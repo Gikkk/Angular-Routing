@@ -1,13 +1,13 @@
 <section class="projects" #fadeInRight>
   <h2 class="projects__title">My Projects</h2>
-  <div>
+  <div class="projects__search">
     <span class="search__btn">HTML/CSS</span>
     <span class="search__btn">HTML/CSS/JS</span>
     <span class="search__btn">HTML/SCSS/JS</span>
-    <span class="search__btn">TS/ANGULAR</span>
+    <span class="search__btn" (click)="fk(angular)">TS/ANGULAR</span>
   </div>
   <div class="projects__list">
-    <div class="projects__item place__left">
+    <div class="projects__item place__left" #angular>
       <div class="projects__hovereffect">
         <img class="projects__img" src="assets/project/github.png" alt="userfinder">
         <div class="projects__overlay">
@@ -52,7 +52,7 @@
         </div>
       </div>
     </div>
-    <div class="projects__item place__right">
+    <div class="projects__item place__right" #angular>
       <div class="projects__hovereffect">
         <img class="projects__img" src="assets/project/oldportfolio.jpg" alt="portfolio" loading="lazy">
         <div class="projects__overlay">
