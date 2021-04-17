@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef} from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-homepage',
@@ -8,7 +8,7 @@ import { Title } from '@angular/platform-browser';
 })
 export class HomepageComponent implements OnInit {
 
-  constructor( private title: Title ) { }
+  constructor( private title: Title, private meta: Meta ) { }
 
   @ViewChild('background') mainBackground: ElementRef;
 

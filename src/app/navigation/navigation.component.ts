@@ -1,6 +1,5 @@
-import { Component, ViewChild, ElementRef, Renderer2, HostListener, OnInit } from '@angular/core';
+import { Component, ViewChild, ElementRef, Renderer2, HostListener, OnInit, Inject } from '@angular/core';
 import { debounce } from '../debounce.decorator';
-import { DOCUMENT } from  '@angular/common';
 
 @Component({
   selector: 'app-navigation',
@@ -9,7 +8,7 @@ import { DOCUMENT } from  '@angular/common';
 })
 export class NavigationComponent implements OnInit {
 
-  constructor( private renderer: Renderer2){ }
+  constructor( private renderer: Renderer2,){ }
 
   prevScrollpos = window.pageYOffset;
   active = false;
@@ -27,10 +26,11 @@ export class NavigationComponent implements OnInit {
       this.renderer.removeClass(this.navbar.nativeElement, "navbar__sticky");
     };
 
-    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    var scrolled = (winScroll / height) * 100;
-    document.getElementById("myBar").style.width = scrolled + "%";
+    // let winScroll = this.doc.body.scrollHeight || this.doc.documentElement.scrollHeight;
+
+    // let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    // let scrolled = (winScroll / height) * 100;
+    // document.getElementById("myBar").style.width = scrolled + "%";
   }
 
   // mobnav menu
