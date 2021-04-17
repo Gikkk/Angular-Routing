@@ -1,5 +1,5 @@
 import { Component, ViewChild, ElementRef, Renderer2, HostListener, OnInit, Inject } from '@angular/core';
-import { debounce } from '../debounce.decorator';
+import { debounce } from '../helpers/debounce.decorator';
 
 @Component({
   selector: 'app-navigation',

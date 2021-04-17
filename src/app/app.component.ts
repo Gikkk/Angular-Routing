@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { slideInAnimation } from './route-transition-animations';
+import { slideInAnimation } from './helpers/route-transition-animations';
 
 @Component({
   selector: 'app-root',

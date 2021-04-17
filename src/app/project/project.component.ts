@@ -8,10 +8,16 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 export class ProjectComponent implements OnInit {
 
-  constructor( private title: Title, private meta: Meta ) { }
+  constructor( private title: Title, private meta: Meta ) {}
+
+
+
+  projectDisplay(){
+
+  }
 
   ngOnInit() {
-    this.title.setTitle("Projects - Dev Portfolio")
+    this.title.setTitle("Projects - Dev Portfolio");
   }
 
 }
