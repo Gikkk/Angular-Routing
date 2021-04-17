@@ -1,20 +1,17 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
   styleUrls: ['./project.component.scss']
 })
-export class ProjectComponent implements AfterViewInit {
+export class ProjectComponent implements OnInit {
 
-  constructor() { }
+  constructor( private title: Title ) { }
 
-  fk(targ){
-    console.log(targ)
-  }
-
-  ngAfterViewInit() {
-
+  ngOnInit() {
+    this.title.setTitle("Projects - Dev Portfolio")
   }
 
 }

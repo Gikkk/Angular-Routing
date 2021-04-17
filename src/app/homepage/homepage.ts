@@ -1,4 +1,5 @@
-import { Component, OnInit, Renderer2, ViewChild, ElementRef} from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef} from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-homepage',
@@ -7,7 +8,7 @@ import { Component, OnInit, Renderer2, ViewChild, ElementRef} from '@angular/cor
 })
 export class HomepageComponent implements OnInit {
 
-  constructor( private renderer: Renderer2) { }
+  constructor( private title: Title ) { }
 
   @ViewChild('background') mainBackground: ElementRef;
 
@@ -18,7 +19,7 @@ export class HomepageComponent implements OnInit {
   windowHeight: number;
 
   onResize(){
-    this.windowHeight = window.innerHeight - 5;
+    this.windowHeight = window.innerHeight;
 
     this.myStyle = {
       'height': `${this.windowHeight}px`,
@@ -132,6 +133,7 @@ export class HomepageComponent implements OnInit {
 
   ngOnInit() {
     this.onResize();
+    this.title.setTitle("Home - Dev Portfolio");
   }
 
 }

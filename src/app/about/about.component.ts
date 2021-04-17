@@ -1,15 +1,16 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })
-export class AboutComponent implements AfterViewInit {
+export class AboutComponent implements OnInit {
 
-  constructor() { }
+  constructor( private title: Title ) {}
 
-  ngAfterViewInit() {
-
+  ngOnInit() {
+    this.title.setTitle("About - Dev Portfolio")
   }
 }

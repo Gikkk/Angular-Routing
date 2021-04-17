@@ -9,7 +9,7 @@ import { DOCUMENT } from  '@angular/common';
 })
 export class NavigationComponent implements OnInit {
 
-  constructor( private renderer: Renderer2 ){ }
+  constructor( private renderer: Renderer2){ }
 
   prevScrollpos = window.pageYOffset;
   active = false;
@@ -18,27 +18,19 @@ export class NavigationComponent implements OnInit {
   // sticky header
   @HostListener("window:scroll", [])
   @debounce(100)
-  onWindowScroll() {
+  onScroll() {
     let currentScrollPos = window.pageYOffset;
-
-    // if (currentScrollPos === 0) {
-    //   console.log('transperent');
-    // } else if( currentScrollPos > 0){
-    //   console.log('hide');
-    // }else if(this.prevScrollpos > currentScrollPos){
-    //   console.log('show');
-    // }
 
     if(currentScrollPos > 0){
       this.renderer.addClass(this.navbar.nativeElement, "navbar__sticky");
-      console.log(currentScrollPos);
-
     }else{
       this.renderer.removeClass(this.navbar.nativeElement, "navbar__sticky");
     };
 
-    currentScrollPos = this.prevScrollpos;
-    console.log(currentScrollPos);
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("myBar").style.width = scrolled + "%";
   }
 
   // mobnav menu

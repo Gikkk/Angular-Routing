@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, OnInit, Renderer2, ViewChild, AfterViewInit, OnDestroy } from '@angular/core';
 import { EmailValidator, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Title } from "@angular/platform-browser"
 
 @Component({
   selector: 'app-contact',
@@ -19,9 +20,10 @@ export class ContactComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('fadeInRight') fadeInRight: ElementRef;
   @ViewChild('fadeInLeft') fadeInLeft: ElementRef;
 
-  constructor( private http: HttpClient, private renderer: Renderer2,) { }
+  constructor( private http: HttpClient, private renderer: Renderer2, private title: Title ) { }
 
   ngOnInit(): void {
+    this.title.setTitle("Contact - Dev Portfolio")
     this.signUpForm = new FormGroup({
       name: new FormControl(null, Validators.required),
       email: new FormControl(null, [Validators.required, Validators.email]),
