@@ -2,7 +2,7 @@
   @extend %grid-centring;
   padding: 3rem 1rem;
   row-gap: 1.5rem;
-  max-width: 1600px;
+  max-width: 1500px;
   margin-bottom: 100px;
 
   .projects__title{
@@ -222,6 +222,8 @@
 @media (min-width: 1024px){
   .projects{
     padding: 3rem 5rem;
+    margin-right: auto;
+    margin-left: auto;
 
     .projects__text {
       font-size: 1rem;
@@ -234,5 +236,13 @@
     .projects__img{
       height: 400px;
     }
+  }
+}
+
+@media (min-width: 1660px){
+  .projects{
+    padding: 3rem 0;
+    margin-right: auto;
+    margin-left: auto;
   }
 }

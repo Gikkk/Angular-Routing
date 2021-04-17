@@ -3,8 +3,7 @@
   flex-direction: column;
   text-decoration: underline;
   opacity: 0;
-  padding-bottom: 2rem;
-  max-width: 1600px;
+  max-width: 1500px;
 
   .carousel__title{
     font-size: 2rem;
@@ -81,7 +80,7 @@
       }
     }
 
-    @media(min-width: 1600px){
+    @media(min-width: 1660px){
       .carousel__img{
         width: auto;
         height: auto;
@@ -89,6 +88,14 @@
     }
   }
 }
+
+@media(min-width: 1660px){
+  .carousel{
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 
 // Carousel animation
 @keyframes carousel {

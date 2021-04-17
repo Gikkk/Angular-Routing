@@ -83,13 +83,25 @@
 
     .cards{
       margin-top: 0;
-      max-width: 800px;
+      max-width: 750px;
     }
 
     .details{
-      max-width: 800px;
+      max-width: 750px;
     }
   }
 }
+
+@media (min-width: 1660px){
+  .info{
+    padding: 0;
+
+    .details{
+      margin-left: auto;
+    }
+  }
+}
+
+
 
 

@@ -78,7 +78,7 @@
       display: grid;
       grid-template-columns: 1fr 0.5fr;
       padding: 0 2rem;
-      max-width: 1728px;
+      max-width: 1628px;
     }
 
     .box{
@@ -108,6 +108,8 @@
 @media (min-width: 1024px){
   .contact{
     .contact__box{
+      margin-right: auto;
+      margin-left: auto;
       padding: 0 4rem;
     }
   }

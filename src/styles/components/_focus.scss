@@ -6,7 +6,7 @@
   margin: 3rem 1rem 100px 1rem;
   padding: 1rem 1rem 3rem 1rem;
   box-shadow: inset 0 0 10px $secondary-color;
-  max-width: 1600px;
+  max-width: 1500px;
 
   .focus__title{
     color: $background;
@@ -81,8 +81,11 @@
   }
 }
 
-@media (min-width: 1600px){
+@media (min-width: 1660px){
   .focus{
+    margin-right: auto;
+    margin-left: auto;
+
     .focus__title{
       font-size: 2.5rem;
     }

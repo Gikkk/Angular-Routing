@@ -10,7 +10,6 @@ export class NavigationComponent implements OnInit {
 
   constructor( private renderer: Renderer2,){ }
 
-  prevScrollpos = window.pageYOffset;
   active = false;
   @ViewChild("navbar") navbar: ElementRef;
 
@@ -25,12 +24,6 @@ export class NavigationComponent implements OnInit {
     }else{
       this.renderer.removeClass(this.navbar.nativeElement, "navbar__sticky");
     };
-
-    // let winScroll = this.doc.body.scrollHeight || this.doc.documentElement.scrollHeight;
-
-    // let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    // let scrolled = (winScroll / height) * 100;
-    // document.getElementById("myBar").style.width = scrolled + "%";
   }
 
   // mobnav menu
