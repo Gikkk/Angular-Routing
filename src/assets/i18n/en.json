@@ -3,7 +3,8 @@
       "home": "Homepage",
       "about": "about",
       "projects": "projects",
-      "contact": "contact"
+      "contact": "contact",
+      "language": "Language"
   },
 
   "footer": {
@@ -28,5 +29,30 @@
     "msg-submit": "submit",
     "msg-err": "The field is empty or not valid!",
     "msg-succ": "Successfully Submitted"
+  },
+  "about": {
+    "title": "about me",
+    "focus": "Current Focus On",
+    "CV": "download cv",
+    "more": "For more information",
+    "ge": "Georgian",
+    "en": "English",
+    "ru": "Russian",
+    "name": "Name:",
+    "surname": "Surname:",
+    "birth": "Date of birth:",
+    "address": "Address:",
+    "name-field": "Giorgi",
+    "surname-field": "Zhonzholadze",
+    "birth-field": "July 15, 1996",
+    "address-field": "Telavi, Kakheti",
+    "subtitle": "SUMMARY",
+    "text": "I am self-taught front-end developer. In addition to my knowledge base, I actively seek everyday to develop more. I can say that everything what I know about programming is the result of my hard work. Currently my goal is to become more proficient in this field and forge my career as front-end developer."
+  },
+  "project": {
+    "title": "my projects",
+    "button": "DEMO",
+    "button-right": "SOURCE",
+    "button-more": "more on github"
   }
 }

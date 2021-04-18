@@ -6,7 +6,7 @@
       <li><a class="navbar__item" routerLink="/about" routerLinkActive='navbar__active' [translate]="'nav.about'"></a></li>
     </ul>
     <a>
-      <img class="header__logo" src="assets/general/logo.png" alt="logo">
+      <img class="header__logo" src="assets/general/logo.png" alt="logo" routerLink="/">
     </a>
     <ul class="navbar__list">
       <li><a class="navbar__item" routerLink="/projects" routerLinkActive='navbar__active' [translate]="'nav.projects'"></a></li>
@@ -32,7 +32,7 @@
             <img src="assets/mob-nav/settings.png" alt="skills icon" loading="lazy">
             <a class="mobnav__item" routerLink="/about" routerLinkActive='navbar__active' [translate]="'nav.about'"></a>
           </li>
-          <div class="mobnav__line"></div>
+          <div class="mobnav__line--middle"></div>
           <li (click)="activeClass()">
             <img src="assets/mob-nav/aim.png" alt="focus icon" loading="lazy">
             <a class="mobnav__item" routerLink="/projects" routerLinkActive='navbar__active' [translate]="'nav.projects'"></a>
@@ -46,10 +46,10 @@
       </article>
       <div class="mobnav__line"></div>
       <div>
-        <p></p>
+        <p [translate]="'nav.language'"></p>
         <div>
-          <button class="buttonactive" (click)="langChange('en')">English</button>
-          <button (click)="langChange('ge')">ქართული</button>
+          <button class=" navbar__btn navbar__btn--active" (click)="langChange('en')" #Eng>English</button>
+          <button class="navbar__btn" (click)="langChange('ge')" #Geo>ქართული</button>
         </div>
       </div>
     </section>

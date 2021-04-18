@@ -15,6 +15,8 @@ export class NavigationComponent implements OnInit {
 
   active = false;
   @ViewChild("navbar") navbar: ElementRef;
+  @ViewChild("Eng") Eng: ElementRef;
+  @ViewChild("Geo") Geo: ElementRef;
 
   // sticky header
   @HostListener("window:scroll", [])
@@ -36,6 +38,13 @@ export class NavigationComponent implements OnInit {
 
   langChange(language: string): void {
     this.translate.use(language);
+    if(language === 'ge'){
+      this.renderer.addClass(this.Geo.nativeElement, "navbar__btn--active");
+      this.renderer.removeClass(this.Eng.nativeElement, "navbar__btn--active");
+    }else{
+      this.renderer.removeClass(this.Geo.nativeElement, "navbar__btn--active");
+      this.renderer.addClass(this.Eng.nativeElement, "navbar__btn--active");
+    }
   }
 
   ngOnInit() {}
