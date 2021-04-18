@@ -7,7 +7,7 @@
   margin-bottom: 100px;
 
   .contact__title{
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: 0;
     padding: 5rem 0 1rem 0;
     color: $background;
@@ -15,6 +15,7 @@
 
   .contact__text{
     color: $secondary-background;
+    margin-bottom: 2rem;
   }
 
   .box{
@@ -58,7 +59,7 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    border: 1px solid $primary-color;
+    border: 1px solid $secondary-color;
     background: red;
   }
 

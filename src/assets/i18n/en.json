@@ -7,7 +7,26 @@
   },
 
   "footer": {
-    "text": "იყავი დაკავშირებული",
-    "auth": "საავტორო უფლებები"
+    "text": "Stay Connected"
+  },
+  "contact": {
+    "map": "Click on the map to zoom in/out",
+    "title": "Contact Me",
+    "subtitle": "Write me about anything or just say hello",
+    "info-title": "CONTACT INFO",
+    "info-loc": "WHERE TO FIND ME",
+    "info-email": "EMAIL ME AT",
+    "info-phone": "CALL ME AT",
+    "info-status": "STATUS",
+    "info-telavi": "Telavi, Kakheti, Georgia",
+    "info-online": "Not available",
+    "msg-title": "SEND ME A MESSAGE",
+    "msg-name": "Your Name",
+    "msg-email": "Your Email",
+    "msg-subject": "Subject",
+    "msg-text": "Your Message",
+    "msg-submit": "submit",
+    "msg-err": "The field is empty or not valid!",
+    "msg-succ": "Successfully Submitted"
   }
 }

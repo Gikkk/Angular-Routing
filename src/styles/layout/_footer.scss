@@ -39,7 +39,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 2rem;
   }
 
   .footer__header{
@@ -54,10 +53,10 @@
     margin-right: 0.5rem;
   }
 
-  .footer__valid{
+  .footer__auth{
     display: flex;
     align-items: center;
-    letter-spacing: 2px;
+    font-size: 14px;
     color: $background;
   }
 
@@ -125,7 +124,6 @@
     grid-template-columns: 1fr 1fr;
 
     .footer__content{
-      margin: 0;
       flex-direction: row;
     }
 
