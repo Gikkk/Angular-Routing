@@ -1,5 +1,6 @@
 import { Component, ViewChild, ElementRef, Renderer2, HostListener, OnInit, Inject } from '@angular/core';
 import { debounce } from '../helpers/debounce.decorator';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navigation',
@@ -8,7 +9,9 @@ import { debounce } from '../helpers/debounce.decorator';
 })
 export class NavigationComponent implements OnInit {
 
-  constructor( private renderer: Renderer2,){ }
+  constructor( private renderer: Renderer2, private translate: TranslateService){
+    translate.setDefaultLang('en');
+  }
 
   active = false;
   @ViewChild("navbar") navbar: ElementRef;
@@ -29,6 +32,10 @@ export class NavigationComponent implements OnInit {
   // mobnav menu
   activeClass(){
     this.active = !this.active
+  }
+
+  langChange(language: string): void {
+    this.translate.use(language);
   }
 
   ngOnInit() {}

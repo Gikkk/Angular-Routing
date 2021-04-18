@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { slideInAnimation } from './helpers/route-transition-animations';
 
 @Component({
@@ -17,7 +18,9 @@ export class AppComponent {
       outlet.activatedRouteData['animationState'];
    }
 
-  constructor() {
+   constructor( translate: TranslateService){
+    translate.setDefaultLang('en');
   }
+
 }
 

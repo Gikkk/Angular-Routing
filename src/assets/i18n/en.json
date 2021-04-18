@@ -1,0 +1,13 @@
+{
+  "nav": {
+      "home": "Homepage",
+      "about": "about",
+      "projects": "projects",
+      "contact": "contact"
+  },
+
+  "footer": {
+    "text": "იყავი დაკავშირებული",
+    "auth": "საავტორო უფლებები"
+  }
+}
