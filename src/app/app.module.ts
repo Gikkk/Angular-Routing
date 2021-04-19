@@ -6,20 +6,22 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { AppRoutingModule } from './app-routing.module';
+import { AboutModule } from './about/about.module';
+import { ProjectModule } from './project/project.module';
+import { ContactModule } from './contact/contact.module';
 
 import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomepageComponent } from './homepage/homepage';
 import { AboutComponent } from './about/about.component';
 import { ProjectComponent } from './project/project.component';
-import { MapComponent } from './contact/map/map.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { FooterComponent } from './footer/footer.component';
 import { CircularMenuComponent } from './circular-menu/circular-menu.component';
 import { TechStackComponent } from './homepage/tech-stack/tech-stack.component';
-import { FocusComponent } from './about/focus/focus.component';
-import { CardComponent } from './about/card/card.component';
+
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient) {
@@ -34,13 +36,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     AboutComponent,
     ContactComponent,
     ProjectComponent,
-    MapComponent,
     NavigationComponent,
     FooterComponent,
     CircularMenuComponent,
-    TechStackComponent,
-    FocusComponent,
-    CardComponent,
+    TechStackComponent
 ],
   imports: [
     BrowserModule,
@@ -49,6 +48,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     HttpClientModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    AboutModule,
+    ProjectModule,
+    ContactModule,
     TranslateModule.forRoot({
       loader: {
           provide: TranslateLoader,

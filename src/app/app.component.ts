@@ -12,11 +12,11 @@ import { slideInAnimation } from './helpers/route-transition-animations';
 export class AppComponent {
   title = 'My-Portfolio-New';
 
-  // prepareRoute(outlet: RouterOutlet) {
-  //   return outlet &&
-  //     outlet.activatedRouteData &&
-  //     outlet.activatedRouteData['animationState'];
-  // }
+  prepareRoute(outlet: RouterOutlet) {
+    return outlet &&
+      outlet.activatedRouteData &&
+      outlet.activatedRouteData['animationState'];
+  }
 
    constructor( translate: TranslateService){
     translate.setDefaultLang('en');

@@ -8,9 +8,9 @@ import { ProjectComponent } from './project/project.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomepageComponent , data: {animation: 'Home'} },
-  { path: 'about', component: AboutComponent , data: {animation: 'About'} },
-  { path: 'projects', component: ProjectComponent , data: {animation: 'Projects'} },
-  { path: 'contact', component: ContactComponent , data: {animation: 'Contact'} }
+  // { path: 'about', component: AboutComponent , data: {animation: 'About'} },
+  // { path: 'projects', component: ProjectComponent , data: {animation: 'Projects'} },
+  // { path: 'contact', component: ContactComponent , data: {animation: 'Contact'} }
 ]
 
 @NgModule({
