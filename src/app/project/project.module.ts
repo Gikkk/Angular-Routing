@@ -8,7 +8,7 @@ const appRoutes: Routes = [
 ]
 
 @NgModule({
-  declarations: [],
+  declarations: [ProjectComponent],
   imports: [
     RouterModule.forChild(appRoutes)
   ],

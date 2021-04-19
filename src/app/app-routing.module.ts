@@ -1,13 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ContactComponent } from './contact/contact.component';
-import { HomepageComponent } from './homepage/homepage';
-import { AboutComponent } from './about/about.component';
-import { ProjectComponent } from './project/project.component';
-
 const appRoutes: Routes = [
-  { path: '', component: HomepageComponent , data: {animation: 'Home'} },
+  // { path: '', component: HomepageComponent , data: {animation: 'Home'} },
   // { path: 'about', component: AboutComponent , data: {animation: 'About'} },
   // { path: 'projects', component: ProjectComponent , data: {animation: 'Projects'} },
   // { path: 'contact', component: ContactComponent , data: {animation: 'Contact'} }

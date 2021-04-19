@@ -20,7 +20,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     FocusComponent,
-    CardComponent
+    CardComponent,
+    AboutComponent
   ],
   imports: [
     RouterModule.forChild(appRoutes),

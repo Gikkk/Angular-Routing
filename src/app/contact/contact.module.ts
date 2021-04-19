@@ -21,6 +21,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     MapComponent,
+    ContactComponent
   ],
   imports: [
     RouterModule.forChild(appRoutes),
