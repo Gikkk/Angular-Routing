@@ -12,23 +12,24 @@
   z-index: 100;
   text-transform: uppercase;
   cursor: pointer;
-  // -webkit-touch-callout: none;
-  // -webkit-user-select: none;
-  // -khtml-user-select: none;
-  // -moz-user-select: none;
-  // -ms-user-select: none;
-  // user-select: none;
 
   &:focus{
     outline: none;
   }
 
-  .header__logo{
+  .navbar__desktop{
+    display: flex;
+  }
+
+  .navbar__logo{
     width: 50px;
     height: 50px;
     margin: 0 2vw;
   }
 
+  .navbar__language{
+    display: none;
+  }
 
   .navbar__list{
     display: none;
@@ -160,6 +161,17 @@
 
     .navbar__list{
       display: flex;
+    }
+
+    .navbar__language{
+      display: flex;
+      position: absolute;
+      right: 16px;
+      height: 24px;
+      width: 30px;
+      background: $secondary-background;
+      justify-content: center;
+      align-items: center;
     }
   }
 

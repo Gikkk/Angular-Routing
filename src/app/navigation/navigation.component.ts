@@ -14,6 +14,7 @@ export class NavigationComponent implements OnInit {
   }
 
   active = false;
+  langFlag = false;
   @ViewChild("navbar") navbar: ElementRef;
   @ViewChild("Eng") Eng: ElementRef;
   @ViewChild("Geo") Geo: ElementRef;
@@ -45,6 +46,7 @@ export class NavigationComponent implements OnInit {
       this.renderer.removeClass(this.Geo.nativeElement, "navbar__btn--active");
       this.renderer.addClass(this.Eng.nativeElement, "navbar__btn--active");
     }
+    this.langFlag = !this.langFlag;
   }
 
   ngOnInit() {}
