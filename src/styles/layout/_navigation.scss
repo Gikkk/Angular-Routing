@@ -138,7 +138,7 @@
   transform: translateX(0vw);
 }
 
-.space{
+.mobnav__space{
   z-index: 100;
   background: $secondary-color;
   opacity: 0.5;
@@ -150,7 +150,7 @@
   transform: translateX(100vw);
 }
 
-.space__fade{
+.mobnav__space--active{
   transform: translateX(0vw);
 }
 

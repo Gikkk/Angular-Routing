@@ -49,10 +49,10 @@
             <a class="mobnav__item" routerLink="/contact" routerLinkActive='navbar__active'>Contact</a>
           </li>
         </ul>
-        <div class="mobnav__line"></div>
       </article>
       <div class="mobnav__line"></div>
-      <div>
+      <div class="mobnav__line"></div>
+      <article>
         <p>Language</p>
         <div>
           <!-- <button class=" navbar__btn navbar__btn--active" (click)="langChange('en')" #Eng>English</button>
@@ -60,9 +60,9 @@
           <button class=" navbar__btn navbar__btn--active" #Eng>English</button>
           <button class="navbar__btn" #Geo>ქართული</button>
         </div>
-      </div>
+      </article>
     </section>
 
   </nav>
-  <div class="space" (click)="activeClass()" [ngClass]="{'space__fade' : active}"></div>
+  <div class="mobnav__space" (click)="activeClass()" [ngClass]="{'mobnav__space--active' : active}"></div>
 </header>

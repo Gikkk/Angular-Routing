@@ -41,7 +41,7 @@
     align-items: center;
   }
 
-  .footer__header{
+  .footer__text{
     letter-spacing: 2px;
     color: $tertiary-color;
     margin: 0.5rem 0;
@@ -126,7 +126,7 @@
       flex-direction: row;
     }
 
-    .footer__header{
+    .footer__text{
       margin: 0 1rem 0 0;
     }
   }

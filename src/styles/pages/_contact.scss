@@ -18,7 +18,7 @@
     margin-bottom: 2rem;
   }
 
-  .box{
+  .form__container{
     background: $primary-color--light;
     padding: 1rem;
     border-radius: 0.5rem 0.5rem 0 0;
@@ -34,7 +34,7 @@
     opacity: 0;
   }
 
-  .box__title{
+  .form__title{
     color: $tertiary-color;
   }
 
@@ -81,7 +81,7 @@
       max-width: 1628px;
     }
 
-    .box{
+    .form__container{
       border-radius: 0.5rem 0 0 0.5rem;
     }
 
