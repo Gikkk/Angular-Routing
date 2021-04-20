@@ -5,7 +5,7 @@
   margin: 0;
   padding: 6rem 0 2rem 0;
   text-transform: uppercase;
-  color: $background;
+  color: $tertiary-color;
 }
 
 .info{
@@ -20,15 +20,15 @@
 
   .details{
     padding: 1rem;
-    background: $secondary-background--light;
-    color: $background;
+    background: $primary-color--light;
+    color: $tertiary-color;
     border-radius: 0.5rem;
     font-weight: 600;
     box-shadow: inset 0 0 10px $secondary-color;
 
     .details__text{
       text-align: justify;
-      color: $secondary-background;
+      color: $secondary-color--light;
     }
 
     .details__info{
@@ -38,7 +38,7 @@
 
     .details__info--highlighted{
       font-weight: 600;
-      color: $secondary-background;
+      color: $secondary-color--light;
     }
   }
 }
@@ -49,7 +49,7 @@
   .CV__title{
     font-size: 1.5rem;
     font-style: italic;
-    color: $background;
+    color: $tertiary-color;
     padding: 0 1rem
   }
 
@@ -61,7 +61,7 @@
 
 @media( min-width: 360px){
   .cards{
-    background: $secondary-background--light;
+    background: $primary-color--light;
     box-shadow: inset 0 0 10px $secondary-color;
     border-radius: 10px;
   }

@@ -1,7 +1,7 @@
 .focus{
   text-align: center;
   justify-content: center;
-  background: $secondary-background--light;
+  background: $primary-color--light;
   border-radius: 0.5rem;
   margin: 3rem 1rem 100px 1rem;
   padding: 1rem 1rem 3rem 1rem;
@@ -9,7 +9,7 @@
   max-width: 1500px;
 
   .focus__title{
-    color: $background;
+    color: $tertiary-color;
     font-size: 2rem;
     font-style: italic
   }

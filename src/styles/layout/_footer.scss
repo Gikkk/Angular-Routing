@@ -5,7 +5,7 @@
   align-items: center;
   row-gap: 1rem;
   padding: 1rem;
-  background: $secondary-background--light;
+  background: $primary-color--light;
   box-shadow: inset 0 0 10px $secondary-color;
   position: absolute;
   bottom: 0;
@@ -22,7 +22,7 @@
     box-shadow: inset 0 0 10px $secondary-color;
 
     &:hover{
-      background: $background;
+      background: $tertiary-color;
 
       path{
         fill: $primary-color;
@@ -43,7 +43,7 @@
 
   .footer__header{
     letter-spacing: 2px;
-    color: $background;
+    color: $tertiary-color;
     margin: 0.5rem 0;
   }
 
@@ -71,7 +71,7 @@
     padding: 1px;
     border-radius: 5px;
     fill: $primary-color;
-    background: $secondary-background;
+    background: $secondary-color--light;
 
     &:hover{
       fill: $primary-color;
@@ -83,7 +83,7 @@
     padding: 5px;
     border-radius: 5px;
     fill: $primary-color;
-    background: $secondary-background;
+    background: $secondary-color--light;
 
     &:hover{
       fill: $primary-color;
@@ -95,7 +95,7 @@
     padding: 5px;
     border-radius: 5px;
     fill: $primary-color;
-    background: $secondary-background;
+    background: $secondary-color--light;
 
     &:hover{
       fill: $primary-color;
@@ -109,7 +109,7 @@
     padding: 5px;
     border-radius: 5px;
     fill: $primary-color;
-    background: $secondary-background;
+    background: $secondary-color--light;
 
     &:hover{
       fill: $primary-color;

@@ -105,7 +105,7 @@
 }
 
   .project__btn{
-    background: linear-gradient(to right, $background 50%, $secondary-background 50%);
+    background: linear-gradient(to right, $tertiary-color 50%, $secondary-color--light 50%);
     color: $secondary-color;
     text-decoration: none;
     padding: 0.5rem;
@@ -124,7 +124,7 @@
   }
 
   .project__btn--highlighted{
-    background: linear-gradient(to right, $secondary-background 50%, $background 50%);
+    background: linear-gradient(to right, $secondary-color--light 50%, $tertiary-color 50%);
     color: $primary-color;
     text-decoration: none;
     padding: 0.5rem;
