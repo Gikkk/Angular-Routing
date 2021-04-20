@@ -8,6 +8,7 @@ import { FocusComponent } from './focus/focus.component';
 import { CardComponent } from './card/card.component';
 import { AboutComponent } from './about.component';
 
+
 // // required for AOT compilation
 // export function HttpLoaderFactory(http: HttpClient) {
 //   return new TranslateHttpLoader(http);
@@ -21,7 +22,7 @@ const appRoutes: Routes = [
   declarations: [
     FocusComponent,
     CardComponent,
-    AboutComponent
+    AboutComponent,
   ],
   imports: [
     RouterModule.forChild(appRoutes),

@@ -11,7 +11,6 @@ export class NavigationComponent implements OnInit {
 
   constructor( private renderer: Renderer2 ){
   }
-
   // constructor( private renderer: Renderer2, private translate: TranslateService){
   //   translate.setDefaultLang('en');
   // }
@@ -19,8 +18,8 @@ export class NavigationComponent implements OnInit {
   active = false;
   langFlag = false;
   @ViewChild("navbar") navbar: ElementRef;
-  // @ViewChild("Eng") Eng: ElementRef;
-  // @ViewChild("Geo") Geo: ElementRef;
+  @ViewChild("Eng") Eng: ElementRef;
+  @ViewChild("Geo") Geo: ElementRef;
 
   // sticky header
   @HostListener("window:scroll", [])

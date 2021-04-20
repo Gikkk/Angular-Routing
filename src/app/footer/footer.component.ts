@@ -15,8 +15,8 @@ export class FooterComponent implements OnInit{
   }
 
   scrollToTop() {
-    let pos = window.pageYOffset;
-    if (pos > 0) {
+    let currentPos = window.pageYOffset;
+    if (currentPos > 0) {
       window.scrollTo({top: 0,behavior: "smooth"});
     }
   }
