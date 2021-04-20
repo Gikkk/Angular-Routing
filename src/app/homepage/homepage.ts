@@ -1,6 +1,6 @@
-import { isPlatformBrowser } from '@angular/common';
-import { Component, OnInit, ViewChild, ElementRef, Inject, PLATFORM_ID} from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { IsBrowserService } from  '../helpers/is-browser.service'
 
 @Component({
   selector: 'app-homepage',
@@ -9,12 +9,7 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 export class HomepageComponent implements OnInit {
 
-  isBrowser;
-
-  constructor( private title: Title, private meta: Meta, @Inject(PLATFORM_ID) private platformId: Object ) {
-    this.isBrowser = isPlatformBrowser(this.platformId);
-   }
-
+  constructor( private title: Title, private meta: Meta, private isBrowserService: IsBrowserService ) {}
 
   @ViewChild('background') mainBackground: ElementRef;
 
@@ -23,12 +18,15 @@ export class HomepageComponent implements OnInit {
   myStyle: object = {};
   myParams: object = {};
   windowHeight: number;
+  isBrowser = this.isBrowserService.isBrowser
 
   onResize(){
-    // this.windowHeight = window.innerHeight;
+    if(this.isBrowser) {
+      this.windowHeight = window.innerHeight;
+    }
 
     this.myStyle = {
-      'height': `800px`,
+      'height': `${this.windowHeight}px`,
       'background': "transperent",
       'z-index': 1,
       'top': 0,

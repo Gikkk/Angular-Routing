@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, OnInit, Renderer2, ViewChild, AfterViewInit, OnDestroy } from '@angular/core';
 import { EmailValidator, FormControl, FormGroup, Validators } from '@angular/forms';
-import { Meta, Title } from "@angular/platform-browser"
+import { Meta, Title } from "@angular/platform-browser";
+import { IsBrowserService } from  '../helpers/is-browser.service'
 
 @Component({
   selector: 'app-contact',
@@ -20,7 +21,7 @@ export class ContactComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('fadeInRight') fadeInRight: ElementRef;
   @ViewChild('fadeInLeft') fadeInLeft: ElementRef;
 
-  constructor( private http: HttpClient, private renderer: Renderer2, private title: Title, private meta: Meta ) { }
+  constructor( private http: HttpClient, private renderer: Renderer2, private title: Title, private meta: Meta, private isBrowserService: IsBrowserService ) { }
 
   ngOnInit(): void {
     this.title.setTitle("Contact - Dev Portfolio")
@@ -63,6 +64,7 @@ export class ContactComponent implements OnInit, AfterViewInit, OnDestroy {
     rootMargin: '0px',
     threshold: 0.2
   };
+  isBrowser = this.isBrowserService.isBrowser;
   private observer: IntersectionObserver | undefined;
 
   ngAfterViewInit() {

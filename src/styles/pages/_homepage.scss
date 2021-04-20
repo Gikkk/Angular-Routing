@@ -40,21 +40,6 @@
   }
 }
 
-.particles__backgr--day{
-  background: url("../../assets/general/background-day.jpg");
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover
-}
-
-.particles__backgr--night{
-  background: url("../../assets/general/background-night.jpg");
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover
-}
-
-
 @media(min-width: 640px){
   .homepage__title--img{
     height: 80px;

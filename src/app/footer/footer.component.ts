@@ -1,5 +1,6 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { IsBrowserService } from  '../helpers/is-browser.service'
 
 @Component({
   selector: 'app-footer',
@@ -8,16 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit{
 
-  constructor( private viewportScroller: ViewportScroller) {}
+  constructor( private viewportScroller: ViewportScroller, private isBrowserService: IsBrowserService) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
 
-  }
+  isBrowser = this.isBrowserService.isBrowser
 
   scrollToTop() {
-    let currentPos = window.pageYOffset;
-    if (currentPos > 0) {
-      window.scrollTo({top: 0,behavior: "smooth"});
+    if(this.isBrowser){
+      let currentPos = window.pageYOffset;
+      if (currentPos > 0) {
+        window.scrollTo({top: 0,behavior: "smooth"});
+      }
     }
   }
 
