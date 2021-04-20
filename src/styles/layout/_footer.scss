@@ -56,7 +56,7 @@
   .footer__auth{
     @extend %flex-centring;
     font-size: 14px;
-    color: $background;
+    color: $secondary-color--light;
   }
 
   .footer__icons{

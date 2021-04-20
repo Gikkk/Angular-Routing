@@ -59,7 +59,7 @@
 
   .projects__item:hover{
     .projects__overlay {
-      background-color: rgba(170,170,170,0.4);
+      background: rgba(170,170,170,0.4);
     }
 
     .projects__img{
@@ -69,7 +69,7 @@
     .projects__box{
       opacity: 1;
       transform: scale(1);
-      background-color: rgba(0,0,0,0.4);
+      background: rgba(0,0,0,0.4);
     }
   }
 

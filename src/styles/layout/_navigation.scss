@@ -95,14 +95,14 @@
   .mobnav__line{
     width: 90%;
     height: 1px;
-    background-color: #e4d9d9;
+    background: #e4d9d9;
     margin-bottom: 1rem
   }
 
   .mobnav__line--middle{
     width: 90%;
     height: 1px;
-    background-color: #e4d9d9;
+    background: #e4d9d9;
   }
 
   .navbar__btn{
@@ -125,7 +125,7 @@
 // support
 .navbar__sticky{
   padding: 0.2rem 1rem;
-  background-color: $primary-color;
+  background: $primary-color;
   box-shadow: inset 0 0 10px $secondary-color;
 }
 

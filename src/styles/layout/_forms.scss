@@ -23,8 +23,8 @@
   }
 
   .form__success{
-    border: 1px solid #4b6cc1;
-    color: #4b6cc1;
+    border: 1px solid $tertiary-color--light;
+    color: $tertiary-color--light;
     font-family: $secondary-font;
     font-size: 16px;
     font-weight: 600;
@@ -34,7 +34,7 @@
     padding: 6px 10px;
     width: 100%;
     top: 100%;
-    box-shadow: inset 0 0 10px #4b6cc1;
+    box-shadow: inset 0 0 10px $tertiary-color--light;
   }
 
   .form__label{
@@ -108,8 +108,8 @@
     color: $secondary-color;
 
     &:hover{
-      box-shadow: inset 0 0 10px #4b6cc1;
-      color: #4b6cc1;
+      box-shadow: inset 0 0 10px $tertiary-color--light;
+      color: $tertiary-color--light;
     }
   }
 }
