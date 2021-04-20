@@ -54,8 +54,7 @@
   }
 
   .footer__auth{
-    display: flex;
-    align-items: center;
+    @extend %flex-centring;
     font-size: 14px;
     color: $background;
   }

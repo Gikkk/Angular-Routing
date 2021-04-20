@@ -1,7 +1,9 @@
 <app-navigation></app-navigation>
-<div [@routeAnimations]="o && o.activatedRouteData
+<div class="'test">
+  <div style="position: relative;" [@routeAnimations]="o && o.activatedRouteData
       && o.activatedRouteData['animation']">
     <router-outlet #o="outlet"></router-outlet>
+</div>
 </div>
 <app-circular-menu></app-circular-menu>
 <app-footer></app-footer>

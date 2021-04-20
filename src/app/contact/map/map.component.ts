@@ -82,7 +82,7 @@ export class MapComponent implements OnInit {
 
   onMouseWheel() {
     this.mapZoom = true;
-    this.renderer.setStyle(this.mapOver.nativeElement, 'background-color', 'rgba(41, 38, 38, 0.296)');
+    this.renderer.setStyle(this.mapOver.nativeElement, 'background-color', 'rgba(0, 0, 0, 0.3)');
   }
 
   onMouseClick(){
