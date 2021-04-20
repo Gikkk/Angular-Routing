@@ -15,8 +15,8 @@ const appRoutes: Routes = [
     HomepageComponent
   ],
   imports: [
-    ParticlesModule,
     RouterModule.forChild(appRoutes),
+    ParticlesModule
   ],
   exports: [
     TechStackComponent

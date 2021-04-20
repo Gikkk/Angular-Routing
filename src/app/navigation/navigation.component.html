@@ -3,22 +3,22 @@
     <!-- desktop navbar  -->
     <section class="navbar__desktop">
       <ul class="navbar__list">
-        <li><a class="navbar__item" [routerLinkActiveOptions]="{exact: true}" routerLink="/" routerLinkActive='navbar__active' [translate]="'nav.home'"></a></li>
-        <li><a class="navbar__item" routerLink="/about" routerLinkActive='navbar__active' [translate]="'nav.about'"></a></li>
+        <li><a class="navbar__item" [routerLinkActiveOptions]="{exact: true}" routerLink="/home" routerLinkActive='navbar__active'>Homepage</a></li>
+        <li><a class="navbar__item" routerLink="/about" routerLinkActive='navbar__active' >About</a></li>
       </ul>
       <a>
         <img class="navbar__logo" src="assets/general/logo.png" alt="logo" routerLink="/">
       </a>
       <ul class="navbar__list">
-        <li><a class="navbar__item" routerLink="/projects" routerLinkActive='navbar__active' [translate]="'nav.projects'"></a></li>
-        <li><a class="navbar__item" routerLink="/contact" routerLinkActive='navbar__active' [translate]="'nav.contact'"></a></li>
+        <li><a class="navbar__item" routerLink="/projects" routerLinkActive='navbar__active' >Projects</a></li>
+        <li><a class="navbar__item" routerLink="/contact" routerLinkActive='navbar__active' >Contact</a></li>
       </ul>
     </section>
     <!-- language bar  -->
-    <section class="navbar__language">
+    <!-- <section class="navbar__language">
       <img src="assets/language/geo.png" alt="geo flag" (click)="langChange('ge')" *ngIf="!langFlag">
       <img src="assets/language/usa.png" alt="usa flag" (click)="langChange('en')" *ngIf="langFlag">
-    </section>
+    </section> -->
 
     <!-- hamburger menu icon -->
     <section class="hamburger" (click)="activeClass()" [ngClass]="{'open' : active}">
@@ -33,30 +33,32 @@
         <ul class="mobnav__list" >
           <li (click)="activeClass()">
             <img src="assets/mob-nav/homepage.png" alt="homepage icon" loading="lazy">
-            <a class="mobnav__item" [routerLinkActiveOptions]="{exact: true}" routerLink="/" routerLinkActive='navbar__active' [translate]="'nav.home'"></a>
+            <a class="mobnav__item" [routerLinkActiveOptions]="{exact: true}" routerLink="/" routerLinkActive='navbar__active'>Home</a>
           </li>
           <li (click)="activeClass()">
             <img src="assets/mob-nav/settings.png" alt="skills icon" loading="lazy">
-            <a class="mobnav__item" routerLink="/about" routerLinkActive='navbar__active' [translate]="'nav.about'"></a>
+            <a class="mobnav__item" routerLink="/about" routerLinkActive='navbar__active'> About</a>
           </li>
           <div class="mobnav__line--middle"></div>
           <li (click)="activeClass()">
             <img src="assets/mob-nav/aim.png" alt="focus icon" loading="lazy">
-            <a class="mobnav__item" routerLink="/projects" routerLinkActive='navbar__active' [translate]="'nav.projects'"></a>
+            <a class="mobnav__item" routerLink="/projects" routerLinkActive='navbar__active'>Projects</a>
           </li>
           <li (click)="activeClass()">
             <img src="assets/mob-nav/question.png" alt="who icon" loading="lazy">
-            <a class="mobnav__item" routerLink="/contact" routerLinkActive='navbar__active' [translate]="'nav.contact'"></a>
+            <a class="mobnav__item" routerLink="/contact" routerLinkActive='navbar__active'>Contact</a>
           </li>
         </ul>
         <div class="mobnav__line"></div>
       </article>
       <div class="mobnav__line"></div>
       <div>
-        <p [translate]="'nav.language'"></p>
+        <p>Language</p>
         <div>
-          <button class=" navbar__btn navbar__btn--active" (click)="langChange('en')" #Eng>English</button>
-          <button class="navbar__btn" (click)="langChange('ge')" #Geo>ქართული</button>
+          <!-- <button class=" navbar__btn navbar__btn--active" (click)="langChange('en')" #Eng>English</button>
+          <button class="navbar__btn" (click)="langChange('ge')" #Geo>ქართული</button> -->
+          <button class=" navbar__btn navbar__btn--active" #Eng>English</button>
+          <button class="navbar__btn" #Geo>ქართული</button>
         </div>
       </div>
     </section>

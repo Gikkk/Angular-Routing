@@ -1,6 +1,6 @@
 import { Component, ViewChild, ElementRef, Renderer2, HostListener, OnInit, Inject } from '@angular/core';
 import { debounce } from '../helpers/debounce.decorator';
-import {TranslateService} from '@ngx-translate/core';
+// import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navigation',
@@ -9,15 +9,18 @@ import {TranslateService} from '@ngx-translate/core';
 })
 export class NavigationComponent implements OnInit {
 
-  constructor( private renderer: Renderer2, private translate: TranslateService){
-    translate.setDefaultLang('en');
+  constructor( private renderer: Renderer2 ){
   }
+
+  // constructor( private renderer: Renderer2, private translate: TranslateService){
+  //   translate.setDefaultLang('en');
+  // }
 
   active = false;
   langFlag = false;
   @ViewChild("navbar") navbar: ElementRef;
-  @ViewChild("Eng") Eng: ElementRef;
-  @ViewChild("Geo") Geo: ElementRef;
+  // @ViewChild("Eng") Eng: ElementRef;
+  // @ViewChild("Geo") Geo: ElementRef;
 
   // sticky header
   @HostListener("window:scroll", [])
@@ -37,17 +40,17 @@ export class NavigationComponent implements OnInit {
     this.active = !this.active
   }
 
-  langChange(language: string): void {
-    this.translate.use(language);
-    if(language === 'ge'){
-      this.renderer.addClass(this.Geo.nativeElement, "navbar__btn--active");
-      this.renderer.removeClass(this.Eng.nativeElement, "navbar__btn--active");
-    }else{
-      this.renderer.removeClass(this.Geo.nativeElement, "navbar__btn--active");
-      this.renderer.addClass(this.Eng.nativeElement, "navbar__btn--active");
-    }
-    this.langFlag = !this.langFlag;
-  }
+  // langChange(language: string): void {
+  //   this.translate.use(language);
+  //   if(language === 'ge'){
+  //     this.renderer.addClass(this.Geo.nativeElement, "navbar__btn--active");
+  //     this.renderer.removeClass(this.Eng.nativeElement, "navbar__btn--active");
+  //   }else{
+  //     this.renderer.removeClass(this.Geo.nativeElement, "navbar__btn--active");
+  //     this.renderer.addClass(this.Eng.nativeElement, "navbar__btn--active");
+  //   }
+  //   this.langFlag = !this.langFlag;
+  // }
 
   ngOnInit() {}
 }

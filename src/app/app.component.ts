@@ -18,9 +18,11 @@ export class AppComponent {
       outlet.activatedRouteData['animationState'];
   }
 
-   constructor( translate: TranslateService){
-    translate.setDefaultLang('en');
-  }
+  //  constructor( translate: TranslateService){
+  //   translate.setDefaultLang('en');
+  // }
+
+  constructor( ){}
 
 }
 
