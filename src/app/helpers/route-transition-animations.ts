@@ -1,8 +1,8 @@
-import { transition, trigger, query, style, animate, group } from '@angular/animations';
+import { transition, trigger, query, style, animate, group, animateChild } from '@angular/animations';
 
 
-export const routeTransitionAnim =
-  trigger('routeAnimations', [
+export const routeTransitionAnimations =
+  trigger('triggerAnimation', [
       transition('Home => About, About => Projects, Projects => Contact, Home => Contact, Home => Projects, About => Contact', [
           query(':enter, :leave', style({ position: 'fixed', width: '100%', top: '0', bottom: '0' }), { optional: true }),
           group([
@@ -12,7 +12,7 @@ export const routeTransitionAnim =
               ], { optional: true }),
               query(':leave', [
                   style({ transform: 'translateX(0%)' }),
-                  animate('0.6s ease-in-out', style({ transform: 'translateX(-100%)', opacity: 0 }))
+                  animate('0.6s ease-in-out', style({ transform: 'translateX(-100%)' }))
               ], { optional: true }),
           ])
       ]),
@@ -30,3 +30,4 @@ export const routeTransitionAnim =
           ])
       ]),
   ]);
+

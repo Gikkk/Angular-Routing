@@ -15,7 +15,7 @@ import { ContactComponent } from './contact.component';
 // }
 
 const appRoutes: Routes = [
-  { path: '', component: ContactComponent , data: {animation: 'Contact'} }
+  { path: '', component: ContactComponent , data: {animationState: 'Contact'} }
 ]
 
 @NgModule({

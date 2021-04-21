@@ -1,5 +1,6 @@
 import { Component, ViewChild, ElementRef, Renderer2, HostListener, OnInit, Inject } from '@angular/core';
 import { debounce } from '../helpers/debounce.decorator';
+import { DOCUMENT } from '@angular/common';
 // import {TranslateService} from '@ngx-translate/core';
 
 @Component({
@@ -9,12 +10,14 @@ import { debounce } from '../helpers/debounce.decorator';
 })
 export class NavigationComponent implements OnInit {
 
-  constructor( private renderer: Renderer2 ){
+  constructor(@Inject(DOCUMENT) document, private renderer: Renderer2 ){
+    this.preventScroll = document;
   }
   // constructor( private renderer: Renderer2, private translate: TranslateService){
   //   translate.setDefaultLang('en');
   // }
 
+  preventScroll: Document
   active = false;
   langFlag = false;
   @ViewChild("navbar") navbar: ElementRef;
@@ -36,7 +39,12 @@ export class NavigationComponent implements OnInit {
 
   // mobnav menu
   activeClass(){
-    this.active = !this.active
+    this.active = !this.active;
+    if(this.active){
+      this.renderer.setStyle(this.preventScroll.body, 'overflow', 'hidden');
+    }else{
+      this.renderer.setStyle(this.preventScroll.body, 'overflow', 'auto');
+    }
   }
 
   // langChange(language: string): void {

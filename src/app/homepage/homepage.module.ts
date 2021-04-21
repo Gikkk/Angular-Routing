@@ -7,7 +7,7 @@ import { TechStackComponent } from './tech-stack/tech-stack.component';
 import { HomepageComponent } from './homepage';
 
 const appRoutes: Routes = [
-  { path: '', component: HomepageComponent , data: {animation: 'Home'} }
+  { path: '', component: HomepageComponent , data: {animationState: 'Home'} }
 ]
 
 @NgModule({

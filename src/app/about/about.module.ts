@@ -15,7 +15,7 @@ import { AboutComponent } from './about.component';
 // }
 
 const appRoutes: Routes = [
-  { path: '', component: AboutComponent , data: {animation: 'About'} }
+  { path: '', component: AboutComponent , data: {animationState: 'About'} }
 ]
 
 @NgModule({
