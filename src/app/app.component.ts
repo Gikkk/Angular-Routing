@@ -1,21 +1,18 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { slideInAnimation } from './helpers/route-transition-animations';
-
+import { routeTransitionAnim } from './helpers/route-transition-animations'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  animations: [slideInAnimation]
+  animations: [routeTransitionAnim]
 })
 export class AppComponent {
   title = 'My-Portfolio-New';
 
   prepareRoute(outlet: RouterOutlet) {
-    return outlet &&
-      outlet.activatedRouteData &&
-      outlet.activatedRouteData['animationState'];
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
   }
 
   //  constructor( translate: TranslateService){

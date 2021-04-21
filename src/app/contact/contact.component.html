@@ -1,8 +1,8 @@
-<section class="contact" #fadeInAnim *ngIf="isBrowser">
+<section class="contact">
   <h2 class="contact__title">Get In Touch</h2>
   <h3 class="contact__greet">Write me about anything or just say hello</h3>
-  <section class="contact__box">
-    <article class="form__container" #fadeInLeft>
+  <section class="contact__box" #fadeInAnim>
+    <article class="form__container">
       <h3 class="form__title">SEND ME A MESSAGE</h3>
       <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()" class="form">
         <div class="form__item">
@@ -43,7 +43,7 @@
         </div>
       </form>
     </article>
-    <article class="contact__details" #fadeInRight>
+    <article class="contact__details">
       <h3>CONTACT INFO</h3>
       <h4 class="contact__subtitle">Where to find me</h4>
       <div class="contact__item">

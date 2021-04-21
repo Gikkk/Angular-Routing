@@ -24,7 +24,6 @@ export class ContactComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor( private http: HttpClient, private renderer: Renderer2, private title: Title, private meta: Meta, private isBrowserService: IsBrowserService ) { }
 
   ngOnInit(): void {
-    this.title.setTitle("Contact - Angular Developer Portfolio")
     this.signUpForm = new FormGroup({
       name: new FormControl(null, Validators.required),
       email: new FormControl(null, [Validators.required, Validators.email]),
@@ -44,6 +43,14 @@ export class ContactComponent implements OnInit, AfterViewInit, OnDestroy {
         this.availability = "Not available";
       }
     }, 3600000);
+
+    this.title.setTitle("Contact - Angular Developer Portfolio");
+    this.meta.updateTag({ name: 'og:title', content: 'Contact - Giorgi Zhonzholadze | Developer portfolio' });
+    this.meta.updateTag({ name: 'description', content: 'Contact page of front end developer portfolio - contact information' });
+    this.meta.updateTag({ name: 'og:url', content: '/contact' });
+
+    this.meta.updateTag({ name: 'twitter:title', content: 'Contact - Giorgi Zhonzholadze | Developer portfolio' });
+    this.meta.updateTag({ name: 'twitter:description', content: 'Contact page of front end developer portfolio - contact information' });
   }
 
   onSubmit(){
@@ -71,8 +78,7 @@ export class ContactComponent implements OnInit, AfterViewInit, OnDestroy {
     this.observer = new IntersectionObserver( entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          this.renderer.addClass(this.fadeInLeft.nativeElement, 'fadeInAnimLeft');
-          this.renderer.addClass(this.fadeInRight.nativeElement, 'fadeInAnimRight');
+          this.renderer.addClass(this.fadeInAnim.nativeElement, 'fadeInAnim');
           this.observer.unobserve(entry.target);
         }
       });

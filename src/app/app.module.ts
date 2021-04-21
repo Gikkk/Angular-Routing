@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { CircularMenuComponent } from './circular-menu/circular-menu.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 // required for AOT compilation
@@ -22,7 +23,8 @@ import { CircularMenuComponent } from './circular-menu/circular-menu.component';
   declarations: [
     AppComponent,
     NavigationComponent,
-    CircularMenuComponent
+    CircularMenuComponent,
+    FooterComponent
 ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

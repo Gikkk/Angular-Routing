@@ -138,6 +138,13 @@ export class HomepageComponent implements OnInit {
   ngOnInit() {
     this.onResize();
     this.title.setTitle("Home - Angular Developer Portfolio");
+
+    this.meta.updateTag({ name: 'og:title', content: 'Home - Giorgi Zhonzholadze | Developer portfolio' });
+    this.meta.updateTag({ name: 'description', content: 'Home page of front end developer portfolio - for developing purposes' });
+    this.meta.updateTag({ name: 'og:url', content: '/home' });
+
+    this.meta.updateTag({ name: 'twitter:title', content: 'Home - Giorgi Zhonzholadze | Developer portfolio' });
+    this.meta.updateTag({ name: 'twitter:description', content: 'Home page of front end developer portfolio - for developing purposes' });
   }
 
 }

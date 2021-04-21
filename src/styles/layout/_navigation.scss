@@ -63,7 +63,7 @@
   left: 0;
   padding: 2rem;
   background: $primary-color;
-  transition: 0.5s;
+  transition: 0.3s;
   transform: translateX(-100vw);
 
   .mobnav__list{
@@ -146,7 +146,7 @@
   height: 100%;
   position: fixed;
   right: 0;
-  transition: 0.5s;
+  transition: 0.3s;
   transform: translateX(100vw);
 }
 
