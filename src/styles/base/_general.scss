@@ -7,14 +7,11 @@ html {
   overflow-x: hidden;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  position: relative;
-  min-height: 100%;
 }
 
 body{
   margin: 0;
   font-family: $primary-font;
-  padding-bottom: 120px;
 }
 
 ::-webkit-scrollbar {

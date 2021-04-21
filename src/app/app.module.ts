@@ -9,7 +9,6 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
-import { FooterComponent } from './footer/footer.component';
 import { CircularMenuComponent } from './circular-menu/circular-menu.component';
 
 
@@ -23,7 +22,6 @@ import { CircularMenuComponent } from './circular-menu/circular-menu.component';
   declarations: [
     AppComponent,
     NavigationComponent,
-    FooterComponent,
     CircularMenuComponent
 ],
   imports: [
