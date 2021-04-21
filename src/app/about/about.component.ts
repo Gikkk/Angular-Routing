@@ -11,6 +11,6 @@ export class AboutComponent implements OnInit {
   constructor( private title: Title, private meta: Meta ) {}
 
   ngOnInit() {
-    this.title.setTitle("About - Dev Portfolio")
+    this.title.setTitle("About - Angular Developer Portfolio")
   }
 }

@@ -24,7 +24,7 @@ export class ContactComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor( private http: HttpClient, private renderer: Renderer2, private title: Title, private meta: Meta, private isBrowserService: IsBrowserService ) { }
 
   ngOnInit(): void {
-    this.title.setTitle("Contact - Dev Portfolio")
+    this.title.setTitle("Contact - Angular Developer Portfolio")
     this.signUpForm = new FormGroup({
       name: new FormControl(null, Validators.required),
       email: new FormControl(null, [Validators.required, Validators.email]),

@@ -137,7 +137,7 @@ export class HomepageComponent implements OnInit {
 
   ngOnInit() {
     this.onResize();
-    this.title.setTitle("Home - Dev Portfolio");
+    this.title.setTitle("Home - Angular Developer Portfolio");
   }
 
 }
