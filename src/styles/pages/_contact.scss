@@ -13,7 +13,11 @@
     color: $tertiary-color;
   }
 
-  .contact__text{
+  .contact__box{
+    color: $tertiary-color;
+  }
+
+  .contact__greet{
     color: $secondary-color--light;
     margin-bottom: 2rem;
   }
@@ -26,7 +30,7 @@
     opacity: 0;
   }
 
-  .box__details{
+  .contact__details{
     background: $primary-color--light;
     padding: 1rem;
     border-radius: 0 0 0.5rem 0.5rem;
@@ -34,16 +38,12 @@
     opacity: 0;
   }
 
-  .form__title{
-    color: $tertiary-color;
-  }
-
-  .box__subtitle{
+  .contact__subtitle{
     margin: 2rem 0 0.5rem 0;
     color: $tertiary-color;
   }
 
-  .box__item{
+  .contact__item{
     @extend %flex-centring;
   }
 
@@ -54,7 +54,7 @@
     border-radius: 0.3rem;
   }
 
-  .box__status{
+  .contact__status{
     width: 8px;
     height: 8px;
     border-radius: 50%;
@@ -62,7 +62,7 @@
     background: red;
   }
 
-  .box__text{
+  .contact__text{
     color: $secondary-color--light;
     margin: 0 0 0 0.5rem;
     font-size: 14px;
@@ -85,7 +85,7 @@
       border-radius: 0.5rem 0 0 0.5rem;
     }
 
-    .box__details{
+    .contact__details{
       border-radius: 0 0.5rem 0.5rem 0;
     }
 
@@ -94,11 +94,11 @@
       // font-size: 2rem;
     }
 
-    .contact__text{
+    .contact__greet{
       text-align: center;
     }
 
-    .box__item{
+    .contact__item{
       justify-content: left;
     }
   }

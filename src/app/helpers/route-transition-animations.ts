@@ -4,7 +4,7 @@ import { transition, trigger, query, style, animate, group } from '@angular/anim
 export const slideInAnimation =
   trigger('routeAnimations', [
       transition('Home => About, About => Projects, Projects => Contact, Home => Contact, Home => Projects, About => Contact', [
-          query(':enter, :leave', style({ position: 'fixed', width: '100%' }), { optional: true }),
+          query(':enter, :leave', style({ position: 'absolute', width: '100%', top: '10%', bottom: '0' }), { optional: true }),
           group([
               query(':enter', [
                   style({ transform: 'translateX(100%)' }),
@@ -17,7 +17,7 @@ export const slideInAnimation =
           ])
       ]),
       transition('About => Home, Projects => Home, Contact => Home, Projects => About, Contact => About, Contact => Projects', [
-          query(':enter, :leave', style({ position: 'fixed', width: '100%' }), { optional: true }),
+          query(':enter, :leave', style({ position: 'absolute', width: '100%', top: '10%', bottom: '0' }), { optional: true }),
           group([
               query(':enter', [
                   style({ transform: 'translateX(-100%)' }),
