@@ -2,8 +2,8 @@
   "nav": {
       "home": "Home",
       "about": "about",
-      "projects": "project",
-      "contact": "contact",
+      "projects": "Works",
+      "contact": "Reach",
       "language": "Language"
   },
 
@@ -46,7 +46,8 @@
     "birth-field": "July 15, 1996",
     "address-field": "Telavi, Kakheti",
     "subtitle": "SUMMARY",
-    "text": "I am self-taught front-end developer. In addition to my knowledge base, I actively seek everyday to develop more. I can say that everything what I know about programming is the result of my hard work. Currently my goal is to become more proficient in this field and forge my career as front-end developer."
+    "text": "I am self-taught front-end developer. In addition to my knowledge base, I actively seek everyday to develop more. I can say that everything what I know about programming is the result of my hard work.",
+    "text2": "Currently my goal is to become more proficient in this field and forge my career as front-end developer."
   },
   "project": {
     "title": "my projects",
