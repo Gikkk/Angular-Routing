@@ -1,7 +1,7 @@
 <section class="contact">
   <h2 class="contact__title">Get In Touch</h2>
   <h3 class="contact__greet">Write me about anything or just say hello</h3>
-  <section class="contact__box" #fadeInAnim>
+  <section class="contact__box" #fadeInAnim *ngIf="isBrowser">
     <article class="form__container">
       <h3 class="form__title">SEND ME A MESSAGE</h3>
       <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()" class="form">

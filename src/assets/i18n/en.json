@@ -2,7 +2,7 @@
   "nav": {
       "home": "Homepage",
       "about": "about",
-      "projects": "projects",
+      "projects": "project",
       "contact": "contact",
       "language": "Language"
   },
@@ -51,8 +51,8 @@
   },
   "project": {
     "title": "my projects",
-    "button": "DEMO",
-    "button-right": "SOURCE",
+    "button": "Demo",
+    "button-right": "Source",
     "button-more": "more on github"
   }
 }

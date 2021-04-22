@@ -2,8 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-// import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
-// import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -14,9 +14,9 @@ import { FooterComponent } from './footer/footer.component';
 
 
 // required for AOT compilation
-// export function HttpLoaderFactory(http: HttpClient) {
-//   return new TranslateHttpLoader(http);
-// }
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 
 @NgModule({
@@ -32,13 +32,13 @@ import { FooterComponent } from './footer/footer.component';
     HttpClientModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    // TranslateModule.forRoot({
-    //   loader: {
-    //       provide: TranslateLoader,
-    //       useFactory: HttpLoaderFactory,
-    //       deps: [HttpClient]
-    //   },
-    // })
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+      },
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

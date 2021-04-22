@@ -15,13 +15,11 @@ export class AppComponent {
     return outlet &&
       outlet.activatedRouteData &&
       outlet.activatedRouteData['animationState'];
-}
+  }
 
-  //  constructor( translate: TranslateService){
-  //   translate.setDefaultLang('en');
-  // }
-
-  constructor( ){}
+  constructor( translate: TranslateService){
+    translate.setDefaultLang('en');
+  }
 
 }
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-project',
@@ -8,7 +9,10 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 export class ProjectComponent implements OnInit {
 
-  constructor( private title: Title, private meta: Meta ) {}
+  constructor( private title: Title, private meta: Meta, private translate: TranslateService) {
+    translate.setDefaultLang('en');
+  }
+
 
   ngOnInit() {
     this.title.setTitle("Projects - Angular Developer Portfolio");

@@ -8,7 +8,8 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 export class AboutComponent implements OnInit {
 
-  constructor( private title: Title, private meta: Meta ) {}
+  constructor( private title: Title, private meta: Meta) {
+  }
 
   ngOnInit() {
     this.title.setTitle("About - Angular Developer Portfolio");
