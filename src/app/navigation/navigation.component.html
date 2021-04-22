@@ -3,15 +3,15 @@
     <!-- desktop navbar  -->
     <section class="navbar__desktop">
       <ul class="navbar__list">
-        <li><a class="navbar__item" [translate]="'nav.home'"  [routerLinkActiveOptions]="{exact: true}" routerLink="/home" routerLinkActive='navbar__active'>Home</a></li>
-        <li><a class="navbar__item"  routerLink="/about" routerLinkActive='navbar__active' >About</a></li>
+        <li><a class="navbar__item" [translate]="'nav.home'"  [routerLinkActiveOptions]="{exact: true}" routerLink="/home" routerLinkActive='navbar__active'>Homepag</a></li>
+        <li><a class="navbar__item" [translate]="'nav.about'"  routerLink="/about" routerLinkActive='navbar__active' >About</a></li>
       </ul>
       <a>
         <img class="navbar__logo" src="assets/general/logo.png" alt="logo" routerLink="/">
       </a>
       <ul class="navbar__list">
-        <li><a class="navbar__item"  routerLink="/projects" routerLinkActive='navbar__active' >Project</a></li>
-        <li><a class="navbar__item"  routerLink="/contact" routerLinkActive='navbar__active' >Contact</a></li>
+        <li><a class="navbar__item" [translate]="'nav.projects'"  routerLink="/projects" routerLinkActive='navbar__active' >Project</a></li>
+        <li><a class="navbar__item" [translate]="'nav.contact'" routerLink="/contact" routerLinkActive='navbar__active' >Contact</a></li>
       </ul>
     </section>
     <!-- language bar  -->
@@ -33,27 +33,27 @@
         <ul class="mobnav__list" >
           <li (click)="activeClass()">
             <img src="assets/mob-nav/homepage.png" alt="homepage icon" loading="lazy">
-            <a class="mobnav__item" [routerLinkActiveOptions]="{exact: true}" routerLink="/home" routerLinkActive='navbar__active'>Home</a>
+            <a class="mobnav__item" [translate]="'nav.home'" [routerLinkActiveOptions]="{exact: true}" routerLink="/home" routerLinkActive='navbar__active'>Home</a>
           </li>
           <li (click)="activeClass()">
             <img src="assets/mob-nav/settings.png" alt="skills icon" loading="lazy">
-            <a class="mobnav__item" routerLink="/about" routerLinkActive='navbar__active'> About</a>
+            <a class="mobnav__item" [translate]="'nav.about'" routerLink="/about" routerLinkActive='navbar__active'> About</a>
           </li>
           <div class="mobnav__line--middle"></div>
           <li (click)="activeClass()">
             <img src="assets/mob-nav/aim.png" alt="focus icon" loading="lazy">
-            <a class="mobnav__item" routerLink="/projects" routerLinkActive='navbar__active'>Projects</a>
+            <a class="mobnav__item" [translate]="'nav.projects'" routerLink="/projects" routerLinkActive='navbar__active'>Projects</a>
           </li>
           <li (click)="activeClass()">
             <img src="assets/mob-nav/question.png" alt="who icon" loading="lazy">
-            <a class="mobnav__item" routerLink="/contact" routerLinkActive='navbar__active'>Contact</a>
+            <a class="mobnav__item" [translate]="'nav.contact'" routerLink="/contact" routerLinkActive='navbar__active'>Contact</a>
           </li>
         </ul>
       </article>
       <div class="mobnav__line"></div>
       <div class="mobnav__line"></div>
       <article>
-        <h4>Language</h4>
+        <h4 [translate]="'nav.language'">Language</h4>
         <div>
           <button class=" navbar__btn navbar__btn--active" (click)="langChange('en')" #Eng>English</button>
           <button class="navbar__btn" (click)="langChange('ge')" #Geo>ქართული</button>

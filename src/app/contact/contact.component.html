@@ -1,66 +1,66 @@
 <section class="contact">
   <h2 class="contact__title" [translate]="'contact.title'" ></h2>
-  <h3 class="contact__greet">Write me about anything or just say hello</h3>
+  <h3 class="contact__greet" [translate]="'contact.subtitle'">Write me about anything or just say hello</h3>
   <section class="contact__box" #fadeInAnim *ngIf="isBrowser">
     <article class="form__container">
-      <h3 class="form__title">SEND ME A MESSAGE</h3>
+      <h3 class="form__title" [translate]="'contact.msg-title'">SEND ME A MESSAGE</h3>
       <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()" class="form">
         <div class="form__item">
-          <label for="name" class="form__label">Your Name</label>
+          <label for="name" class="form__label" [translate]="'contact.msg-name'">Your Name</label>
           <input id="name" formControlName="name" type="text" class="form__input">
-          <span class="form__error"
+          <span class="form__error" [translate]="'contact.msg-err'"
           *ngIf="!signUpForm.get('name').valid && signUpForm.get('name').touched"
           >The Name field is empty or not valid!</span>
         </div>
 
         <div class="form__item">
-          <label for="email" class="form__label">Your Email</label>
+          <label for="email" class="form__label" [translate]="'contact.msg-email'">Your Email</label>
           <input id="email" formControlName="email" type="text" class="form__input">
-          <span class="form__error"
+          <span class="form__error" [translate]="'contact.msg-err'"
           *ngIf="!signUpForm.get('email').valid && signUpForm.get('email').touched"
           >The Email field is empty or not valid!</span>
         </div>
 
         <div class="form__item">
-          <label for="subject" class="form__label">Subject</label>
+          <label for="subject" class="form__label" [translate]="'contact.msg-subject'">Subject</label>
           <input id="subject" formControlName="subject" type="text" class="form__input" >
-          <span class="form__error"
+          <span class="form__error" [translate]="'contact.msg-err'"
           *ngIf="!signUpForm.get('subject').valid && signUpForm.get('subject').touched"
           >The Subject field is empty or not valid!</span>
         </div>
 
         <div class="form__item">
-          <label for="message" class="form__label">Message</label>
+          <label for="message" class="form__label" [translate]="'contact.msg-text'">Message</label>
           <textarea id="message" formControlName="message" rows="4" class="form__textarea" placeholder="e.g. I'd like to talk about..."></textarea>
-          <span class="form__error"
+          <span class="form__error" [translate]="'contact.msg-err'"
           *ngIf="!signUpForm.get('message').valid && signUpForm.get('message').touched"
           >The Message field is empty or not valid!</span>
         </div>
 
         <div class="form__item">
-          <button type="submit" class="submit__btn" [disabled]="!signUpForm.valid" [ngClass]="{'submit__btn--valid':signUpForm.valid}">Submit</button>
-          <span *ngIf="submitted" class="form__success">Successfully Submitted</span>
+          <button type="submit" class="submit__btn" [disabled]="!signUpForm.valid" [ngClass]="{'submit__btn--valid':signUpForm.valid}" [translate]="'contact.msg-submit'">Submit</button>
+          <span *ngIf="submitted" class="form__success" [translate]="'contact.msg-succ'">Successfully Submitted</span>
         </div>
       </form>
     </article>
     <article class="contact__details">
-      <h3>CONTACT INFO</h3>
-      <h4 class="contact__subtitle">Where to find me</h4>
+      <h3 [translate]="'contact.info-title'">CONTACT INFO</h3>
+      <h4 [translate]="'contact.info-loc'" class="contact__subtitle">Where to find me</h4>
       <div class="contact__item">
         <img src="assets/contact/home.svg" alt="home" class="box__img" loading="lazy">
-        <p class="contact__text">Telavi, Kakheti</p>
+        <p [translate]="'contact.info-telavi'" class="contact__text">Telavi, Kakheti</p>
       </div>
-      <h4 class="contact__subtitle">Email me at</h4>
+      <h4 [translate]="'contact.info-email'" class="contact__subtitle">Email me at</h4>
       <div class="contact__item">
         <img src="assets/contact/email.svg" alt="email" class="box__img" loading="lazy">
         <p class="contact__text">giorgizhonzholadze1996@gmail.com</p>
       </div>
-      <h4 class="contact__subtitle">Call me at</h4>
+      <h4 [translate]="'contact.info-phone'" class="contact__subtitle">Call me at</h4>
       <div class="contact__item">
         <img src="assets/contact/smartphone.svg" alt="phone" class="box__img" loading="lazy">
         <a href="tel:+4917640206387" class="contact__text">595 33 34 39</a>
       </div>
-      <h4 class="contact__subtitle">Status</h4>
+      <h4 [translate]="'contact.info-status'" class="contact__subtitle">Status</h4>
       <div class="contact__item">
         <span class="contact__status" #status></span>
         <p class="contact__text">{{availability}}</p>

@@ -186,13 +186,13 @@
   }
 
   .projects__text{
-    list-style: none;
     font-size: 14px;
   }
 
   .text__left{
     padding: 0 24px 0 0 !important;
     text-align: right !important;
+    direction: rtl;
   }
 }
 

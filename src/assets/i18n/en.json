@@ -1,6 +1,6 @@
 {
   "nav": {
-      "home": "Homepage",
+      "home": "Home",
       "about": "about",
       "projects": "project",
       "contact": "contact",
@@ -20,7 +20,6 @@
     "info-phone": "CALL ME AT",
     "info-status": "STATUS",
     "info-telavi": "Telavi, Kakheti, Georgia",
-    "info-online": "Not available",
     "msg-title": "SEND ME A MESSAGE",
     "msg-name": "Your Name",
     "msg-email": "Your Email",
@@ -53,6 +52,24 @@
     "title": "my projects",
     "button": "Demo",
     "button-right": "Source",
-    "button-more": "more on github"
-  }
+    "button-more": "more on github",
+    "resp": "Responsive design",
+    "hover": "See hover states for all interactive elements",
+    "toggle": "Toggle the color scheme between light and dark mode",
+    "url": "Shorten any valid URL",
+    "err": "Receive an error message when the form is not submitted",
+    "copy": "Copy the shortened link in a single click",
+    "IP": "See their own IP Address on the map on the initial page load",
+    "IP-search": "Search for any IP addresses or domains and see the key information and location",
+    "search": "Search for a country using an input field",
+    "filter": "Filter countries by region",
+    "country": "Click on a country to see more detailed information on a separate page",
+    "time": "View the current time and location information based on their IP address",
+    "background": "See correct greeting and background image based on the time of day",
+    "quotes": "See random programming quotes",
+    "personal": "Personal information about me",
+    "stack": "You can see my tech stack, projects, contact info etc...",
+    "github": "You can find every GitHub user",
+    "repo": "Extra information of GitHub users(location, repositories, followers etc...)"
+   }
 }
