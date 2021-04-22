@@ -9,9 +9,7 @@ import {TranslateService} from '@ngx-translate/core';
 })
 export class ProjectComponent implements OnInit {
 
-  constructor( private title: Title, private meta: Meta, private translate: TranslateService) {
-    translate.setDefaultLang('en');
-  }
+  constructor( private title: Title, private meta: Meta ) {}
 
 
   ngOnInit() {

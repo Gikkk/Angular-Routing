@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { SharedModule } from '../shared/shared.module';
 
 import { FocusComponent } from './focus/focus.component';
 import { CardComponent } from './card/card.component';
@@ -17,10 +18,8 @@ const appRoutes: Routes = [
   ],
   imports: [
     RouterModule.forChild(appRoutes),
+    SharedModule
   ],
-  exports: [
-    FocusComponent,
-    CardComponent
-  ]
+  exports: []
 })
 export class AboutModule { }

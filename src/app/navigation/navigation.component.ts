@@ -14,7 +14,6 @@ export class NavigationComponent implements OnInit {
 
   constructor(@Inject(DOCUMENT) document, private renderer: Renderer2, private translate: TranslateService ){
     this.preventScroll = document;
-    // translate.setDefaultLang('en');
   }
 
   preventScroll: Document

@@ -1,7 +1,8 @@
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ParticlesModule } from 'angular-particle';
-import { CommonModule } from '@angular/common';
+import { SharedModule } from '../shared/shared.module';
+
 
 import { TechStackComponent } from './tech-stack/tech-stack.component';
 import { HomepageComponent } from './homepage';
@@ -18,7 +19,7 @@ const appRoutes: Routes = [
   imports: [
     RouterModule.forChild(appRoutes),
     ParticlesModule,
-    CommonModule
+    SharedModule
   ],
   exports: [
     TechStackComponent
