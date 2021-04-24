@@ -1,6 +1,10 @@
 # MyPortfolioNew
 
-## remake of old one - under construction
+## testing environment for real portfolio:
+- currently implementing SSR
+- testing navbar
+- angular animations testing
+
 
 
 

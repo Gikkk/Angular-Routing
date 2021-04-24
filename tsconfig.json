@@ -18,6 +18,9 @@
     },
     {
       "path": "./tsconfig.server.json"
+    },
+    {
+      "path": "./tsconfig.server.json"
     }
 ]
 }

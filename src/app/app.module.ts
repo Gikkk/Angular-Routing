@@ -25,7 +25,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     FooterComponent
 ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
