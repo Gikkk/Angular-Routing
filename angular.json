@@ -132,7 +132,8 @@
           "options": {
             "outputPath": "dist/My-Portfolio-New/server",
             "main": "server.ts",
-            "tsConfig": "tsconfig.server.json"
+            "tsConfig": "tsconfig.server.json",
+            "bundleDependencies": true
           },
           "configurations": {
             "production": {

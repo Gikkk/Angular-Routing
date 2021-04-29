@@ -25,6 +25,7 @@
     "@angular/platform-server": "~10.0.3",
     "@angular/router": "~10.0.3",
     "@angular/service-worker": "~10.0.3",
+    "@ng-toolkit/universal": "^8.1.0",
     "@nguniversal/express-engine": "^10.0.2",
     "@ngx-translate/core": "^13.0.0",
     "@ngx-translate/http-loader": "^6.0.0",
