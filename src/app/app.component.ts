@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import {  RouterOutlet } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { routeTransitionAnimations } from './helpers/route-transition-animations';
+import { routeTransitionAnimations } from './shared/helpers/route-transition-animations';
 
 @Component({
   selector: 'app-root',
@@ -9,21 +9,20 @@ import { routeTransitionAnimations } from './helpers/route-transition-animations
   styleUrls: ['./app.component.scss'],
   animations: [routeTransitionAnimations]
 })
-export class AppComponent {
-  title = 'My-Portfolio-New';
+export class AppComponent implements OnInit{
 
+  // route animation
   prepareRoute(outlet: RouterOutlet) {
     return outlet &&
       outlet.activatedRouteData &&
       outlet.activatedRouteData['animationState'];
   }
 
+  // multi language
   constructor(translate: TranslateService) {
-    // this language will be used as a fallback when a translation isn't found in the current language
     translate.setDefaultLang('en');
-
-     // the lang to use, if the lang isn't available, it will use the current loader to get them
     translate.use('en');
   }
-}
 
+  ngOnInit() {}
+}

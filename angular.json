@@ -25,10 +25,11 @@
             "aot": true,
             "assets": [
               "src/favicon.png",
-              "src/assets"
+              "src/assets",
+              "src/manifest.webmanifest"
             ],
             "styles": [
-              "src/styles/styles.scss"
+              "src/styles/main.scss"
             ],
             "scripts": []
           },
@@ -59,7 +60,9 @@
                   "maximumWarning": "6kb",
                   "maximumError": "10kb"
                 }
-              ]
+              ],
+              "serviceWorker": true,
+              "ngswConfigPath": "ngsw-config.json"
             }
           }
         },
@@ -80,16 +83,17 @@
             "browserTarget": "My-Portfolio-New:build"
           }
         },
-        "projects__tag": {
+        "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/projects__tag.ts",
+            "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
-              "src/favicon.png",
-              "src/assets"
+              "src/favicon.ico",
+              "src/assets",
+              "src/manifest.webmanifest"
             ],
             "styles": [
               "src/styles.scss"
@@ -104,7 +108,6 @@
               "tsconfig.app.json",
               "tsconfig.spec.json",
               "e2e/tsconfig.json",
-              "tsconfig.server.json",
               "tsconfig.server.json"
             ],
             "exclude": [
@@ -172,7 +175,6 @@
           }
         }
       }
-    }
-  },
+    }},
   "defaultProject": "My-Portfolio-New"
 }

@@ -38,11 +38,9 @@ speed-measure-plugin*.json
 /libpeerconnection.log
 npm-debug.log
 yarn-error.log
-projects__tagem.log
+testem.log
 /typings
 
 # System Files
 .DS_Store
 Thumbs.db
-
-.vercel

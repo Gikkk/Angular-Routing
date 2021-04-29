@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
-import { IsBrowserService } from  '../helpers/is-browser.service'
+import { IsBrowserService } from  '../shared/helpers/is-browser.service'
 
 @Component({
   selector: 'app-homepage',
@@ -20,6 +20,7 @@ export class HomepageComponent implements OnInit {
   windowHeight: number;
   isBrowser = this.isBrowserService.isBrowser
 
+  // particles details and screen resize event
   onResize(){
     if(this.isBrowser) {
       this.windowHeight = window.innerHeight;
@@ -28,7 +29,6 @@ export class HomepageComponent implements OnInit {
     this.myStyle = {
       'height': `${this.windowHeight}px`,
       'background': "transperent",
-      'z-index': 1,
       'top': 0,
       'left': 0,
       'right': 0,
@@ -103,7 +103,6 @@ export class HomepageComponent implements OnInit {
             "enable": true,
             "mode": "push"
           },
-          "resize": true
         },
         "modes": {
           "grab": {
@@ -135,15 +134,16 @@ export class HomepageComponent implements OnInit {
     }
   }
 
+  // setting meta tags dynamically
   ngOnInit() {
     this.onResize();
     this.title.setTitle("Home - Angular Developer Portfolio");
 
-    this.meta.updateTag({ name: 'og:title', content: 'Home - Giorgi Zhonzholadze | Developer portfolio' });
+    this.meta.updateTag({ name: 'og:title', content: 'Home - Developer portfolio' });
     this.meta.updateTag({ name: 'description', content: 'Home page of front end developer portfolio - for developing purposes' });
-    this.meta.updateTag({ name: 'og:url', content: '/home' });
+    this.meta.updateTag({ name: 'og:url', content: 'https://giorgi-portfolio.web.app/home' });
 
-    this.meta.updateTag({ name: 'twitter:title', content: 'Home - Giorgi Zhonzholadze | Developer portfolio' });
+    this.meta.updateTag({ name: 'twitter:title', content: 'Home - Developer portfolio' });
     this.meta.updateTag({ name: 'twitter:description', content: 'Home page of front end developer portfolio - for developing purposes' });
   }
 

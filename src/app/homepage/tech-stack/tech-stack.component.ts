@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy,Renderer2, ViewChild } from '@angular/core';
+import { IsBrowserService } from  '../../shared/helpers/is-browser.service'
 
 @Component({
   selector: 'app-tech-stack',
@@ -7,10 +8,11 @@ import { AfterViewInit, Component, ElementRef, OnDestroy,Renderer2, ViewChild } 
 })
 export class TechStackComponent implements AfterViewInit, OnDestroy {
 
-  constructor(private renderer: Renderer2) { }
+  constructor(private renderer: Renderer2, private isBrowserService: IsBrowserService) { }
 
   @ViewChild('rotatableEl') rotatableEl: ElementRef;
   @ViewChild('fadeIn') fadeInEl: ElementRef;
+  isBrowser = this.isBrowserService.isBrowser
 
   options = {
     rootMargin: '0px',
@@ -19,17 +21,19 @@ export class TechStackComponent implements AfterViewInit, OnDestroy {
   private observer: IntersectionObserver | undefined;
 
   ngAfterViewInit() {
-    this.observer = new IntersectionObserver( entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          this.renderer.addClass(this.fadeInEl.nativeElement, 'fadeInAnim');
-          this.renderer.setStyle(this.rotatableEl.nativeElement, 'animation-play-state', 'running');
-          this.observer.unobserve(entry.target);
-        }
-      });
-    }, this.options);
+    if(this.isBrowser) {
+      this.observer = new IntersectionObserver( entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            this.renderer.addClass(this.fadeInEl.nativeElement, 'fadeInAnim');
+            this.renderer.setStyle(this.rotatableEl.nativeElement, 'animation-play-state', 'running');
+            this.observer.unobserve(entry.target);
+          }
+        });
+      }, this.options);
 
-    this.observer.observe(this.fadeInEl.nativeElement as HTMLElement);
+      this.observer.observe(this.fadeInEl.nativeElement as HTMLElement);
+    }
   }
 
   ngOnDestroy(){

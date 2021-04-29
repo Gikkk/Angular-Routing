@@ -1,7 +1,8 @@
 <section class="contact">
-  <h2 class="contact__title" [translate]="'contact.title'" ></h2>
+  <h1 class="contact__title" [translate]="'contact.title'" ></h1>
   <h3 class="contact__greet" [translate]="'contact.subtitle'">Write me about anything or just say hello</h3>
-  <section class="contact__box" #fadeInAnim *ngIf="isBrowser">
+
+  <section class="contact__box" #fadeInAnim>
     <article class="form__container">
       <h3 class="form__title" [translate]="'contact.msg-title'">SEND ME A MESSAGE</h3>
       <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()" class="form">
@@ -43,34 +44,34 @@
         </div>
       </form>
     </article>
+
     <article class="contact__details">
       <h3 [translate]="'contact.info-title'">CONTACT INFO</h3>
       <h4 [translate]="'contact.info-loc'" class="contact__subtitle">Where to find me</h4>
       <div class="contact__item">
-        <img src="assets/contact/home.svg" alt="home" class="box__img" loading="lazy">
+        <img src="assets/contact/home.svg" alt="home" class="contact__img" >
         <p [translate]="'contact.info-telavi'" class="contact__text">Telavi, Kakheti</p>
       </div>
       <h4 [translate]="'contact.info-email'" class="contact__subtitle">Email me at</h4>
       <div class="contact__item">
-        <img src="assets/contact/email.svg" alt="email" class="box__img" loading="lazy">
+        <img src="assets/contact/email.svg" alt="email" class="contact__img" >
         <p class="contact__text">giorgizhonzholadze1996@gmail.com</p>
       </div>
       <h4 [translate]="'contact.info-phone'" class="contact__subtitle">Call me at</h4>
       <div class="contact__item">
-        <img src="assets/contact/smartphone.svg" alt="phone" class="box__img" loading="lazy">
-        <a href="tel:+4917640206387" class="contact__text">595 33 34 39</a>
+        <img src="assets/contact/smartphone.svg" alt="phone" class="contact__img" >
+        <a href="tel:+995595333439" class="contact__text contact__phone">595 33 34 39</a>
       </div>
       <h4 [translate]="'contact.info-status'" class="contact__subtitle">Status</h4>
       <div class="contact__item">
-        <span class="contact__status" #status></span>
-        <p class="contact__text">{{availability}}</p>
+        <span class="contact__status"></span>
+        <p [translate]="'contact.status'" class="contact__text">Available</p>
       </div>
     </article>
   </section>
 
   <!-- map section  -->
-  <app-map></app-map>
+  <app-map *ngIf="isBrowser"></app-map>
 </section>
 
-<!-- footer section  -->
-<!-- <app-footer></app-footer> -->
+

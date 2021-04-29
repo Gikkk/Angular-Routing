@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, OnInit, Renderer2, ViewChild, AfterViewInit, OnDestroy } from '@angular/core';
 import { EmailValidator, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Meta, Title } from "@angular/platform-browser";
-import { IsBrowserService } from  '../helpers/is-browser.service'
+import { IsBrowserService } from  '../shared/helpers/is-browser.service'
 
 @Component({
   selector: 'app-contact',
@@ -10,13 +10,11 @@ import { IsBrowserService } from  '../helpers/is-browser.service'
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit, AfterViewInit, OnDestroy {
-  availability = "Not available";
-  signUpForm: FormGroup;
-  currentTime;
-  hour: number;
-  submitted = false;
 
-  @ViewChild("status") onlineStatus: ElementRef<HTMLElement>;
+  signUpForm: FormGroup;
+  submitted = false;
+  isBrowser = this.isBrowserService.isBrowser
+
   @ViewChild('fadeInAnim') fadeInAnim: ElementRef;
   @ViewChild('fadeInRight') fadeInRight: ElementRef;
   @ViewChild('fadeInLeft') fadeInLeft: ElementRef;
@@ -24,6 +22,7 @@ export class ContactComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor( private http: HttpClient, private renderer: Renderer2, private title: Title, private meta: Meta, private isBrowserService: IsBrowserService ) { }
 
   ngOnInit(): void {
+    // form group manage
     this.signUpForm = new FormGroup({
       name: new FormControl(null, Validators.required),
       email: new FormControl(null, [Validators.required, Validators.email]),
@@ -31,28 +30,17 @@ export class ContactComponent implements OnInit, AfterViewInit, OnDestroy {
       message: new FormControl(null, Validators.required)
     });
 
-    setInterval(() => {
-      this.currentTime = new Date();
-      this.hour = this.currentTime.getHours();
-
-      if (this.hour >= 9 && this.hour <= 19 ) {
-        this.renderer.setStyle(this.onlineStatus.nativeElement, 'backgroundColor', 'rgb(28, 221, 28)');
-        this.availability = "Available";
-      } else {
-        this.renderer.setStyle(this.onlineStatus.nativeElement, 'backgroundColor', 'red');
-        this.availability = "Not available";
-      }
-    }, 3600000);
-
+    // setting meta tags dynamically
     this.title.setTitle("Contact - Angular Developer Portfolio");
-    this.meta.updateTag({ name: 'og:title', content: 'Contact - Giorgi Zhonzholadze | Developer portfolio' });
+    this.meta.updateTag({ name: 'og:title', content: 'Contact - Developer portfolio' });
     this.meta.updateTag({ name: 'description', content: 'Contact page of front end developer portfolio - contact information' });
-    this.meta.updateTag({ name: 'og:url', content: '/contact' });
+    this.meta.updateTag({ name: 'og:url', content: 'https://giorgi-portfolio.web.app/contact' });
 
-    this.meta.updateTag({ name: 'twitter:title', content: 'Contact - Giorgi Zhonzholadze | Developer portfolio' });
+    this.meta.updateTag({ name: 'twitter:title', content: 'Contact - Developer portfolio' });
     this.meta.updateTag({ name: 'twitter:description', content: 'Contact page of front end developer portfolio - contact information' });
   }
 
+  // http post request to database
   onSubmit(){
     this.http.post<{name: string, email: EmailValidator, subject: string, message: string}>('https://giorgi-zho-default-rtdb.europe-west1.firebasedatabase.app/messages.json',
      this.signUpForm.value
@@ -67,28 +55,30 @@ export class ContactComponent implements OnInit, AfterViewInit, OnDestroy {
     });
   }
 
+  // intersection observer of element going into view
   options = {
     rootMargin: '0px',
     threshold: 0.2
   };
-  isBrowser = this.isBrowserService.isBrowser;
   private observer: IntersectionObserver | undefined;
 
   ngAfterViewInit() {
-    this.observer = new IntersectionObserver( entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          this.renderer.addClass(this.fadeInAnim.nativeElement, 'fadeInAnim');
-          this.observer.unobserve(entry.target);
-        }
-      });
-    }, this.options);
+    if(this.isBrowser) {
+      this.observer = new IntersectionObserver( entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            this.renderer.addClass(this.fadeInAnim.nativeElement, 'fadeInAnim');
+            this.observer.unobserve(entry.target);
+          }
+        });
+      }, this.options);
 
-    this.observer.observe(this.fadeInAnim.nativeElement as HTMLElement);
+      this.observer.observe(this.fadeInAnim.nativeElement as HTMLElement);
+    }
   }
 
   ngOnDestroy(){
-    if (this.observer) {
+    if(this.observer) {
       this.observer.disconnect();
       this.observer = undefined;
     }

@@ -8,7 +8,6 @@
 
   .contact__title{
     font-size: 2rem;
-    margin: 0;
     padding: 5rem 0 1rem 0;
     color: $tertiary-color;
   }
@@ -43,10 +42,10 @@
   }
 
   .contact__item{
-    @extend %flex-centring;
+    @extend %flex--centring;
   }
 
-  .box__img{
+  .contact__img{
     width: 16px;
     height: 16px;
     background: $primary-color;
@@ -58,7 +57,7 @@
     height: 8px;
     border-radius: 50%;
     border: 1px solid $secondary-color;
-    background: red;
+    background: rgb(74, 196, 37);
   }
 
   .contact__text{
@@ -66,6 +65,12 @@
     margin: 0 0 0 0.5rem;
     font-size: 14px;
     font-weight: 600;
+  }
+
+  .contact__phone{
+    font-family: $tertiary-font;
+    text-decoration: underline;
+    font-size: 12px;
   }
 }
 

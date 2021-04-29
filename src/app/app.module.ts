@@ -1,16 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
-import {HttpClientModule, HttpClient} from '@angular/common/http';
-import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { HttpClientModule, HttpClient} from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AppComponent } from './app.component';
-import { NavigationComponent } from './navigation/navigation.component';
-import { CircularMenuComponent } from './circular-menu/circular-menu.component';
-import { FooterComponent } from './footer/footer.component';
+import { NavigationComponent } from './shared/navigation/navigation.component';
+import { CircularMenuComponent } from './shared/circular-menu/circular-menu.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -22,11 +23,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppComponent,
     NavigationComponent,
     CircularMenuComponent,
-    FooterComponent
-],
+    FooterComponent,
+  ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
     AppRoutingModule,
@@ -37,7 +37,8 @@ export function HttpLoaderFactory(http: HttpClient) {
           useFactory: HttpLoaderFactory,
           deps: [HttpClient]
       }
-  })
+  }),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
