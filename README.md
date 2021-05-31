@@ -2,6 +2,6 @@
 Advance Angular Routing
 
 ## Development server
-Practicing angular routing:
+Practicing angular routing
 
 
